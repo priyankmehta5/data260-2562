@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>HW1-Priyank Mehta</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            max-width: 760px;
+            margin: 40px auto;
+            padding: 20px;
+            color: #1f2933;
+            background-color: #eef3f7;
+            line-height: 1.5;
+        }
+
+        h1 {
+            margin-bottom: 8px;
+            color: #123b5d;
+            text-align: center;
+        }
+
+        .subtitle {
+            margin-top: 0;
+            margin-bottom: 30px;
+            color: #526675;
+            text-align: center;
+        }
+
+        form {
+            padding: 30px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 7px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 11px;
+            font-family: inherit;
+            font-size: 16px;
+            border: 1px solid #a9b7c2;
+            border-radius: 5px;
+        }
+
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        select:focus,
+        textarea:focus {
+            border-color: #1769aa;
+            outline: 2px solid rgba(23, 105, 170, 0.18);
+        }
+
+        textarea {
+            min-height: 130px;
+            resize: vertical;
+        }
+
+        .required-indicator {
+            color: #b42318;
+        }
+
+        .help-text {
+            display: block;
+            margin-top: 5px;
+            color: #5d6c76;
+            font-size: 14px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .checkbox-group input {
+            width: auto;
+            margin-top: 5px;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-weight: normal;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 13px;
+            color: #ffffff;
+            background-color: #1769aa;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0f527f;
+        }
+
+        #successMessage {
+            display: none;
+            margin-top: 20px;
+            padding: 12px;
+            color: #14532d;
+            background-color: #dcfce7;
+            border: 1px solid #86efac;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Municipal Transit Incident</h1>
+
+    <p class="subtitle">
+        Submit information about an incident affecting a municipal transit service.
+    </p>
+
+    <form id="incidentForm">
+        <!-- Primary field -->
+        <div class="form-group">
+            <label for="incidentTitle">
+                Incident Title
+                <span class="required-indicator">*</span>
+            </label>
+
+            <input
+                type="text"
+                id="incidentTitle"
+                name="incidentTitle"
+                placeholder="Enter a short incident title"
+                required
+                autofocus
+            >
+        </div>
+
+        <!-- Secondary field -->
+        <div class="form-group">
+            <label for="transitRoute">
+                Affected Transit Route
+                <span class="required-indicator">*</span>
+            </label>
+
+            <input
+                type="text"
+                id="transitRoute"
+                name="transitRoute"
+                placeholder="Enter the affected bus or rail route"
+                required
+            >
+        </div>
+
+        <!-- Submitter email -->
+        <div class="form-group">
+            <label for="submitterEmail">
+                Submitter Email
+                <span class="required-indicator">*</span>
+            </label>
+
+            <input
+                type="email"
+                id="submitterEmail"
+                name="submitterEmail"
+                placeholder="Enter your email address"
+                required
+            >
+        </div>
+
+        <!-- Incident description -->
+        <div class="form-group">
+            <label for="incidentDescription">
+                Incident Description
+                <span class="required-indicator">*</span>
+            </label>
+
+            <textarea
+                id="incidentDescription"
+                name="incidentDescription"
+                placeholder="Describe the transit incident in more than 25 characters"
+                required
+            ></textarea>
+
+            <small class="help-text">
+                The description must contain more than 25 characters.
+            </small>
+        </div>
+
+        <!-- Category dropdown -->
+        <div class="form-group">
+            <label for="incidentCategory">
+                Incident Category
+                <span class="required-indicator">*</span>
+            </label>
+
+            <select
+                id="incidentCategory"
+                name="incidentCategory"
+                required
+            >
+                <option value="" disabled selected>
+                    Select an incident category
+                </option>
+                <option value="Delay">Delay</option>
+                <option value="Service Disruption">
+                    Service Disruption
+                </option>
+                <option value="Safety Incident">
+                    Safety Incident
+                </option>
+                <option value="Infrastructure Issue">
+                    Infrastructure Issue
+                </option>
+            </select>
+        </div>
+
+        <!-- Terms checkbox -->
+        <div class="form-group checkbox-group">
+            <input
+                type="checkbox"
+                id="termsAccepted"
+                name="termsAccepted"
+            >
+
+            <label for="termsAccepted">
+                I agree to the terms and conditions.
+            </label>
+        </div>
+
+        <!-- Domain-appropriate submit button -->
+        <button type="submit">
+            Report Transit Incident
+        </button>
+
+        <div id="successMessage" role="status"></div>
+    </form>
+
+    <!-- JavaScript is linked at the end of the HTML body. -->
+    <script src="script.js"></script>
+</body>
+</html>
