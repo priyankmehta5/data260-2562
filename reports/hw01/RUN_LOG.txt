@@ -116,3 +116,178 @@ PS D:\Grad Prep\SJSU\GitHub\data260-2562> Stop-Transcript
 Windows PowerShell transcript end
 End time: 20260901220624
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260902225828
+Username: DESKTOP-HNRTO7F\MEHTA
+RunAs User: DESKTOP-HNRTO7F\MEHTA
+Configuration Name: 
+Machine: DESKTOP-HNRTO7F (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell
+Process ID: 25036
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\reports\hw01\RUN_LOG.txt
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Get-Date -Format o
+2026-09-02T22:58:33.4435386-07:00
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws configure get region
+aws : The term 'aws' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the 
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ aws configure get region
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (aws:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+aws : The term 'aws' is not recognized as the name of a cmdlet, function, script file, or operable program. Check the
+spelling of the name, or if a path was included, verify that the path is correct and try again.
+At line:1 char:1
++ aws configure get region
++ ~~~
+    + CategoryInfo          : ObjectNotFound: (aws:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260902230057
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260902230315
+Username: DESKTOP-HNRTO7F\MEHTA
+RunAs User: DESKTOP-HNRTO7F\MEHTA
+Configuration Name: 
+Machine: DESKTOP-HNRTO7F (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell
+Process ID: 16280
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\reports\hw01\RUN_LOG.txt
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Get-Date -Format o
+2026-09-02T23:03:20.2396229-07:00
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws configure get region
+us-east-1
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> docker images data260-2562-hw1
+failed to connect to the docker API at npipe:////./pipe/dockerDesktopLinuxEngine; check if the path is correct and if th
+e daemon is running: open //./pipe/dockerDesktopLinuxEngine: The system cannot find the file specified.
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> docker images data260-2562-hw1
+                                                                                                    i Info →   U  In Use
+IMAGE                     ID             DISK USAGE   CONTENT SIZE   EXTRA
+data260-2562-hw1:latest   11d34fdbfb4c       93.4MB         26.3MB
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> docker image inspect data260-2562-hw1 --format '{{.Os}}/{{.Architecture}}'
+linux/amd64
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> (Get-ECRLoginCommand).Password | docker login --username AWS --password-stdin 166917388061.dkr.ecr.us-east-1.amazonaws.com
+Get-ECRLoginCommand : The term 'Get-ECRLoginCommand' is not recognized as the name of a cmdlet, function, script file, 
+or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and try 
+again.
+At line:1 char:2
++ (Get-ECRLoginCommand).Password | docker login --username AWS --passwo ...
++  ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Get-ECRLoginCommand:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+Get-ECRLoginCommand : The term 'Get-ECRLoginCommand' is not recognized as the name of a cmdlet, function, script file,
+or operable program. Check the spelling of the name, or if a path was included, verify that the path is correct and
+try again.
+At line:1 char:2
++ (Get-ECRLoginCommand).Password | docker login --username AWS --passwo ...
++  ~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (Get-ECRLoginCommand:String) [], CommandNotFoundException
+    + FullyQualifiedErrorId : CommandNotFoundException
+
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 166917388061.dkr.ecr.us-east-1.amazonaws.com
+Login Succeeded
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> docker tag s2562-transit-app:latest 166917388061.dkr.ecr.us-east-1.amazonaws.com/s2562-transit-app:latest
+Error response from daemon: No such image: s2562-transit-app:latest
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> docker images
+                                                                                                    i Info →   U  In Use
+IMAGE                           ID             DISK USAGE   CONTENT SIZE   EXTRA
+apache/airflow:2.10.1           41928f36b625       1.97GB          400MB    U
+data260-2562-hw1:latest         11d34fdbfb4c       93.4MB         26.3MB
+ghcr.io/mlflow/mlflow:v2.13.0   47c5c26d06a4       1.11GB          253MB    U
+goodbye-image:latest            ab728476a7a8        186MB         45.4MB
+hello-image:latest              965afe682123        186MB         45.4MB
+hello-world:latest              5dd0d3e6e255       25.9kB         9.49kB    U
+postgres:13                     4689940c6838        624MB          161MB    U
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> docker tag data260-2562-hw1:latest 166917388061.dkr.ecr.us-east-1.amazonaws.com/s2562-transit-app:latest
+
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> docker images
+                                                                                                    i Info →   U  In Use
+IMAGE                                                                   ID             DISK USAGE   CONTENT SIZE   EXTRA
+166917388061.dkr.ecr.us-east-1.amazonaws.com/s2562-transit-app:latest   11d34fdbfb4c       93.4MB         26.3MB
+apache/airflow:2.10.1                                                   41928f36b625       1.97GB          400MB    U
+data260-2562-hw1:latest                                                 11d34fdbfb4c       93.4MB         26.3MB
+ghcr.io/mlflow/mlflow:v2.13.0                                           47c5c26d06a4       1.11GB          253MB    U
+goodbye-image:latest                                                    ab728476a7a8        186MB         45.4MB
+hello-image:latest                                                      965afe682123        186MB         45.4MB
+hello-world:latest                                                      5dd0d3e6e255       25.9kB         9.49kB    U
+postgres:13                                                             4689940c6838        624MB          161MB    U
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> docker push 166917388061.dkr.ecr.us-east-1.amazonaws.com/s2562-transit-app:latest
+The push refers to repository [166917388061.dkr.ecr.us-east-1.amazonaws.com/s2562-transit-app]
+87e58e8f97fc: Pushed
+44136fa355b3: Pushed
+d94291c26261: Pushed
+55afa1ecc21d: Pushed
+0ea935727878: Pushed
+1ed8e39a7434: Pushed
+0d62d88506ba: Pushed
+8cdfe4f23778: Pushed
+da4dea1b00af: Pushed
+fb597529c916: Pushed
+8a699f35901a: Pushed
+8e3fc18aedad: Pushed
+latest: digest: sha256:11d34fdbfb4c7b763b29063df4b64c83a890bbac4a8d70300245fe7064526a79 size: 856
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecr describe-images --repository-name s2562-transit-app --region us-east-1
+{
+    "imageDetails": [
+        {
+            "registryId": "166917388061",
+            "repositoryName": "s2562-transit-app",
+            "imageDigest": "sha256:dad9e51cd185d72e21c813750ec92741d80dd192ba4e636eef04011e45186c2d",
+            "imageSizeInBytes": 26270235,
+            "imagePushedAt": "2026-09-02T23:18:41.778000-07:00",
+            "imageManifestMediaType": "application/vnd.oci.image.manifest.v1+json",
+            "artifactMediaType": "application/vnd.oci.image.config.v1+json",
+            "imageStatus": "ACTIVE"
+        },
+        {
+            "registryId": "166917388061",
+            "repositoryName": "s2562-transit-app",
+            "imageDigest": "sha256:cb85a44def1dbf7d834da35c33c5dd7f48278a6179f40465b692c4a821d5d0b0",
+            "imageSizeInBytes": 1562,
+            "imagePushedAt": "2026-09-02T23:18:41.782000-07:00",
+            "imageManifestMediaType": "application/vnd.oci.image.manifest.v1+json",
+            "artifactMediaType": "application/vnd.docker.attestation.manifest.v1+json",
+            "subjectManifestDigest": "sha256:dad9e51cd185d72e21c813750ec92741d80dd192ba4e636eef04011e45186c2d",
+            "imageStatus": "ACTIVE"
+        },
+        {
+            "registryId": "166917388061",
+            "repositoryName": "s2562-transit-app",
+            "imageDigest": "sha256:11d34fdbfb4c7b763b29063df4b64c83a890bbac4a8d70300245fe7064526a79",
+            "imageTags": [
+                "latest"
+            ],
+^C
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Get-Date -Format o
+2026-09-02T23:24:31.9097047-07:00
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260902232438
+**********************
