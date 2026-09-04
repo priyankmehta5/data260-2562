@@ -291,3 +291,289 @@ PS D:\Grad Prep\SJSU\GitHub\data260-2562> Stop-Transcript
 Windows PowerShell transcript end
 End time: 20260902232438
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260902234406
+Username: DESKTOP-HNRTO7F\MEHTA
+RunAs User: DESKTOP-HNRTO7F\MEHTA
+Configuration Name: 
+Machine: DESKTOP-HNRTO7F (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell
+Process ID: 16280
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\reports\hw01\RUN_LOG.txt
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Get-Date -Format o
+2026-09-02T23:44:13.5849130-07:00
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ec2 describe-security-groups --filters "Name=group-name,Values=s2562-transit-sg" --region us-east-1
+{
+    "SecurityGroups": [
+        {
+            "GroupId": "sg-0f779790b4c72b0a2",
+            "IpPermissionsEgress": [
+                {
+                    "IpProtocol": "-1",
+                    "UserIdGroupPairs": [],
+                    "IpRanges": [
+                        {
+                            "CidrIp": "0.0.0.0/0"
+                        }
+                    ],
+                    "Ipv6Ranges": [],
+                    "PrefixListIds": []
+                }
+            ],
+            "VpcId": "vpc-0f13f95e547d7c6f6",
+            "SecurityGroupArn": "arn:aws:ec2:us-east-1:166917388061:security-group/sg-0f779790b4c72b0a2",
+            "OwnerId": "166917388061",
+            "GroupName": "s2562-transit-sg",
+            "Description": "HTTP access for DATA-260 transit application",
+            "IpPermissions": [
+                {
+                    "IpProtocol": "tcp",
+                    "FromPort": 80,
+                    "ToPort": 80,
+                    "UserIdGroupPairs": [],
+                    "IpRanges": [
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws iam get-role --role-name AWSServiceRoleForECS
+{
+    "Role": {
+        "Path": "/aws-service-role/ecs.amazonaws.com/",
+        "RoleName": "AWSServiceRoleForECS",
+        "RoleId": "AROASNXING4OVAIOQVUZJ",
+        "Arn": "arn:aws:iam::166917388061:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS",
+        "CreateDate": "2026-09-03T06:48:19+00:00",
+        "AssumeRolePolicyDocument": {
+            "Version": "2012-10-17",
+            "Statement": [
+                {
+                    "Effect": "Allow",
+                    "Principal": {
+                        "Service": "ecs.amazonaws.com"
+                    },
+                    "Action": "sts:AssumeRole"
+                }
+            ]
+        },
+        "Description": "Policy to enable Amazon ECS to manage your EC2 instances and related resources.",
+        "MaxSessionDuration": 3600,
+        "RoleLastUsed": {}
+    }
+}
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws iam get-role --role-name AWSServiceRoleForECS --query "Role.{RoleName:RoleName,Path:Path,Arn:Arn}"
+{
+    "RoleName": "AWSServiceRoleForECS",
+    "Path": "/aws-service-role/ecs.amazonaws.com/",
+    "Arn": "arn:aws:iam::166917388061:role/aws-service-role/ecs.amazonaws.com/AWSServiceRoleForECS"
+}
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs describe-clusters --clusters s2562-transit-cluster --region us-east-1 --query "clusters[].{Name:clusterName,Status:status}"
+
+aws: [ERROR]: Your session has expired. Please reauthenticate using 'aws login'.
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws login
+Attempting to open your default browser. If the browser does not open, open the following URL.
+If you are unable to open the URL on this device, run this command again with the '--remote' option.
+
+https://us-east-1.signin.aws.amazon.com/v1/authorize?response_type=code&client_id=arn%3Aaws%3Asignin%3A%3A%3Adevtools%2F
+same-device&state=893341d7-67cc-44ee-aab5-d240ba0eda03&code_challenge_method=SHA-256&scope=openid&redirect_uri=http%3A%2
+F%2F127.0.0.1%3A61361%2Foauth%2Fcallback&code_challenge=93tjorAI1oQIlvvO7C08IIYpQIEN79LrtAgaAXD77gs
+
+
+Updated profile default to use arn:aws:iam::166917388061:root credentials.
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs describe-clusters --clusters s2562-transit-cluster --region us-east-1 --query "clusters[].{Name:clusterName,Status:status}"
+[
+    {
+        "Name": "s2562-transit-cluster",
+        "Status": "ACTIVE"
+    }
+]
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Get-Date -Format o
+2026-09-03T11:44:16.1467817-07:00
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260903114422
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260903120520
+Username: DESKTOP-HNRTO7F\MEHTA
+RunAs User: DESKTOP-HNRTO7F\MEHTA
+Configuration Name: 
+Machine: DESKTOP-HNRTO7F (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell
+Process ID: 16280
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\reports\hw01\RUN_LOG.txt
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Get-Date -Format o
+2026-09-03T12:05:30.3167277-07:00
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs describe-task-definition --task-definition s2562-transit-task --region us-east-1 --query "taskDefinition.{Family:family,Revision:revision,CPU:cpu,Memory:memory,NetworkMode:networkMode,Image:containerDefinitions[0].image,ContainerPort:containerDefinitions[0].portMappings[0].containerPort}"
+
+aws: [ERROR]: Your session has expired. Please reauthenticate using 'aws login'.
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws login
+Attempting to open your default browser. If the browser does not open, open the following URL.
+If you are unable to open the URL on this device, run this command again with the '--remote' option.
+
+https://us-east-1.signin.aws.amazon.com/v1/authorize?response_type=code&client_id=arn%3Aaws%3Asignin%3A%3A%3Adevtools%2F
+same-device&state=3ff1223b-38b8-49e0-b631-49f946443dc7&code_challenge_method=SHA-256&scope=openid&redirect_uri=http%3A%2
+F%2F127.0.0.1%3A59735%2Foauth%2Fcallback&code_challenge=1EdAUpZw-Ptaehy7JzXiFyQ9j1-WW5cI0kTAmMCVLZ4
+
+
+Updated profile default to use arn:aws:iam::166917388061:root credentials.
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs describe-task-definition --task-definition s2562-transit-task --region us-east-1 --query "taskDefinition.{Family:family,Revision:revision,CPU:cpu,Memory:memory,NetworkMode:networkMode,Image:containerDefinitions[0].image,ContainerPort:containerDefinitions[0].portMappings[0].containerPort}"
+{
+    "Family": "s2562-transit-task",
+    "Revision": 1,
+    "CPU": "256",
+    "Memory": "512",
+    "NetworkMode": "awsvpc",
+    "Image": "166917388061.dkr.ecr.us-east-1.amazonaws.com/s2562-transit-app",
+    "ContainerPort": 80
+}
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Get-Date -Format o
+2026-09-03T12:06:40.6055068-07:00
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260903120646
+**********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260903192607
+Username: DESKTOP-HNRTO7F\MEHTA
+RunAs User: DESKTOP-HNRTO7F\MEHTA
+Configuration Name: 
+Machine: DESKTOP-HNRTO7F (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell
+Process ID: 16280
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\reports\hw01\RUN_LOG.txt
+2026-09-03T19:26:07.5114647-07:00
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs describe-services --cluster s2562-transit-cluster --services s2562-transit-service --region us-east-1 --query "services[0].{Service:serviceName,Status:status,Desired:desiredCount,Running:runningCount,Pending:pendingCount,LaunchType:launchType}"
+null
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs describe-services --cluster s2562-transit-cluster --services s2562-transit-service --region us-east-1 --query "services[0].{Service:serviceName,Status:status,Desired:desiredCount,Running:runningCount,Pending:pendingCount,LaunchType:launchType}"
+null
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws sts get-caller-identity --query "Account" --output text
+166917388061
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws configure get region
+us-east-1
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs list-services --cluster s2562-transit-cluster --region us-east-1
+{
+    "serviceArns": [
+        "arn:aws:ecs:us-east-1:166917388061:service/s2562-transit-cluster/s2562-transit-task-service-8a4hn397"
+    ]
+}
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs describe-services --cluster s2562-transit-cluster --services s2562-transit-task-service-8a4hn397 --region us-east-1
+{
+    "services": [
+        {
+            "serviceArn": "arn:aws:ecs:us-east-1:166917388061:service/s2562-transit-cluster/s2562-transit-task-service-8
+a4hn397",
+            "serviceName": "s2562-transit-task-service-8a4hn397",
+            "clusterArn": "arn:aws:ecs:us-east-1:166917388061:cluster/s2562-transit-cluster",
+            "loadBalancers": [],
+            "serviceRegistries": [],
+            "status": "ACTIVE",
+            "desiredCount": 1,
+            "runningCount": 1,
+            "pendingCount": 0,
+            "capacityProviderStrategy": [
+                {
+                    "capacityProvider": "FARGATE",
+                    "weight": 1,
+                    "base": 0
+                }
+            ],
+            "platformVersion": "LATEST",
+            "platformFamily": "Linux",
+            "taskDefinition": "arn:aws:ecs:us-east-1:166917388061:task-definition/s2562-transit-task:1",
+            "deploymentConfiguration": {
+                "deploymentCircuitBreaker": {
+                    "enable": true,
+                    "rollback": true,
+                    "resetOnHealthyTask": false,
+                    "thresholdConfiguration": {
+^C
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> TerminatingError(): "The pipeline has been stopped."
+>> TerminatingError(): "The pipeline has been stopped."
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs describe-services --cluster s2562-transit-cluster --services s2562-transit-task-service-8a4hn397 --region us-east-1 --query "services[0].{Service:serviceName,Status:status,Desired:desiredCount,Running:runningCount,Pending:pendingCount,LaunchType:launchType}"
+{
+    "Service": "s2562-transit-task-service-8a4hn397",
+    "Status": "ACTIVE",
+    "Desired": 1,
+    "Running": 1,
+    "Pending": 0,
+    "LaunchType": null
+}
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs describe-services --cluster s2562-transit-cluster --services s2562-transit-task-service-8a4hn397 --region us-east-1 --query "services[0].{LaunchType:launchType,CapacityProviders:capacityProviderStrategy}"
+{
+    "LaunchType": null,
+    "CapacityProviders": [
+        {
+            "capacityProvider": "FARGATE",
+            "weight": 1,
+            "base": 0
+        }
+    ]
+}
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs list-tasks --cluster s2562-transit-cluster --service-name s2562-transit-task-service-8a4hn397 --desired-status RUNNING --region us-east-1
+{
+    "taskArns": [
+        "arn:aws:ecs:us-east-1:166917388061:task/s2562-transit-cluster/393f544ab71c47c48f913a3a799d471d"
+    ]
+}
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs describe-tasks --cluster s2562-transit-cluster --tasks arn:aws:ecs:us-east-1:166917388061:task/s2562-transit-cluster/393f544ab71c47c48f913a3a799d471d --region us-east-1 --query "tasks[0].{Status:lastStatus,LaunchType:launchType,CapacityProvider:capacityProviderName,PlatformVersion:platformVersion}"
+{
+    "Status": "RUNNING",
+    "LaunchType": "FARGATE",
+    "CapacityProvider": "FARGATE",
+    "PlatformVersion": "1.4.0"
+}
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Get-Date -Format o
+aws ecs describe-services --cluster s2562-transit-cluster --services s2562-transit-task-service-8a4hn397 --region us-east-1 --query "services[0].{Service:serviceName,Status:status,Desired:desiredCount,Running:runningCount,Pending:pendingCount,CapacityProviders:capacityProviderStrategy}"
+2026-09-03T19:47:59.3543197-07:00
+{
+    "Service": "s2562-transit-task-service-8a4hn397",
+    "Status": "ACTIVE",
+    "Desired": 1,
+    "Running": 1,
+    "Pending": 0,
+    "CapacityProviders": [
+        {
+            "capacityProvider": "FARGATE",
+            "weight": 1,
+            "base": 0
+        }
+    ]
+}
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Get-Date -Format o
+Stop-Transcript
+2026-09-03T19:48:11.4392068-07:00
+**********************
+Windows PowerShell transcript end
+End time: 20260903194811
+**********************
