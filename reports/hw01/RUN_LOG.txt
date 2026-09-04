@@ -577,3 +577,38 @@ Stop-Transcript
 Windows PowerShell transcript end
 End time: 20260903194811
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260903200048
+Username: DESKTOP-HNRTO7F\MEHTA
+RunAs User: DESKTOP-HNRTO7F\MEHTA
+Configuration Name: 
+Machine: DESKTOP-HNRTO7F (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell
+Process ID: 16280
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\reports\hw01\RUN_LOG.txt
+2026-09-03T20:00:48.1595469-07:00
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> aws ecs list-tasks --cluster s2562-transit-cluster --desired-status RUNNING --region us-east-1
+aws ecr describe-repositories --repository-names s2562-transit-app --region us-east-1
+Get-Date -Format o
+Stop-Transcript
+{
+    "taskArns": []
+}
+
+aws: [ERROR]: An error occurred (RepositoryNotFoundException) when calling the DescribeRepositories operation: The repos
+itory with name 's2562-transit-app' does not exist in the registry with id '166917388061'
+2026-09-03T20:01:02.5751475-07:00
+**********************
+Windows PowerShell transcript end
+End time: 20260903200102
+**********************
