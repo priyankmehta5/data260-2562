@@ -1,256 +1,349 @@
+import argparse
+import json
+import os
+import re
+import sys
+import time
+from collections import Counter
+from pathlib import Path
+from typing import Any
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from src.model_client import OllamaModelClient
 
 
-import argparse, json, os, re, sys, time
-from dataclasses import dataclass
-from typing import List, Dict, Any, Iterable, Tuple
-
-from langchain_community.chat_models import ChatOllama
-from langchain_core.prompts import ChatPromptTemplate
-from langchain_core.output_parsers import StrOutputParser
-
-
-# Optional: students can expand/modify this
-STOP = {
-    "the", "and", "for", "that", "with", "this", "from", "into", "than", "your", "you",
-    "are", "was", "were", "have", "has", "had", "use", "used", "using", "about", "how",
-    "can", "will", "more", "less", "very", "over", "under", "their", "there", "then",
-    "our", "out", "on", "in", "of", "to", "by", "a", "an", "is", "it", "as",
+STOP_WORDS = {
+    "a", "an", "and", "are", "as", "at", "be", "because", "been",
+    "by", "for", "from", "has", "have", "in", "into", "is", "it",
+    "of", "on", "or", "that", "the", "their", "this", "to", "was",
+    "were", "will", "with",
 }
 
 
-# -------------------------
-# Text cleanup + extraction
-# -------------------------
-
-def strip_code_and_md(s: str) -> str:
-    """
-    TODO: Remove markdown/code artifacts from model output.
-    Suggested:
-      - remove fenced code blocks
-      - remove inline backticks
-      - normalize whitespace
-    """
-    # Placeholder implementation:
-    return " ".join(str(s).split())
+def clean_text(value: Any) -> str:
+    text = str(value or "")
+    text = re.sub(r"```(?:json)?", "", text, flags=re.IGNORECASE)
+    text = text.replace("```", "").replace("`", "")
+    return " ".join(text.split())
 
 
-def extract_json_block(text: str) -> str:
-    """
-    TODO: Extract the first JSON object from a text response.
-    If none is present, wrap text like: {"message": "<cleaned text>"}.
-    """
-    text = str(text).strip()
-    # Placeholder: assume it's already JSON
-    return text
+def extract_json(text: str) -> dict[str, Any]:
+    cleaned = clean_text(text)
+    decoder = json.JSONDecoder()
+
+    for index, character in enumerate(cleaned):
+        if character != "{":
+            continue
+
+        try:
+            value, _ = decoder.raw_decode(cleaned[index:])
+            if isinstance(value, dict):
+                return value
+        except json.JSONDecodeError:
+            continue
+
+    return {}
 
 
+def tokenize(text: str) -> list[str]:
+    return re.findall(r"[a-z0-9]+(?:-[a-z0-9]+)?", text.lower())
 
 
-def tokens(txt: str) -> List[str]:
-    """
-    TODO: Tokenize into lowercase words (optionally keep hyphens), filter junk, etc.
-    """
-    return re.findall(r"[a-z][a-z\-]+", str(txt).lower())
+def phrase_candidates(
+    title: str,
+    content: str,
+    limit: int = 15,
+) -> list[str]:
+    words = [
+        word
+        for word in tokenize(f"{title} {content}")
+        if word not in STOP_WORDS and len(word) > 2
+    ]
+
+    phrases = []
+
+    for size in (3, 2):
+        for index in range(len(words) - size + 1):
+            phrases.append(" ".join(words[index:index + size]))
+
+    counts = Counter(phrases)
+    first_position = {}
+
+    for index, phrase in enumerate(phrases):
+        first_position.setdefault(phrase, index)
+
+    ranked = sorted(
+        counts,
+        key=lambda phrase: (-counts[phrase], first_position[phrase]),
+    )
+
+    candidates = ranked[:limit]
+
+    for word in words:
+        if word not in candidates:
+            candidates.append(word)
+
+        if len(candidates) >= limit:
+            break
+
+    return candidates
 
 
-def ngrams(words: List[str], n: int) -> Iterable[Tuple[str, ...]]:
-    """
-    TODO: Yield word n-grams from a token list.
-    """
-    for i in range(max(0, len(words) - n + 1)):
-        yield tuple(words[i:i + n])
+def normalize_tag(tag: Any) -> str:
+    value = clean_text(tag).lower()
+    value = re.sub(r"[^a-z0-9 -]", "", value)
+    return " ".join(value.split()[:4])
 
 
-def phrase_candidates(title: str, content: str, maxn: int = 12) -> List[str]:
-    """
-    TODO: Build tag candidates derived ONLY from title+content.
-    Suggested approach:
-      - tokenize + remove STOP words
-      - gather bigrams/trigrams
-      - rank by frequency
-      - fall back to unigrams
-      - return up to maxn
-    """
-    # Placeholder: students should implement
-    return []
+def normalize_summary(summary: Any, title: str, content: str) -> str:
+    value = clean_text(summary)
+
+    if not value:
+        value = clean_text(f"{title}. {content}")
+
+    words = value.split()
+
+    if len(words) > 25:
+        value = " ".join(words[:25])
+
+    value = value.rstrip(".,;:!?")
+
+    if not value:
+        value = title.strip()
+
+    return f"{value}."
 
 
-# -------------------------
-# Output schema coercion
-# -------------------------
+def coerce_reply(
+    raw_reply: Any,
+    title: str,
+    content: str,
+    strict: bool,
+) -> dict[str, Any]:
+    reply = raw_reply if isinstance(raw_reply, dict) else {}
+    data = reply.get("data", {})
 
-def coerce_reply(raw_obj: Any, title: str, content: str, strict: bool) -> Dict[str, Any]:
-    """
-    TODO: Coerce arbitrary model output into the required schema:
-      {
-        "thought": str,
-        "message": str (non-empty, <= 60 words),
-        "data": {
-          "tags": [str, str, str],        # exactly 3 topical tags
-          "summary": str,                # <= 25 words, ends with '.'
-          "issues": [str, ...]
-        }
-      }
+    if not isinstance(data, dict):
+        data = {}
 
-    strict=True suggestion:
-      - enforce at least two multi-word tags
-    """
-    # Placeholder minimal schema
+    source_words = set(tokenize(f"{title} {content}"))
+    tags = []
+
+    raw_tags = data.get("tags", [])
+
+    if not isinstance(raw_tags, list):
+        raw_tags = []
+
+    for raw_tag in raw_tags:
+        tag = normalize_tag(raw_tag)
+
+        if not tag or tag in tags:
+            continue
+
+        if strict and not source_words.intersection(tokenize(tag)):
+            continue
+
+        tags.append(tag)
+
+        if len(tags) == 3:
+            break
+
+    for candidate in phrase_candidates(title, content):
+        tag = normalize_tag(candidate)
+
+        if tag and tag not in tags:
+            tags.append(tag)
+
+        if len(tags) == 3:
+            break
+
+    if len(tags) < 3:
+        raise ValueError("The input does not contain enough words for three tags.")
+
+    issues = data.get("issues", [])
+
+    if not isinstance(issues, list):
+        issues = [clean_text(issues)]
+
     return {
-        "thought": "",
-        "message": "OK — proposal reviewed; tags and summary prepared.",
-        "data": {"tags": ["tag one", "tag two", "tag three"], "summary": "Short summary.", "issues": []},
+        "thought": clean_text(reply.get("thought", "")),
+        "message": clean_text(reply.get("message", "")),
+        "data": {
+            "tags": tags[:3],
+            "summary": normalize_summary(
+                data.get("summary", ""),
+                title,
+                content,
+            ),
+            "issues": [
+                clean_text(issue)
+                for issue in issues
+                if clean_text(issue)
+            ],
+        },
     }
 
 
-def parse_and_coerce(text: str, title: str, content: str, strict: bool) -> Dict[str, Any]:
-    """
-    TODO:
-      - extract_json_block()
-      - json.loads()
-      - coerce_reply()
-      - handle JSON parse failures gracefully
-    """
-    try:
-        obj = json.loads(extract_json_block(text))
-    except Exception:
-        obj = {"message": strip_code_and_md(text)}
-    return coerce_reply(obj, title, content, strict)
+def call_agent(
+    client: OllamaModelClient,
+    system_prompt: str,
+    user_prompt: str,
+    title: str,
+    content: str,
+    strict: bool,
+) -> tuple[dict[str, Any], int]:
+    started = time.perf_counter()
+
+    response = client.complete(
+        [
+            ("system", system_prompt),
+            ("human", user_prompt),
+        ]
+    )
+
+    latency_ms = round((time.perf_counter() - started) * 1000)
+    parsed = extract_json(str(response.content))
+    result = coerce_reply(parsed, title, content, strict)
+
+    return result, latency_ms
 
 
-# -------------------------
-# Agent wrapper
-# -------------------------
+def finalize(
+    planner: dict[str, Any],
+    reviewer: dict[str, Any],
+    title: str,
+    content: str,
+) -> dict[str, Any]:
+    reviewed = coerce_reply(reviewer, title, content, True)
 
-@dataclass
-class SimpleAgent:
-    name: str
-    system: str
-    model: Any  # LangChain ChatModel
+    if len(reviewed["data"]["tags"]) != 3:
+        reviewed = coerce_reply(planner, title, content, True)
 
-    def respond(
-        self,
-        conversation: List[Dict[str, str]],
-        task: str,
-        title: str,
-        content: str,
-        strict: bool,
-    ) -> Dict[str, Any]:
-        """
-        TODO:
-          - Build a ChatPromptTemplate with system + human instructions
-          - Inject task + conversation history
-          - Run chain: prompt | model | StrOutputParser()
-          - parse_and_coerce() the output into the required schema
-        """
-        prompt = ChatPromptTemplate.from_messages([
-            ("system", self.system),
-            ("human",
-             "Task:\n{task}\n\nConversation so far:\n{history}\n\n"
-             "Return ONLY one JSON object (no code fences, no markdown, no explanations). "
-             "Keys: thought (string), message (non-empty, <=60 words, no code), "
-             "data.tags (array of exactly 3 topical tags), "
-             "data.summary (<=25 words, no ellipses), data.issues (array).\n"
-             "Do not add extra text outside JSON."
-            ),
-        ])
+    return {
+        "tags": reviewed["data"]["tags"],
+        "summary": reviewed["data"]["summary"],
+    }
 
-        history_text = "\n".join([f'{m["role"]}: {m["content"]}' for m in conversation]) or "(empty)"
-        chain = prompt | self.model | StrOutputParser()
-
-        raw = chain.invoke({"task": task, "history": history_text})
-        return parse_and_coerce(raw, title, content, strict)
-
-
-# -------------------------
-# CLI entrypoint
-# -------------------------
 
 def main():
-    ap = argparse.ArgumentParser()
-    ap.add_argument("--title", default="Your Blog Title Here")
-    ap.add_argument("--content", default="Your blog post content goes here.")
-    ap.add_argument("--email", default="student@example.com")
-    ap.add_argument("--model", default=os.environ.get("SMOL_MODEL", "your-ollama-model-tag"))
-    ap.add_argument("--base_url", default=os.environ.get("OLLAMA_URL", "http://localhost:11434"))
-    ap.add_argument("--turns", type=int, default=1)
-    ap.add_argument("--strict", action="store_true")
-    args = ap.parse_args()
-
-    # Initialize Ollama chat model (students can adjust params)
-    try:
-        llm = ChatOllama(
-            model=args.model,
-            temperature=0.0,
-            base_url=args.base_url,
-            num_ctx=2048,
-            format="json",  # asks Ollama to produce JSON when supported
-        )
-    except Exception:
-        print(
-            "Failed to initialize ChatOllama. Is Ollama running and the model available?\n"
-            "Try: `ollama serve` and `ollama pull <your-model-tag>`.",
-            file=sys.stderr,
-        )
-        raise
-
-    # Define three agents (Planner -> Reviewer -> Finalizer)
-    planner = SimpleAgent(
-        name="Planner",
-        system="Propose exactly 3 distinct, topical tags (prefer multi-word phrases) and a one-line summary for the blog post.",
-        model=llm,
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--title", required=True)
+    parser.add_argument("--content", required=True)
+    parser.add_argument(
+        "--model",
+        default=os.environ.get("OLLAMA_MODEL", "qwen3:1.7b"),
     )
-    reviewer = SimpleAgent(
-        name="Reviewer",
-        system=(
-            "Validate: tags topical and not generic; summary ≤ 25 words; no code or markdown. "
-            "If issues, list in data.issues; otherwise echo cleaned tags/summary."
+    parser.add_argument(
+        "--base-url",
+        default=os.environ.get(
+            "OLLAMA_URL",
+            "http://localhost:11434",
         ),
-        model=llm,
     )
-    finalizer = SimpleAgent(
-        name="Finalizer",
-        system=(
-            "Use reviewer feedback to finalize. Output exactly 3 tags in data.tags and the final summary in data.summary. "
-            "Set data.issues to []."
-        ),
-        model=llm,
-    )
+    parser.add_argument("--temperature", type=float, default=0.0)
+    parser.add_argument("--strict", action="store_true")
+    args = parser.parse_args()
 
-    task = (
-        f'Given blog title "{args.title}" and content "{args.content}", produce exactly 3 topical tags '
-        f'and a one-sentence summary in your own words. Email is {args.email}.'
+    client = OllamaModelClient(
+        model=args.model,
+        temperature=args.temperature,
+        base_url=args.base_url,
     )
 
-    transcript: List[Dict[str, str]] = []
+    planner_system = (
+        "You are the Planner agent. Create exactly three distinct topical "
+        "tags and one sentence summarizing the supplied title and content. "
+        "The summary must contain no more than 25 words. Derive everything "
+        "from the supplied input. Return only valid JSON with keys thought, "
+        "message, and data. Data must contain tags, summary, and issues."
+    )
 
-    # Planner
-    t0 = time.time()
-    a = planner.respond(transcript, task, args.title, args.content, args.strict)
-    t1 = time.time()
-    transcript.append({"role": "Planner", "content": a.get("message", "")})
-    print(f"\n--- Planner ({int((t1 - t0) * 1000)} ms) ---\n{json.dumps(a, indent=2)}")
+    planner_prompt = (
+        f"Title: {args.title}\n"
+        f"Content: {args.content}\n\n"
+        "Return this JSON structure:\n"
+        "{"
+        '"thought":"brief decision note",'
+        '"message":"planner result",'
+        '"data":{'
+        '"tags":["tag one","tag two","tag three"],'
+        '"summary":"one sentence",'
+        '"issues":[]'
+        "}"
+        "}"
+    )
 
-    # Reviewer
-    t0 = time.time()
-    b = reviewer.respond(transcript, task, args.title, args.content, args.strict)
-    t1 = time.time()
-    transcript.append({"role": "Reviewer", "content": b.get("message", "")})
-    print(f"\n--- Reviewer ({int((t1 - t0) * 1000)} ms) ---\n{json.dumps(b, indent=2)}")
+    planner, planner_latency = call_agent(
+        client,
+        planner_system,
+        planner_prompt,
+        args.title,
+        args.content,
+        args.strict,
+    )
 
-    # Finalizer
-    final = finalizer.respond(transcript, task, args.title, args.content, args.strict)
-    print(f"\n Finalized Output \n{json.dumps(final, indent=2)}")
+    reviewer_system = (
+        "You are the Reviewer agent. Review the Planner output against the "
+        "original input. Correct generic, repeated, or unrelated tags. "
+        "Ensure there are exactly three topical tags and the summary is one "
+        "sentence of no more than 25 words. Return only valid JSON with keys "
+        "thought, message, and data. Data must contain the corrected tags, "
+        "summary, and issues."
+    )
 
-    # Publish package
-    package = {
-        "title": args.title,
-        "email": args.email,
-        "content": args.content,
-        "agents": {"transcript": transcript, "final": final.get("data", {})},
-        "submissionDate": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+    reviewer_prompt = (
+        f"Original title: {args.title}\n"
+        f"Original content: {args.content}\n\n"
+        f"Planner output:\n{json.dumps(planner, indent=2)}\n\n"
+        "Return the reviewed result using the same JSON structure."
+    )
+
+    reviewer, reviewer_latency = call_agent(
+        client,
+        reviewer_system,
+        reviewer_prompt,
+        args.title,
+        args.content,
+        args.strict,
+    )
+
+    final_output = finalize(
+        planner,
+        reviewer,
+        args.title,
+        args.content,
+    )
+
+    transcript = {
+        "planner": planner,
+        "reviewer": reviewer,
     }
-    print(f"\n Publish Package \n{json.dumps(package, indent=2)}")
+
+    publish_output = {
+        "title": args.title,
+        "content": args.content,
+        "transcript": transcript,
+        "final": final_output,
+    }
+
+    print(
+        f"\n--- Planner Output ({planner_latency} ms) ---"
+    )
+    print(json.dumps(planner, indent=2))
+
+    print(
+        f"\n--- Reviewer Output ({reviewer_latency} ms) ---"
+    )
+    print(json.dumps(reviewer, indent=2))
+
+    print("\n--- Finalized Output ---")
+    print(json.dumps(final_output, indent=2))
+
+    print("\n--- Publish Output ---")
+    print(json.dumps(publish_output, indent=2))
 
 
 if __name__ == "__main__":
