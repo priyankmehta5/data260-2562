@@ -1153,3 +1153,45 @@ Stop-Transcript
 Windows PowerShell transcript end
 End time: 20260904184212
 **********************
+
+**********************
+PART 4 - MODEL CLIENT
+**********************
+
+Model: qwen3:1.7b
+Execution mode: CPU only
+Client command: python code/hw1_client.py
+
+The interactive model client completed five conversation turns.
+
+Statistics after turn 3:
+Turn count: 3
+Cumulative input tokens: 501
+Cumulative output tokens: 131
+History length: 1370 characters
+
+Statistics after turn 5:
+Turn count: 5
+Cumulative input tokens: 1155
+Cumulative output tokens: 193
+History length: 1920 characters
+
+Final statistics:
+Turn count: 5
+Cumulative input tokens: 1155
+Cumulative output tokens: 193
+
+AGENT.md instructions loaded successfully.
+Bullet-only response validation: PASS
+Five-turn conversation: PASS
+Token tracking: PASS
+Conversation history tracking: PASS
+
+Part 4 screenshots:
+reports/hw01/screenshots/part4-bullet-format.jpg
+reports/hw01/screenshots/part4-stats-after-turn-3.jpg
+reports/hw01/screenshots/part4-stats-after-turn-5.jpg
+reports/hw01/screenshots/part4-final-stats.jpg
+
+PART 4 RESULT: PASS
+**********************
