@@ -743,3 +743,413 @@ Stop-Transcript
 Windows PowerShell transcript end
 End time: 20260904070459
 **********************
+**********************
+Windows PowerShell transcript start
+Start time: 20260904073734
+Username: DESKTOP-HNRTO7F\MEHTA
+RunAs User: DESKTOP-HNRTO7F\MEHTA
+Configuration Name: 
+Machine: DESKTOP-HNRTO7F (Microsoft Windows NT 10.0.19045.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe
+Process ID: 2012
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\reports\hw01\RUN_LOG.txt
+2026-09-04T07:37:34.3198125-07:00
+PS D:\Grad Prep\SJSU\GitHub\data260-2562>
+(.venv) python code/run_nondeterminism.py --input reports/hw01/cases/nondeterminism_input.json --model qwen3:1.7b --runs 20
+    "morning commute",
+    "blue line"
+  ],
+  "latency_ms": 119146
+}
+Temperature 0.7, run 4/20
+{
+  "tags": [
+    "vta signal failure",
+    "santa clara station",
+    "blue line delays"
+  ],
+  "latency_ms": 136499
+}
+Temperature 0.7, run 5/20
+{
+  "tags": [
+    "signal failure",
+    "morning commute",
+    "blue line"
+  ],
+  "latency_ms": 97660
+}
+Temperature 0.7, run 6/20
+{
+  "tags": [
+    "signal failure",
+    "blue line",
+    "vta blue line"
+  ],
+  "latency_ms": 133340
+}
+Temperature 0.7, run 7/20
+{
+  "tags": [
+    "signal failure",
+    "santa clara station",
+    "blue line"
+  ],
+  "latency_ms": 130850
+}
+Temperature 0.7, run 8/20
+{
+  "tags": [
+    "signal failure",
+    "blue line",
+    "vta blue line"
+  ],
+  "latency_ms": 106221
+}
+Temperature 0.7, run 9/20
+{
+  "tags": [
+    "signal failure",
+    "delays",
+    "blue line"
+  ],
+  "latency_ms": 76401
+}
+Temperature 0.7, run 10/20
+{
+  "tags": [
+    "signal failure",
+    "rail service disruption",
+    "blue line"
+  ],
+  "latency_ms": 85833
+}
+Temperature 0.7, run 11/20
+{
+  "tags": [
+    "signal failure",
+    "delays",
+    "blue line"
+  ],
+  "latency_ms": 103304
+}
+Temperature 0.7, run 12/20
+{
+  "tags": [
+    "signal failure",
+    "santa clara station",
+    "blue line"
+  ],
+  "latency_ms": 103724
+}
+Temperature 0.7, run 13/20
+{
+  "tags": [
+    "signal failure",
+    "morning commute",
+    "blue line"
+  ],
+  "latency_ms": 102975
+}
+Temperature 0.7, run 14/20
+{
+  "tags": [
+    "signal failure",
+    "commute delay",
+    "blue line"
+  ],
+  "latency_ms": 111826
+}
+Temperature 0.7, run 15/20
+{
+  "tags": [
+    "signal failure",
+    "santa clara station",
+    "blue line"
+  ],
+  "latency_ms": 134390
+}
+Temperature 0.7, run 16/20
+{
+  "tags": [
+    "santa clara station",
+    "signal failure",
+    "blue line"
+  ],
+  "latency_ms": 99291
+}
+Temperature 0.7, run 17/20
+{
+  "tags": [
+    "signal failure",
+    "morning commute",
+    "blue line"
+  ],
+  "latency_ms": 78530
+}
+Temperature 0.7, run 18/20
+{
+  "tags": [
+    "signal failure",
+    "santa clara",
+    "blue line"
+  ],
+  "latency_ms": 151569
+}
+Temperature 0.7, run 19/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta blue line"
+  ],
+  "latency_ms": 145394
+}
+Temperature 0.7, run 20/20
+{
+  "tags": [
+    "signal failure",
+    "santa clara station",
+    "blue line"
+  ],
+  "latency_ms": 119151
+}
+Temperature 0.0, run 1/20
+{
+  "tags": [
+    "signal failure",
+    "morning commute",
+    "blue line"
+  ],
+  "latency_ms": 162249
+}
+Temperature 0.0, run 2/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta blue line"
+  ],
+  "latency_ms": 120767
+}
+Temperature 0.0, run 3/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 81598
+}
+Temperature 0.0, run 4/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 75717
+}
+Temperature 0.0, run 5/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 75190
+}
+Temperature 0.0, run 6/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 75151
+}
+Temperature 0.0, run 7/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 75158
+}
+Temperature 0.0, run 8/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 78268
+}
+Temperature 0.0, run 9/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 74853
+}
+Temperature 0.0, run 10/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 74656
+}
+Temperature 0.0, run 11/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 74430
+}
+Temperature 0.0, run 12/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 75202
+}
+Temperature 0.0, run 13/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 76626
+}
+Temperature 0.0, run 14/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 74907
+}
+Temperature 0.0, run 15/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 84626
+}
+Temperature 0.0, run 16/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 90411
+}
+Temperature 0.0, run 17/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 85091
+}
+Temperature 0.0, run 18/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 77023
+}
+Temperature 0.0, run 19/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 76981
+}
+Temperature 0.0, run 20/20
+{
+  "tags": [
+    "blue line",
+    "signal failure",
+    "vta"
+  ],
+  "latency_ms": 79974
+}
+
+Experiment complete
+[
+  {
+    "temperature": 0.7,
+    "successful_runs": 20,
+    "distinct_tag_sets": 10,
+    "tags_in_all_runs": [],
+    "tags_in_exactly_one_run": [
+      "blue line delays",
+      "blue line service disruption",
+      "commute delay",
+      "rail service",
+      "rail service disruption",
+      "santa clara",
+      "vta signal failure"
+    ],
+    "latency_ms": {
+      "p50": 115486,
+      "p95": 161003,
+      "p99": 167861
+    }
+  },
+  {
+    "temperature": 0.0,
+    "successful_runs": 20,
+    "distinct_tag_sets": 3,
+    "tags_in_all_runs": [
+      "blue line",
+      "signal failure"
+    ],
+    "tags_in_exactly_one_run": [
+      "morning commute",
+      "vta blue line"
+    ],
+    "latency_ms": {
+      "p50": 76804,
+      "p95": 122841,
+      "p99": 154367
+    }
+  }
+]
+PS D:\Grad Prep\SJSU\GitHub\data260-2562>
+(.venv) Get-Date -Format o
+Stop-Transcript
+2026-09-04T18:42:12.4178296-07:00
+**********************
+Windows PowerShell transcript end
+End time: 20260904184212
+**********************

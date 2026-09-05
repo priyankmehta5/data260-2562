@@ -1,0 +1,41 @@
+temperature,run_number,tags,summary,latency_ms,timestamp_utc
+0.7,1,"[""signal failure"", ""rail service"", ""blue line""]",Major delays and disrupted Blue Line service near Santa Clara station.,169575,2026-09-04T14:43:42.782625+00:00
+0.7,2,"[""signal failure"", ""santa clara station"", ""blue line service disruption""]",Signal failure at Santa Clara Station disrupted Blue Line service during morning commute.,160552,2026-09-04T14:46:23.339457+00:00
+0.7,3,"[""signal failure"", ""morning commute"", ""blue line""]",Signal failure near Santa Clara station caused major delays and disrupted Blue Line service during morning commute.,119146,2026-09-04T14:48:22.481213+00:00
+0.7,4,"[""vta signal failure"", ""santa clara station"", ""blue line delays""]",Signal failure at Santa Clara Station disrupted Blue Line service during morning commute.,136499,2026-09-04T14:50:38.994894+00:00
+0.7,5,"[""signal failure"", ""morning commute"", ""blue line""]",Signal failure near Santa Clara caused major delays and disrupted Blue Line service during morning commute.,97660,2026-09-04T14:52:16.659852+00:00
+0.7,6,"[""signal failure"", ""blue line"", ""vta blue line""]",Signal failure near Santa Clara station disrupted Blue Line service during morning commute.,133340,2026-09-04T14:54:29.994936+00:00
+0.7,7,"[""signal failure"", ""santa clara station"", ""blue line""]",Signal failure near Santa Clara station disrupted Blue Line light rail service during morning commute.,130850,2026-09-04T14:56:40.854563+00:00
+0.7,8,"[""signal failure"", ""blue line"", ""vta blue line""]",Signal failure near Santa Clara caused major delays and disrupted Blue Line service during morning commute.,106221,2026-09-04T14:58:27.085345+00:00
+0.7,9,"[""signal failure"", ""delays"", ""blue line""]",Signal failure at Santa Clara station disrupted Blue Line service during morning commute.,76401,2026-09-04T14:59:43.501047+00:00
+0.7,10,"[""signal failure"", ""rail service disruption"", ""blue line""]",Signal failure near Santa Clara station disrupted Blue Line rail service during morning commute.,85833,2026-09-04T15:01:09.347489+00:00
+0.7,11,"[""signal failure"", ""delays"", ""blue line""]",Signal failure at Santa Clara station disrupted Blue Line service during morning commute.,103304,2026-09-04T15:02:53.017049+00:00
+0.7,12,"[""signal failure"", ""santa clara station"", ""blue line""]",Signal failure near Santa Clara station disrupted Blue Line service during morning commute.,103724,2026-09-04T15:04:36.758198+00:00
+0.7,13,"[""signal failure"", ""morning commute"", ""blue line""]",Signal failure near Santa Clara station caused delays and disrupted Blue Line service during morning commute.,102975,2026-09-04T15:06:19.749831+00:00
+0.7,14,"[""signal failure"", ""commute delay"", ""blue line""]",VTA Blue Line signal failure near Santa Clara disrupted morning commute.,111826,2026-09-04T15:08:11.589098+00:00
+0.7,15,"[""signal failure"", ""santa clara station"", ""blue line""]",VTA Blue Line Signal Failure Disrupts Service at Santa Clara Station.,134390,2026-09-04T15:10:26.163714+00:00
+0.7,16,"[""santa clara station"", ""signal failure"", ""blue line""]",Signal failure near Santa Clara station disrupted Blue Line service during morning commute.,99291,2026-09-04T15:12:05.477196+00:00
+0.7,17,"[""signal failure"", ""morning commute"", ""blue line""]",Signal failure near Santa Clara station caused major delays and disrupted Blue Line service during morning commute.,78530,2026-09-04T15:13:24.179315+00:00
+0.7,18,"[""signal failure"", ""santa clara"", ""blue line""]",Signal failure near Santa Clara disrupted Blue Line service during morning commute.,151569,2026-09-04T15:15:55.768529+00:00
+0.7,19,"[""blue line"", ""signal failure"", ""vta blue line""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,145394,2026-09-04T15:18:21.175211+00:00
+0.7,20,"[""signal failure"", ""santa clara station"", ""blue line""]",Signal failure near Santa Clara Station disrupted Blue Line service during morning commute.,119151,2026-09-04T15:20:20.354584+00:00
+0.0,1,"[""signal failure"", ""morning commute"", ""blue line""]",Signal failure near Santa Clara station caused major delays and disrupted Blue Line light rail service during the morning commute.,162249,2026-09-04T17:11:05.446925+00:00
+0.0,2,"[""blue line"", ""signal failure"", ""vta blue line""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,120767,2026-09-04T17:13:06.231154+00:00
+0.0,3,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,81598,2026-09-04T17:14:27.824106+00:00
+0.0,4,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,75717,2026-09-04T17:15:43.550478+00:00
+0.0,5,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,75190,2026-09-04T17:16:58.746097+00:00
+0.0,6,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,75151,2026-09-04T17:18:13.913017+00:00
+0.0,7,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,75158,2026-09-04T17:19:29.084262+00:00
+0.0,8,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,78268,2026-09-04T17:20:47.369274+00:00
+0.0,9,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,74853,2026-09-04T17:22:02.277833+00:00
+0.0,10,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,74656,2026-09-04T17:23:16.947589+00:00
+0.0,11,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,74430,2026-09-04T17:24:31.552085+00:00
+0.0,12,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,75202,2026-09-04T17:25:46.895925+00:00
+0.0,13,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,76626,2026-09-04T17:27:03.544752+00:00
+0.0,14,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,74907,2026-09-04T17:28:18.656876+00:00
+0.0,15,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,84626,2026-09-04T17:29:43.732676+00:00
+0.0,16,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,90411,2026-09-04T17:31:14.150264+00:00
+0.0,17,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,85091,2026-09-04T17:32:39.245648+00:00
+0.0,18,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,77023,2026-09-04T17:33:56.278343+00:00
+0.0,19,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,76981,2026-09-04T17:35:13.262489+00:00
+0.0,20,"[""blue line"", ""signal failure"", ""vta""]",Signal failure near Santa Clara caused delays and disrupted Blue Line service during morning commute.,79974,2026-09-04T17:36:33.251559+00:00

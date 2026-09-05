@@ -70,3 +70,22 @@ The final output contained exactly three distinct tags. All three tags were deri
 ### Observed Model Limitation
 
 The Planner and Reviewer placed the summary text in the auxiliary `issues` array even though it was not an issue. I detected this by comparing the meaning of the `issues` field with its actual content. The deterministic Finalizer excluded that field from the required final JSON, so the published result contained only the validated tags and summary.
+
+## Part 3: Nondeterminism Experiment
+
+The nondeterminism experiment used the same fixed municipal transit incident input for every run. The local `qwen3:1.7b` model was tested 20 times at temperature 0.7 and 20 times at temperature 0.0. All 40 runs completed successfully.
+
+### Results
+
+| Temperature | Successful Runs | Distinct Tag Sets | p50 Latency | p95 Latency | p99 Latency |
+|---|---:|---:|---:|---:|---:|
+| 0.7 | 20 | 10 | 115,486 ms | 161,003 ms | 167,861 ms |
+| 0.0 | 20 | 3 | 76,804 ms | 122,841 ms | 154,367 ms |
+
+At temperature 0.7, no tag appeared in all 20 runs. The tags that appeared in exactly one run were `blue line delays`, `blue line service disruption`, `commute delay`, `rail service`, `rail service disruption`, `santa clara`, and `vta signal failure`.
+
+At temperature 0.0, `blue line` and `signal failure` appeared in all 20 runs. The tags `morning commute` and `vta blue line` each appeared in exactly one run.
+
+The higher temperature produced 10 distinct tag sets, while temperature 0.0 produced only 3. This shows that lowering the temperature reduced output variation but did not eliminate it completely. Temperature 0.0 was also faster in this experiment, with a median latency of 76,804 ms compared with 115,486 ms at temperature 0.7.
+
+The latency measurements represent the complete Planner and Reviewer workflow for each test run.

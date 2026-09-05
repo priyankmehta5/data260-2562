@@ -1,0 +1,40 @@
+[
+  {
+    "temperature": 0.7,
+    "successful_runs": 20,
+    "distinct_tag_sets": 10,
+    "tags_in_all_runs": [],
+    "tags_in_exactly_one_run": [
+      "blue line delays",
+      "blue line service disruption",
+      "commute delay",
+      "rail service",
+      "rail service disruption",
+      "santa clara",
+      "vta signal failure"
+    ],
+    "latency_ms": {
+      "p50": 115486,
+      "p95": 161003,
+      "p99": 167861
+    }
+  },
+  {
+    "temperature": 0.0,
+    "successful_runs": 20,
+    "distinct_tag_sets": 3,
+    "tags_in_all_runs": [
+      "blue line",
+      "signal failure"
+    ],
+    "tags_in_exactly_one_run": [
+      "morning commute",
+      "vta blue line"
+    ],
+    "latency_ms": {
+      "p50": 76804,
+      "p95": 122841,
+      "p99": 154367
+    }
+  }
+]
