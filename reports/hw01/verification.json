@@ -1,0 +1,54 @@
+{
+  "homework": "hw01",
+  "sid4": "2562",
+  "verify_seed": 262562,
+  "generated_at_utc": "2026-09-05T03:42:49.724094+00:00",
+  "overall_status": "PASS",
+  "checks": [
+    {
+      "name": "required_files",
+      "status": "PASS",
+      "details": "All required files exist"
+    },
+    {
+      "name": "html_title",
+      "status": "PASS",
+      "details": "HTML title begins with HW1-"
+    },
+    {
+      "name": "docker_web_application",
+      "status": "PASS",
+      "details": "HTTP status: 200"
+    },
+    {
+      "name": "model_adapter_interface",
+      "status": "PASS",
+      "details": "complete(messages, tools=None) method found"
+    },
+    {
+      "name": "nondeterminism_run_count",
+      "status": "PASS",
+      "details": "Total runs: 40"
+    },
+    {
+      "name": "temperature_0.7_run_count",
+      "status": "PASS",
+      "details": "Temperature 0.7 runs: 20"
+    },
+    {
+      "name": "temperature_0.0_run_count",
+      "status": "PASS",
+      "details": "Temperature 0.0 runs: 20"
+    },
+    {
+      "name": "nondeterminism_output_format",
+      "status": "PASS",
+      "details": "Every run has three tags, a summary of at most 25 words, and positive latency"
+    },
+    {
+      "name": "part4_conversation",
+      "status": "PASS",
+      "details": "Five-turn statistics found"
+    }
+  ]
+}
