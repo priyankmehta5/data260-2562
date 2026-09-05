@@ -89,3 +89,24 @@ At temperature 0.0, `blue line` and `signal failure` appeared in all 20 runs. Th
 The higher temperature produced 10 distinct tag sets, while temperature 0.0 produced only 3. This shows that lowering the temperature reduced output variation but did not eliminate it completely. Temperature 0.0 was also faster in this experiment, with a median latency of 76,804 ms compared with 115,486 ms at temperature 0.7.
 
 The latency measurements represent the complete Planner and Reviewer workflow for each test run.
+
+## Part 4: Model Client Conversation
+
+The interactive model client completed a five-turn code-review conversation using the local `qwen3:1.7b` model. Instructions were loaded from the root-level `AGENT.md` file and sent to the model as a system message.
+
+All five responses followed the required bullet-only format. The client displayed the input, output, and total token counts after every model response.
+
+### Conversation Statistics
+
+| Measurement              |     After Turn 3 |     After Turn 5 |
+| ------------------------ | ---------------: | ---------------: |
+| Turn count               |                3 |                5 |
+| Cumulative input tokens  |              501 |            1,155 |
+| Cumulative output tokens |              131 |              193 |
+| History length           | 1,370 characters | 1,920 characters |
+
+Between turns 3 and 5, the cumulative input-token count increased from 501 to 1,155, while the conversation history increased from 1,370 to 1,920 characters. The input-token count increased because each new request included the system instructions and the previous user and assistant messages.
+
+The cumulative output-token count increased from 131 to 193 as two additional responses were generated. The model followed the instructions from `AGENT.md`, and the client reported `Bullet-only format followed: Yes`.
+
+The final session contained five completed turns, 1,155 cumulative input tokens, and 193 cumulative output tokens.

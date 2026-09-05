@@ -1,4 +1,4 @@
-from typing import Any
+'''from typing import Any
 
 from langchain_ollama import ChatOllama
 
@@ -25,4 +25,19 @@ class OllamaModelClient:
         tools: list[Any] | None = None,
     ):
         model = self.model.bind_tools(tools) if tools else self.model
-        return model.invoke(messages)
+        return model.invoke(messages)'''
+
+from langchain_ollama import ChatOllama
+
+
+class OllamaModelClient:
+    def __init__(self, model="qwen3:1.7b", temperature=0.0):
+        self.model = ChatOllama(
+            model=model,
+            temperature=temperature,
+            reasoning=False
+        )
+
+    def complete(self, messages, tools=None):
+        client = self.model.bind_tools(tools) if tools else self.model
+        return client.invoke(messages)
