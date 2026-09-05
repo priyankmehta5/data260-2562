@@ -1,0 +1,239 @@
+# Homework 1 Reproducible Run Instructions
+
+## Configuration
+
+* SID4: 2562
+* PORT_BASE: 8762
+* PREFIX: s2562
+* SEED: 2562
+* VERIFY_SEED: 262562
+* DOMAIN_ID: 2
+* Domain: Municipal transit incidents
+* Local model: qwen3:1.7b
+* Model execution: CPU only
+
+## Prerequisites
+
+The following software is required:
+
+* Git
+* Python 3.11 or 3.12
+* Docker Desktop
+* Ollama
+
+The commands below use Windows PowerShell.
+
+## 1. Clone the Repository
+
+```powershell
+git clone https://github.com/priyankmehta5/data260-2562.git
+cd data260-2562
+```
+
+After the final submission tag is created, the submitted version can be checked out with:
+
+```powershell
+git checkout hw1
+```
+
+## 2. Create the Python Environment
+
+```powershell
+py -3.11 -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+## 3. Run the Web Application with Docker
+
+Make sure Docker Desktop is running.
+
+Build the image:
+
+```powershell
+docker build -f code/Dockerfile -t data260-2562-hw1 code/web_application
+```
+
+Run the container:
+
+```powershell
+docker run -d -p 8762:80 --name data260-2562-web data260-2562-hw1
+```
+
+Confirm that the container is running:
+
+```powershell
+docker ps
+```
+
+Open the application in a browser:
+
+```text
+http://localhost:8762
+```
+
+After testing, stop and remove only the Homework 1 container:
+
+```powershell
+docker stop data260-2562-web
+docker rm data260-2562-web
+```
+
+## 4. Prepare Ollama in CPU-Only Mode
+
+Download the model:
+
+```powershell
+ollama pull qwen3:1.7b
+```
+
+Exit the Ollama tray application if it is already running. In the first PowerShell window, run:
+
+```powershell
+$env:OLLAMA_LLM_LIBRARY = "cpu_avx2"
+ollama serve
+```
+
+Keep this window open.
+
+In a second PowerShell window, activate the environment:
+
+```powershell
+cd data260-2562
+.\.venv\Scripts\Activate.ps1
+```
+
+Test the model:
+
+```powershell
+ollama run qwen3:1.7b "Reply with only: CPU test successful"
+ollama ps
+```
+
+The `PROCESSOR` column should show `100% CPU`.
+
+## 5. Run the Planner and Reviewer Workflow
+
+```powershell
+python code/agents_demo.py --title "VTA Blue Line Signal Failure" --content "A signal failure near Santa Clara station caused major delays and disrupted Blue Line light rail service during the morning commute." --model qwen3:1.7b --temperature 0.0 --strict
+```
+
+The program should display:
+
+* Planner Output
+* Reviewer Output
+* Finalized Output
+* Publish Output
+
+The finalized output must contain exactly three tags and a summary of no more than 25 words.
+
+## 6. Run the Nondeterminism Experiment
+
+The repository already contains the original submitted experiment results. To reproduce all 40 runs in a fresh disposable clone, remove only the generated experiment-output files:
+
+```powershell
+Remove-Item reports/hw01/raw/nondeterminism_runs.json
+Remove-Item reports/hw01/raw/nondeterminism_runs.csv
+Remove-Item reports/hw01/raw/nondeterminism_summary.json
+```
+
+Do not delete:
+
+```text
+reports/hw01/cases/nondeterminism_input.json
+```
+
+Run 20 tests at temperature 0.7 and 20 tests at temperature 0.0:
+
+```powershell
+python code/run_nondeterminism.py --input reports/hw01/cases/nondeterminism_input.json --model qwen3:1.7b --runs 20
+```
+
+The experiment may require several hours when running entirely on the CPU. Completed runs are saved incrementally. If the process is interrupted, run the same command again to resume it.
+
+The generated files are:
+
+```text
+reports/hw01/raw/nondeterminism_runs.json
+reports/hw01/raw/nondeterminism_runs.csv
+reports/hw01/raw/nondeterminism_summary.json
+```
+
+Verify the run counts:
+
+```powershell
+python -c "import json; d=json.load(open('reports/hw01/raw/nondeterminism_runs.json')); print('Total:',len(d)); print('Temp 0.7:',sum(x['temperature']==0.7 for x in d)); print('Temp 0.0:',sum(x['temperature']==0.0 for x in d))"
+```
+
+Expected output:
+
+```text
+Total: 40
+Temp 0.7: 20
+Temp 0.0: 20
+```
+
+## 7. Run the Interactive Model Client
+
+```powershell
+python code/hw1_client.py
+```
+
+Use these five prompts:
+
+```text
+Review this Python function: def calculate_total(prices): return sum(prices)
+```
+
+```text
+How could the function handle an empty list?
+```
+
+```text
+Review this revised version: def calculate_total(prices): return sum(prices) if prices else 0
+```
+
+After turn 3, enter:
+
+```text
+/stats
+```
+
+Continue with:
+
+```text
+Could invalid values such as strings cause a problem?
+```
+
+```text
+Give a final review of the function and suggest one improvement.
+```
+
+After turn 5, enter:
+
+```text
+/stats
+```
+
+End the client with:
+
+```text
+/exit
+```
+
+The model responses should contain only bullet points. The client should display per-turn token usage, cumulative token counts, turn count, and serialized history length.
+
+## 8. Review the Submitted Results
+
+The main evidence files are:
+
+```text
+reports/hw01/RUN_LOG.txt
+reports/hw01/METRICS.md
+reports/hw01/AI_USE.md
+reports/hw01/raw/
+reports/hw01/screenshots/
+reports/hw01/report.pdf
+reports/hw01/verification.json
+```
