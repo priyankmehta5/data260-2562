@@ -1,2 +1,6 @@
-langchain-ollama
-pydantic
+fastapi==0.141.1
+langchain-ollama==1.1.0
+langgraph==1.2.11
+pydantic==2.13.5
+python-multipart==0.0.32
+uvicorn[standard]==0.52.4
