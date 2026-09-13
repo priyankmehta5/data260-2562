@@ -1,0 +1,36 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260912184743
+Username: DESKTOP-HNRTO7F\MEHTA
+RunAs User: DESKTOP-HNRTO7F\MEHTA
+Configuration Name: 
+Machine: DESKTOP-HNRTO7F (Microsoft Windows NT 10.0.19045.0)
+Host Application: powershell
+Process ID: 25496
+PSVersion: 5.1.19041.6456
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.19041.6456
+BuildVersion: 10.0.19041.6456
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+Transcript started, output file is .\reports\hw02\RUN_LOG.txt
+2026-09-12T18:47:43.4291220-07:00
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        reports/hw02/
+        src/__init__.py
+
+nothing added to commit but untracked files present (use "git add" to track)
+80dd69152bf8428e374a29f79903782326326949
+Python 3.12.0
+PS D:\Grad Prep\SJSU\GitHub\data260-2562> Stop-Transcript
+**********************
+Windows PowerShell transcript end
+End time: 20260912184823
+**********************
