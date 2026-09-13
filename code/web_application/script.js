@@ -1,148 +1,266 @@
-"use strict";
-
-// Closure used to maintain the number of successful form submissions.
-// The count variable cannot be accessed directly from outside the closure.
-const createSubmissionCounter = () => {
-    let count = 0;
-
-    return () => {
-        count += 1;
-        return count;
-    };
-};
-
-const trackSuccessfulSubmission = createSubmissionCounter();
-
-// Arrow function used to validate the assignment-specific requirements.
-const validateForm = () => {
-    const incidentDescription = document
-        .getElementById("incidentDescription")
-        .value
-        .trim();
-
-    const termsAccepted = document
-        .getElementById("termsAccepted")
-        .checked;
-
-    // "More than 25 characters" means that 25 or fewer is invalid.
-    if (incidentDescription.length <= 25) {
-        alert(
-            "The incident description must contain more than 25 characters."
-        );
-
-        document.getElementById("incidentDescription").focus();
-        return false;
-    }
-
-    if (!termsAccepted) {
-        alert(
-            "You must agree to the terms and conditions before submitting."
-        );
-
-        document.getElementById("termsAccepted").focus();
-        return false;
-    }
-
-    return true;
-};
+const API_URL = "/api/incidents";
 
 const incidentForm = document.getElementById("incidentForm");
+const searchForm = document.getElementById("searchForm");
+const searchInput = document.getElementById("search");
+const refreshButton = document.getElementById("refreshButton");
+const clearSearchButton = document.getElementById("clearSearchButton");
+const formMessage = document.getElementById("formMessage");
+const loadingState = document.getElementById("loadingState");
+const emptyState = document.getElementById("emptyState");
+const errorState = document.getElementById("errorState");
+const incidentList = document.getElementById("incidentList");
 
-incidentForm.addEventListener("submit", (event) => {
-    // Prevent the browser from reloading the page after submission.
-    event.preventDefault();
+function showState(state) {
+    loadingState.hidden = state !== "loading";
+    emptyState.hidden = state !== "empty";
+    errorState.hidden = state !== "error";
+    incidentList.hidden = state !== "list";
+}
 
-    // Stop processing if the custom validation fails.
-    if (!validateForm()) {
+function showMessage(message, isError = false) {
+    formMessage.textContent = message;
+    formMessage.hidden = false;
+
+    if (isError) {
+        formMessage.classList.add("error-state");
+    } else {
+        formMessage.classList.remove("error-state");
+    }
+}
+
+async function getErrorMessage(response) {
+    try {
+        const data = await response.json();
+
+        if (typeof data.detail === "string") {
+            return data.detail;
+        }
+
+        return "The request could not be completed.";
+    } catch {
+        return "The request could not be completed.";
+    }
+}
+
+function createIncidentCard(incident) {
+    const card = document.createElement("article");
+    card.className = "incident-card";
+
+    const title = document.createElement("h3");
+    title.textContent = incident.title;
+
+    const description = document.createElement("p");
+    description.textContent = incident.description;
+
+    const incidentId = document.createElement("p");
+    incidentId.className = "incident-id";
+    incidentId.textContent = `Incident ID: ${incident.id}`;
+
+    const actions = document.createElement("div");
+    actions.className = "card-actions";
+
+    const editButton = document.createElement("button");
+    editButton.type = "button";
+    editButton.textContent = "Edit";
+    editButton.addEventListener("click", () => {
+        updateIncident(incident);
+    });
+
+    const deleteButton = document.createElement("button");
+    deleteButton.type = "button";
+    deleteButton.textContent = "Delete";
+    deleteButton.className = "delete-button";
+    deleteButton.addEventListener("click", () => {
+        deleteIncident(incident);
+    });
+
+    actions.append(editButton, deleteButton);
+    card.append(title, description, incidentId, actions);
+
+    return card;
+}
+
+function displayIncidents(incidents) {
+    incidentList.replaceChildren();
+
+    if (incidents.length === 0) {
+        showState("empty");
         return;
     }
 
-    // Read the values entered in the form.
-    const incidentTitle = document
-        .getElementById("incidentTitle")
+    incidents.forEach((incident) => {
+        incidentList.appendChild(createIncidentCard(incident));
+    });
+
+    showState("list");
+}
+
+async function loadIncidents(search = "") {
+    showState("loading");
+
+    try {
+        const url = search
+            ? `${API_URL}?search=${encodeURIComponent(search)}`
+            : API_URL;
+
+        const response = await fetch(url, {
+            cache: "no-store"
+        });
+
+        if (!response.ok) {
+            throw new Error("Unable to load incidents.");
+        }
+
+        const incidents = await response.json();
+        displayIncidents(incidents);
+    } catch (error) {
+        console.error(error);
+        showState("error");
+    }
+}
+
+async function createIncident(event) {
+    event.preventDefault();
+
+    const title = document.getElementById("title").value.trim();
+    const description = document
+        .getElementById("description")
         .value
         .trim();
 
-    const transitRoute = document
-        .getElementById("transitRoute")
-        .value
-        .trim();
+    if (!title || !description) {
+        showMessage(
+            "Enter both an incident title and description.",
+            true
+        );
+        return;
+    }
 
-    const submitterEmail = document
-        .getElementById("submitterEmail")
-        .value
-        .trim();
+    try {
+        const response = await fetch(API_URL, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                title,
+                description
+            })
+        });
 
-    const incidentDescription = document
-        .getElementById("incidentDescription")
-        .value
-        .trim();
+        if (!response.ok) {
+            throw new Error(await getErrorMessage(response));
+        }
 
-    const incidentCategory = document
-        .getElementById("incidentCategory")
-        .value;
+        window.location.href = "/";
+    } catch (error) {
+        showMessage(error.message, true);
+    }
+}
 
-    const termsAccepted = document
-        .getElementById("termsAccepted")
-        .checked;
+async function updateIncident(incident) {
+    const title = window.prompt(
+        "Enter the updated incident title:",
+        incident.title
+    );
 
-    // Create a JavaScript object from the submitted form data.
-    const incidentData = {
-        incidentTitle,
-        transitRoute,
-        submitterEmail,
-        incidentDescription,
-        incidentCategory,
-        termsAccepted
-    };
+    if (title === null) {
+        return;
+    }
 
-    // Convert the form data object into a JSON string.
-    const incidentJsonString = JSON.stringify(incidentData);
+    const description = window.prompt(
+        "Enter the updated incident description:",
+        incident.description
+    );
 
-    console.log("Form data as a JSON string:");
-    console.log(incidentJsonString);
+    if (description === null) {
+        return;
+    }
 
-    // Convert the JSON string back into a JavaScript object.
-    const parsedIncidentData = JSON.parse(incidentJsonString);
+    if (!title.trim() || !description.trim()) {
+        showMessage(
+            "The title and description cannot be empty.",
+            true
+        );
+        return;
+    }
 
-    console.log("Parsed incident object:");
-    console.log(parsedIncidentData);
+    try {
+        const response = await fetch(
+            `${API_URL}/${incident.id}`,
+            {
+                method: "PUT",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    title: title.trim(),
+                    description: description.trim()
+                })
+            }
+        );
 
-    // Use object destructuring to extract the primary field and email field.
-    const {
-        incidentTitle: extractedIncidentTitle,
-        submitterEmail: extractedSubmitterEmail
-    } = parsedIncidentData;
+        if (!response.ok) {
+            throw new Error(await getErrorMessage(response));
+        }
 
-    console.log("Destructured incident title:", extractedIncidentTitle);
-    console.log("Destructured submitter email:", extractedSubmitterEmail);
+        window.location.href = "/";
+    } catch (error) {
+        showMessage(error.message, true);
+    }
+}
 
-    // Use the spread operator to copy the parsed object and add submissionDate.
-    const updatedIncidentData = {
-        ...parsedIncidentData,
-        submissionDate: new Date().toISOString()
-    };
+async function deleteIncident(incident) {
+    const confirmed = window.confirm(
+        `Delete incident ${incident.id}: ${incident.title}?`
+    );
 
-    console.log("Updated incident object with submission date:");
-    console.log(updatedIncidentData);
+    if (!confirmed) {
+        return;
+    }
 
-    // Increase the closure counter only after successful validation.
-    const submissionCount = trackSuccessfulSubmission();
+    try {
+        const response = await fetch(
+            `${API_URL}/${incident.id}`,
+            {
+                method: "DELETE"
+            }
+        );
 
-    console.log("Successful submission count:", submissionCount);
+        if (!response.ok) {
+            throw new Error(await getErrorMessage(response));
+        }
 
-    // Display confirmation on the webpage.
-    const successMessage = document.getElementById("successMessage");
+        window.location.href = "/";
+    } catch (error) {
+        showMessage(error.message, true);
+    }
+}
 
-    successMessage.textContent =
-        `Transit incident submitted successfully. ` +
-        `Successful submission count: ${submissionCount}`;
+incidentForm.addEventListener("submit", createIncident);
 
-    successMessage.style.display = "block";
+searchForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    loadIncidents(searchInput.value.trim());
+});
 
-    // Clear the form after successful submission.
-    incidentForm.reset();
+clearSearchButton.addEventListener("click", () => {
+    searchInput.value = "";
+    loadIncidents();
+});
 
-    // Return focus to the primary field.
-    document.getElementById("incidentTitle").focus();
+refreshButton.addEventListener("click", () => {
+    loadIncidents(searchInput.value.trim());
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const parameters = new URLSearchParams(window.location.search);
+
+    if (parameters.get("state") === "error") {
+        showState("error");
+        return;
+    }
+
+    loadIncidents();
 });

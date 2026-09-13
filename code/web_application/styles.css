@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #1f2933;
+    background-color: #f3f6f8;
+}
+
+header {
+    width: 100%;
+    color: white;
+    background-color: #005a70;
+}
+
+.header-content {
+    width: min(900px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 28px 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+header p {
+    margin: 8px 0 0;
+    font-size: 16px;
+}
+
+main {
+    width: min(900px, calc(100% - 32px));
+    margin: 24px auto;
+    flex: 1;
+}
+
+.panel {
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+h2 {
+    margin: 0 0 18px;
+    color: #263238;
+    font-size: 22px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    font: inherit;
+    color: #1f2933;
+    background-color: white;
+    border: 1px solid #9aa5b1;
+    border-radius: 5px;
+}
+
+textarea {
+    min-height: 110px;
+    resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+    border-color: #007c91;
+    outline: 2px solid rgba(0, 124, 145, 0.2);
+}
+
+button {
+    padding: 11px 16px;
+    font: inherit;
+    font-weight: bold;
+    color: white;
+    background-color: #007c91;
+    border: 0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #005a70;
+}
+
+button:focus {
+    outline: 3px solid rgba(0, 124, 145, 0.25);
+    outline-offset: 2px;
+}
+
+.secondary-button {
+    color: #005a70;
+    background-color: #e3f2f5;
+}
+
+.secondary-button:hover {
+    background-color: #c8e5ea;
+}
+
+.section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 {
+    margin: 0;
+}
+
+.search-form {
+    margin-bottom: 20px;
+}
+
+.search-controls {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto auto;
+    gap: 8px;
+}
+
+.status-state {
+    padding: 20px;
+    text-align: center;
+    color: #52616b;
+    background-color: #f5f7f8;
+    border: 1px solid #d9e2e8;
+    border-radius: 6px;
+}
+
+.error-state {
+    color: #9b1c1c;
+    background-color: #fff1f1;
+    border-color: #efb4b4;
+}
+
+.message {
+    margin: 16px 0 0;
+    padding: 12px;
+    color: #17612b;
+    background-color: #e7f6ec;
+    border: 1px solid #add8b8;
+    border-radius: 5px;
+}
+
+.incident-list {
+    display: grid;
+    gap: 14px;
+}
+
+.incident-card {
+    padding: 16px;
+    background-color: white;
+    border: 1px solid #d9e2e8;
+    border-left: 5px solid #007c91;
+    border-radius: 6px;
+}
+
+.incident-card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+.incident-card p {
+    margin: 0 0 12px;
+    line-height: 1.5;
+}
+
+.incident-id {
+    color: #667780;
+    font-size: 14px;
+}
+
+.card-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.delete-button {
+    background-color: #b42318;
+}
+
+.delete-button:hover {
+    background-color: #8f1c13;
+}
+
+footer {
+    width: 100%;
+    margin-top: auto;
+    padding: 18px 16px;
+    color: #eaf6f8;
+    text-align: center;
+    background-color: #263238;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+@media (max-width: 500px) {
+    .header-content {
+        width: calc(100% - 24px);
+        padding: 22px 0;
+    }
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    main {
+        width: calc(100% - 24px);
+        margin: 16px auto;
+    }
+
+    .panel {
+        margin-bottom: 16px;
+        padding: 16px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .section-heading {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .search-controls {
+        grid-template-columns: 1fr;
+    }
+
+    .search-controls button,
+    .section-heading button,
+    #incidentForm > button {
+        width: 100%;
+    }
+
+    .card-actions {
+        flex-direction: column;
+    }
+
+    .card-actions button {
+        width: 100%;
+    }
+
+    footer {
+        padding: 16px 12px;
+    }
+}
