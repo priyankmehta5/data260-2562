@@ -1,0 +1,41 @@
+turn_ceiling,run,completed,classification,first_valid_attempt,planner_attempts,turn_count,latency_ms,tags,summary
+2,1,False,valid_first_attempt,1,1,3,3985,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,2,False,valid_first_attempt,1,1,3,1232,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,3,False,valid_first_attempt,1,1,3,1248,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,4,False,valid_first_attempt,1,1,3,1251,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,5,False,valid_first_attempt,1,1,3,1215,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,6,False,valid_first_attempt,1,1,3,1200,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,7,False,valid_first_attempt,1,1,3,1199,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,8,False,valid_first_attempt,1,1,3,1204,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,9,False,valid_first_attempt,1,1,3,1198,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,10,False,valid_first_attempt,1,1,3,1201,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,11,False,valid_first_attempt,1,1,3,1213,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,12,False,valid_first_attempt,1,1,3,1204,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,13,False,valid_first_attempt,1,1,3,1207,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,14,False,valid_first_attempt,1,1,3,1240,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,15,False,valid_first_attempt,1,1,3,1206,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,16,False,valid_first_attempt,1,1,3,1206,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,17,False,valid_first_attempt,1,1,3,1204,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,18,False,valid_first_attempt,1,1,3,1218,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,19,False,valid_first_attempt,1,1,3,1212,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+2,20,False,valid_first_attempt,1,1,3,1219,"[""signal failure"", ""Blue Line"", ""Santa Clara""]",Signal failure disrupts Blue Line service near Santa Clara
+10,1,True,valid_first_attempt,1,2,5,2693,"[""VTA"", ""signal failure"", ""disruption""]",Signal failure disrupts Blue Line service
+10,2,True,valid_first_attempt,1,3,7,4037,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,3,True,valid_first_attempt,1,3,7,4057,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,4,True,valid_first_attempt,1,3,7,4066,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,5,True,valid_first_attempt,1,3,7,4047,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,6,True,valid_first_attempt,1,3,7,4111,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,7,True,valid_first_attempt,1,3,7,4085,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,8,True,valid_first_attempt,1,3,7,4059,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,9,True,valid_first_attempt,1,3,7,4077,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,10,True,valid_first_attempt,1,3,7,4097,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,11,True,valid_first_attempt,1,3,7,4137,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,12,True,valid_first_attempt,1,3,7,4091,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,13,True,valid_first_attempt,1,3,7,4064,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,14,True,valid_first_attempt,1,3,7,4062,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,15,True,valid_first_attempt,1,3,7,4059,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,16,True,valid_first_attempt,1,3,7,4050,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,17,True,valid_first_attempt,1,3,7,4056,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,18,True,valid_first_attempt,1,3,7,4083,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,19,True,valid_first_attempt,1,3,7,4065,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays
+10,20,True,valid_first_attempt,1,3,7,4053,"[""VTA"", ""Blue Line"", ""Signal Failure""]",VTA Blue Line signal failure causes delays

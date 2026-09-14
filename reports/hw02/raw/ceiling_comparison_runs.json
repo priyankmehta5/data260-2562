@@ -1,0 +1,642 @@
+[
+  {
+    "run": 1,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 3985,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 2,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1232,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 3,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1248,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 4,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1251,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 5,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1215,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 6,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1200,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 7,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1199,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 8,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1204,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 9,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1198,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 10,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1201,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 11,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1213,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 12,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1204,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 13,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1207,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 14,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1240,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 15,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1206,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 16,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1206,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 17,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1204,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 18,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1218,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 19,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1212,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 20,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 1,
+    "completed": false,
+    "turn_count": 3,
+    "latency_ms": 1219,
+    "tags": [
+      "signal failure",
+      "Blue Line",
+      "Santa Clara"
+    ],
+    "summary": "Signal failure disrupts Blue Line service near Santa Clara",
+    "turn_ceiling": 2
+  },
+  {
+    "run": 1,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 2,
+    "completed": true,
+    "turn_count": 5,
+    "latency_ms": 2693,
+    "tags": [
+      "VTA",
+      "signal failure",
+      "disruption"
+    ],
+    "summary": "Signal failure disrupts Blue Line service",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 2,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4037,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 3,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4057,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 4,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4066,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 5,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4047,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 6,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4111,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 7,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4085,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 8,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4059,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 9,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4077,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 10,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4097,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 11,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4137,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 12,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4091,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 13,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4064,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 14,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4062,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 15,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4059,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 16,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4050,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 17,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4056,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 18,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4083,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 19,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4065,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  },
+  {
+    "run": 20,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4053,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays",
+    "turn_ceiling": 10
+  }
+]

@@ -1,0 +1,12 @@
+{
+  "total_runs": 30,
+  "categories": {
+    "valid_first_attempt": 30,
+    "valid_after_one_retry": 0,
+    "valid_after_two_or_more_retries": 0,
+    "abandoned_or_ceiling": 0
+  },
+  "completed_runs": 30,
+  "completion_rate_percent": 100.0,
+  "mean_latency_ms": 6487.7
+}

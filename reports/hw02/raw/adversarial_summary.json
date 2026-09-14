@@ -1,0 +1,8 @@
+{
+  "total_runs": 5,
+  "ceiling_hits": 5,
+  "ceiling_hit_rate_percent": 100.0,
+  "completed_without_ceiling": 0,
+  "target_ceiling_hits": 4,
+  "target_met": true
+}

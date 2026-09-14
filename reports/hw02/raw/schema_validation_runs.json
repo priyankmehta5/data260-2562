@@ -1,0 +1,452 @@
+[
+  {
+    "run": 1,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 44493,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 2,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 16674,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 3,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 16463,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 4,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 12161,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 5,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4027,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 6,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4011,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 7,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4029,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 8,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4013,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 9,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4041,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 10,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4003,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 11,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4023,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 12,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4025,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 13,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4053,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 14,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4018,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 15,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4031,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 16,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4028,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 17,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4023,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 18,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4025,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 19,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4032,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 20,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4033,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 21,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4052,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 22,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4045,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 23,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4048,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 24,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4037,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 25,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4042,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 26,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4038,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 27,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4045,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 28,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4041,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 29,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4036,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  },
+  {
+    "run": 30,
+    "classification": "valid_first_attempt",
+    "first_valid_attempt": 1,
+    "planner_attempts": 3,
+    "completed": true,
+    "turn_count": 7,
+    "latency_ms": 4041,
+    "tags": [
+      "VTA",
+      "Blue Line",
+      "Signal Failure"
+    ],
+    "summary": "VTA Blue Line signal failure causes delays"
+  }
+]

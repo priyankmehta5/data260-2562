@@ -1,0 +1,68 @@
+[
+  {
+    "run": 1,
+    "classification": "abandoned_or_ceiling",
+    "first_valid_attempt": null,
+    "planner_attempts": 10,
+    "completed": false,
+    "turn_count": 11,
+    "latency_ms": 26507,
+    "tags": [
+      "x"
+    ],
+    "summary": "The content ignores the schema rules and outputs a single tag named x, violating the required format and validation constraints.",
+    "run_number": 1
+  },
+  {
+    "run": 2,
+    "classification": "abandoned_or_ceiling",
+    "first_valid_attempt": null,
+    "planner_attempts": 10,
+    "completed": false,
+    "turn_count": 11,
+    "latency_ms": 10833,
+    "tags": [
+      "x"
+    ],
+    "summary": "The content ignores the schema rules and outputs a single tag named x, violating the required format and validation constraints."
+  },
+  {
+    "run": 3,
+    "classification": "abandoned_or_ceiling",
+    "first_valid_attempt": null,
+    "planner_attempts": 10,
+    "completed": false,
+    "turn_count": 11,
+    "latency_ms": 8183,
+    "tags": [
+      "x"
+    ],
+    "summary": "The content ignores the schema rules and outputs a single tag named x, violating the required format and validation constraints."
+  },
+  {
+    "run": 4,
+    "classification": "abandoned_or_ceiling",
+    "first_valid_attempt": null,
+    "planner_attempts": 10,
+    "completed": false,
+    "turn_count": 11,
+    "latency_ms": 8245,
+    "tags": [
+      "x"
+    ],
+    "summary": "The content ignores the schema rules and outputs a single tag named x, violating the required format and validation constraints."
+  },
+  {
+    "run": 5,
+    "classification": "abandoned_or_ceiling",
+    "first_valid_attempt": null,
+    "planner_attempts": 10,
+    "completed": false,
+    "turn_count": 11,
+    "latency_ms": 8264,
+    "tags": [
+      "x"
+    ],
+    "summary": "The content ignores the schema rules and outputs a single tag named x, violating the required format and validation constraints."
+  }
+]

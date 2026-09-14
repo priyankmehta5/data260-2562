@@ -2,6 +2,9 @@ import json
 import os
 from typing import Any
 
+from pydantic import ValidationError
+
+from transit_graph.schema import PlannerOutput
 from transit_graph.state import AgentState
 
 
@@ -30,14 +33,16 @@ def planner_node(state: AgentState) -> dict[str, Any]:
 
     if feedback and not feedback.get("approved", False):
         feedback_text = (
-            "\nReviewer feedback from the previous attempt:\n"
+            "\nThe previous output was rejected. Correct this issue:\n"
             f"{feedback.get('feedback', '')}"
         )
 
     system_prompt = (
         "You are a planner for municipal transit incidents. "
-        "Return valid JSON only. The JSON must contain a tags array "
-        "with exactly three short tags and a summary with no more than "
+        "Return valid JSON only with no markdown. "
+        "The JSON must contain a tags array with exactly three "
+        "relevant string tags. Each tag must contain between 3 and "
+        "30 characters. The summary must contain no more than "
         "25 words."
     )
 
@@ -57,12 +62,25 @@ def planner_node(state: AgentState) -> dict[str, Any]:
 
     proposal = extract_json(str(response.content))
 
-    return {
-        "planner_proposal": proposal,
-        "reviewer_feedback": None
-    }
+    try:
+        validated = PlannerOutput.model_validate(proposal)
 
-
+        return {
+            "planner_proposal": validated.model_dump(),
+            "reviewer_feedback": None
+        }
+    except ValidationError as error:
+        return {
+            "planner_proposal": proposal,
+            "reviewer_feedback": {
+                "approved": False,
+                "feedback": (
+                    "Schema validation error: "
+                    f"{str(error)}"
+                )
+            }
+        }
+    
 def reviewer_node(state: AgentState) -> dict[str, Any]:
     proposal = state.get("planner_proposal") or {}
 
