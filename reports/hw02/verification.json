@@ -1,0 +1,43 @@
+{
+  "homework_number": 2,
+  "sid4": 2562,
+  "commit_hash": "23bef04ff163e494af20b9176cd1d9ba5801a24e",
+  "model_configuration": {
+    "model": "qwen3:1.7b",
+    "temperature": 0.0,
+    "num_ctx": 4096,
+    "execution": "CPU-only",
+    "port_base": 8762
+  },
+  "seed": 2562,
+  "verify_seed": 262562,
+  "verified_at_utc": "2026-09-14T23:07:41.897640+00:00",
+  "checks": [
+    {
+      "name": "FastAPI responds on PORT_BASE",
+      "passed": true,
+      "details": "GET http://127.0.0.1:8762/api/incidents returned HTTP 200; JSON type=list"
+    },
+    {
+      "name": "LangGraph completes with valid schema",
+      "passed": true,
+      "details": "completed=True; tag_count=3; summary_words=7; turn_count=7"
+    },
+    {
+      "name": "Schema-validation run count",
+      "passed": true,
+      "details": "Expected 30; found 30"
+    },
+    {
+      "name": "Ceiling-comparison run count",
+      "passed": true,
+      "details": "Expected 40; found 40"
+    },
+    {
+      "name": "Adversarial run count",
+      "passed": true,
+      "details": "Expected 5; found 5"
+    }
+  ],
+  "overall_passed": true
+}
