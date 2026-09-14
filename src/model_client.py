@@ -1,4 +1,4 @@
-'''from typing import Any
+from typing import Any
 
 from langchain_ollama import ChatOllama
 
@@ -9,7 +9,7 @@ class OllamaModelClient:
         model: str = "qwen3:1.7b",
         temperature: float = 0.0,
         base_url: str = "http://localhost:11434",
-        num_ctx: int = 4096,
+        num_ctx: int = 4096
     ):
         self.model = ChatOllama(
             model=model,
@@ -17,27 +17,13 @@ class OllamaModelClient:
             base_url=base_url,
             num_ctx=num_ctx,
             format="json",
+            reasoning=False
         )
 
     def complete(
         self,
         messages: list[tuple[str, str]],
-        tools: list[Any] | None = None,
+        tools: list[Any] | None = None
     ):
-        model = self.model.bind_tools(tools) if tools else self.model
-        return model.invoke(messages)'''
-
-from langchain_ollama import ChatOllama
-
-
-class OllamaModelClient:
-    def __init__(self, model="qwen3:1.7b", temperature=0.0):
-        self.model = ChatOllama(
-            model=model,
-            temperature=temperature,
-            reasoning=False
-        )
-
-    def complete(self, messages, tools=None):
         client = self.model.bind_tools(tools) if tools else self.model
         return client.invoke(messages)
