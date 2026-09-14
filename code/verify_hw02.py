@@ -161,14 +161,16 @@ def word_count(value: str) -> int:
 
 def check_langgraph(checks: list[dict[str, Any]]) -> None:
     """Run one LangGraph case and validate behavior instead of exact wording."""
-    case = {
-        "title": "VTA Blue Line Signal Failure",
-        "content": (
-            "A signal failure near Santa Clara station caused major delays "
-            "and disrupted Blue Line light rail service during the morning "
-            "commute."
-        ),
-    }
+    case_path = (
+        ROOT
+        / "reports"
+        / "hw02"
+        / "cases"
+        / "schema_input.json"
+    )
+
+    with case_path.open("r", encoding="utf-8") as file:
+        case = json.load(file)
 
     try:
         client = OllamaModelClient(
