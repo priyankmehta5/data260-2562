@@ -1,0 +1,61 @@
+domain_id: 2
+domain: "Municipal transit incidents"
+top_k: 5
+
+questions:
+  - id: "q1"
+    question: >
+      What digital communication improvements does VTA propose
+      for informing riders about emergencies and service
+      disruptions?
+    expected_answer: >
+      VTA proposes electronic signs on trains, buses, and at
+      facilities, improved SMS alerts, greater use of mobile
+      applications such as VTAlerts, and audible indicators
+      where feasible.
+    expected_source: "vta_climate_actions.pdf"
+    unique_source: true
+
+  - id: "q2"
+    question: >
+      What operational measures does VTA propose to protect
+      light rail service during extreme heat?
+    expected_answer: >
+      VTA proposes frequent track-walking inspections and
+      specific criteria for issuing rail slow or stop orders
+      to prevent or reduce overheating.
+    expected_source: "vta_climate_actions.pdf"
+    unique_source: true
+
+  - id: "q3"
+    question: >
+      Who takes primary command during a fire emergency in the
+      BART system, and with whom do they coordinate?
+    expected_answer: >
+      The local fire department assumes overall command of the
+      fire emergency scene in cooperation with BART Central
+      Control.
+    expected_source: "vta_security_and_system_safety.pdf"
+    unique_source: true
+
+  - id: "q4"
+    question: >
+      What speed restriction and physical safety device did
+      SEPTA introduce near Norristown Station after the
+      May 2025 collision?
+    expected_answer: >
+      SEPTA reduced the maximum authorized speed from 15 mph
+      to 5 mph between signal 1N and the end of the track and
+      installed trip stops near the ends of the station tracks.
+    expected_source: "septa_norristown_collision.pdf"
+    unique_source: true
+
+  - id: "q5"
+    question: >
+      Which four possible contributing factors did the NTSB
+      exclude from the Norristown end-of-track collision?
+    expected_answer: >
+      The NTSB excluded visibility, track defects, the
+      mechanical condition of LRV 153, and drugs and alcohol.
+    expected_source: "septa_norristown_collision.pdf"
+    unique_source: true

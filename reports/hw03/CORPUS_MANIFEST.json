@@ -1,0 +1,25 @@
+{
+  "domain_id": 2,
+  "domain": "Municipal transit incidents",
+  "generated_at_utc": "2026-09-21T18:10:43.175107+00:00",
+  "minimum_required_bytes": 204800,
+  "total_bytes": 1933843,
+  "meets_size_requirement": true,
+  "files": [
+    {
+      "filename": "septa_norristown_collision.pdf",
+      "byte_size": 1347273,
+      "sha256": "66c583e43696a69acc52d188ed29cae4d198d0eaacdf473605786539c38331d3"
+    },
+    {
+      "filename": "vta_climate_actions.pdf",
+      "byte_size": 555529,
+      "sha256": "8776df8adb9d1ecea03864fe662030159de67ffcd01bff90a0a08a80915cbfea"
+    },
+    {
+      "filename": "vta_security_and_system_safety.pdf",
+      "byte_size": 31041,
+      "sha256": "0fab11f9aa7d1d87c9d0bcf5080dede2f35994e4c599897a109bf716ad98adda"
+    }
+  ]
+}
