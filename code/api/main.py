@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from typing import List
 
@@ -5,14 +6,36 @@ import uvicorn
 from fastapi import FastAPI, HTTPException, Query, Response
 from fastapi.responses import FileResponse
 from pydantic import BaseModel, Field
+from starlette.middleware.sessions import SessionMiddleware
+
+from routers.auth import router as auth_router
 
 
-WEB_DIRECTORY = Path(__file__).resolve().parents[1] / "web_application"
+WEB_DIRECTORY = (
+    Path(__file__).resolve().parents[1]
+    / "web_application"
+)
 
 app = FastAPI(
     title="Municipal Transit Incident API",
-    version="2.0.0"
+    version="3.0.0"
 )
+
+SECRET_KEY = os.getenv(
+    "SECRET_KEY",
+    "hw3-development-key-change-before-production"
+)
+
+app.add_middleware(
+    SessionMiddleware,
+    secret_key=SECRET_KEY,
+    session_cookie="hw3_session",
+    max_age=1800,
+    same_site="lax",
+    https_only=True
+)
+
+app.include_router(auth_router)
 
 
 class Incident(BaseModel):
@@ -22,37 +45,60 @@ class Incident(BaseModel):
 
 
 class IncidentCreate(BaseModel):
-    title: str = Field(min_length=3, max_length=100)
-    description: str = Field(min_length=3, max_length=500)
+    title: str = Field(
+        min_length=3,
+        max_length=100
+    )
+    description: str = Field(
+        min_length=3,
+        max_length=500
+    )
 
 
 class IncidentUpdate(BaseModel):
-    title: str = Field(min_length=3, max_length=100)
-    description: str = Field(min_length=3, max_length=500)
+    title: str = Field(
+        min_length=3,
+        max_length=100
+    )
+    description: str = Field(
+        min_length=3,
+        max_length=500
+    )
 
 
 incidents: List[Incident] = [
     Incident(
         id=1,
         title="VTA Blue Line Signal Failure",
-        description="A signal failure near Santa Clara station caused major delays."
+        description=(
+            "A signal failure near Santa Clara "
+            "station caused major delays."
+        )
     ),
     Incident(
         id=2,
         title="Bus Route 22 Delay",
-        description="Heavy traffic caused delays along the morning route."
+        description=(
+            "Heavy traffic caused delays along "
+            "the morning route."
+        )
     ),
     Incident(
         id=3,
         title="Light Rail Maintenance",
-        description="Scheduled maintenance affected service near downtown San Jose."
+        description=(
+            "Scheduled maintenance affected service "
+            "near downtown San Jose."
+        )
     )
 ]
 
 
-@app.get("/", include_in_schema=False)
-def home():
-    return FileResponse(WEB_DIRECTORY / "index.html")
+@app.get("/incidents", include_in_schema=False)
+def incidents_page():
+    return FileResponse(
+        WEB_DIRECTORY / "index.html"
+    )
 
 
 @app.get("/styles.css", include_in_schema=False)
@@ -71,7 +117,10 @@ def script():
     )
 
 
-@app.get("/api/incidents", response_model=List[Incident])
+@app.get(
+    "/api/incidents",
+    response_model=List[Incident]
+)
 def get_incidents(
     response: Response,
     search: str = Query(default="")
@@ -91,7 +140,10 @@ def get_incidents(
     ]
 
 
-@app.get("/api/incidents/{incident_id}", response_model=Incident)
+@app.get(
+    "/api/incidents/{incident_id}",
+    response_model=Incident
+)
 def get_incident(incident_id: int):
     incident = next(
         (
@@ -188,6 +240,6 @@ def delete_incident(incident_id: int):
 if __name__ == "__main__":
     uvicorn.run(
         app,
-        host="0.0.0.0",
+        host="127.0.0.1",
         port=8762
     )

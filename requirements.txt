@@ -4,3 +4,13 @@ langgraph==1.2.11
 pydantic==2.13.5
 python-multipart==0.0.32
 uvicorn[standard]==0.52.4
+jinja2
+itsdangerous
+httpx
+pyyaml
+llama-index
+llama-index-embeddings-huggingface
+sentence-transformers
+faiss-cpu
+numpy
+pandas
