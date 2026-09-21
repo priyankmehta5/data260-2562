@@ -1,0 +1,52 @@
+{
+  "homework_number": 3,
+  "sid4": 2562,
+  "commit_hash": "fcb84496692b69938939abc82267671e1b1d204d",
+  "model_configuration": {
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "device": "CPU",
+    "top_k": 5,
+    "port_base": 8762
+  },
+  "seed": 2562,
+  "verify_seed": 262562,
+  "verified_at_utc": "2026-09-21T20:53:31.628680+00:00",
+  "checks": [
+    {
+      "name": "FastAPI route / responds",
+      "passed": true,
+      "details": "GET http://127.0.0.1:8762/ returned HTTP 200; response_bytes=1724"
+    },
+    {
+      "name": "FastAPI route /login responds",
+      "passed": true,
+      "details": "GET http://127.0.0.1:8762/login returned HTTP 200; response_bytes=2447"
+    },
+    {
+      "name": "Five precommitted questions exist",
+      "passed": true,
+      "details": "question_ids=['q1', 'q2', 'q3', 'q4', 'q5']; expected_sources=5"
+    },
+    {
+      "name": "Corpus manifest satisfies requirements",
+      "passed": true,
+      "details": "domain_id=2; files=3; total_bytes=1933843; valid_sha256=True"
+    },
+    {
+      "name": "Corpus files match manifest hashes",
+      "passed": true,
+      "details": "checked=3; problems=none"
+    },
+    {
+      "name": "Retrieval results are complete",
+      "passed": true,
+      "details": "rows=75; questions=5; techniques=['Semantic', 'Sentence window', 'Token']; ranks=[1, 2, 3, 4, 5]"
+    },
+    {
+      "name": "Retrieval metrics contain valid values",
+      "passed": true,
+      "details": "Validated cosine similarity, chunk length, and latency for 75 rows"
+    }
+  ],
+  "overall_passed": true
+}
