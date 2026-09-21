@@ -1,0 +1,64 @@
+{
+  "seed": 2562,
+  "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dimension": 384,
+  "top_k": 5,
+  "retrieval_rows": 75,
+  "metrics_by_technique": [
+    {
+      "technique": "Token",
+      "questions": 5,
+      "retrieval_rows": 25,
+      "source_accuracy_at_1": 1.0,
+      "source_recall_at_5": 1.0,
+      "source_precision_at_5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "mean_top1_store_score": 0.6918390244245605,
+      "mean_top1_cosine": 0.6710692968591225,
+      "mean_chunk_length": 1087.24,
+      "latency_mean_ms": 16.766020000795834,
+      "latency_p50_ms": 17.78270000068005,
+      "latency_p95_ms": 18.0112200032454
+    },
+    {
+      "technique": "Semantic",
+      "questions": 5,
+      "retrieval_rows": 25,
+      "source_accuracy_at_1": 1.0,
+      "source_recall_at_5": 1.0,
+      "source_precision_at_5": 0.84,
+      "mean_reciprocal_rank": 1.0,
+      "mean_top1_store_score": 0.6015319418321361,
+      "mean_top1_cosine": 0.5636677042427258,
+      "mean_chunk_length": 4214.4,
+      "latency_mean_ms": 17.49515999981668,
+      "latency_p50_ms": 17.435400004615076,
+      "latency_p95_ms": 19.121099999756552
+    },
+    {
+      "technique": "Sentence window",
+      "questions": 5,
+      "retrieval_rows": 25,
+      "source_accuracy_at_1": 1.0,
+      "source_recall_at_5": 1.0,
+      "source_precision_at_5": 1.0,
+      "mean_reciprocal_rank": 1.0,
+      "mean_top1_store_score": 0.7463973147407091,
+      "mean_top1_cosine": 0.7024593166429889,
+      "mean_chunk_length": 236.28,
+      "latency_mean_ms": 33.68244000594132,
+      "latency_p50_ms": 35.449000002699904,
+      "latency_p95_ms": 38.264060000074096
+    }
+  ],
+  "confident_false_positive": {
+    "technique": "Semantic",
+    "question_id": "q2",
+    "rank": 3,
+    "retrieved_source": "vta_security_and_system_safety.pdf",
+    "expected_source": "vta_climate_actions.pdf",
+    "store_score": 0.5593428608800776,
+    "cosine_similarity": 0.5075762127909484,
+    "preview": "Crime and antisocial behavior are potential problems in any public environment. System Safety refers to the prevention of accidents to the riding public, employ..."
+  }
+}

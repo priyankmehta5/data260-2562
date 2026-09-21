@@ -1,0 +1,23 @@
+[
+  {
+    "technique": "Token",
+    "chunk_count": 91,
+    "average_chunk_length": 1077.010989010989,
+    "minimum_chunk_length": 502,
+    "maximum_chunk_length": 1268
+  },
+  {
+    "technique": "Semantic",
+    "chunk_count": 27,
+    "average_chunk_length": 3146.4444444444443,
+    "minimum_chunk_length": 97,
+    "maximum_chunk_length": 13532
+  },
+  {
+    "technique": "Sentence window",
+    "chunk_count": 460,
+    "average_chunk_length": 184.68260869565216,
+    "minimum_chunk_length": 9,
+    "maximum_chunk_length": 968
+  }
+]
