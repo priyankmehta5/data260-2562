@@ -1,0 +1,32 @@
+[
+  {
+    "configuration": "A",
+    "name": "No RAG",
+    "questions": 6,
+    "retrieval_accuracy_percent": 33.3,
+    "answer_accuracy_percent": 33.3,
+    "faithfulness_percent": 0.0,
+    "format_compliance_percent": 100.0,
+    "refusal_robustness_percent": 0.0
+  },
+  {
+    "configuration": "B",
+    "name": "Basic RAG",
+    "questions": 6,
+    "retrieval_accuracy_percent": 66.7,
+    "answer_accuracy_percent": 50.0,
+    "faithfulness_percent": 0.0,
+    "format_compliance_percent": 100.0,
+    "refusal_robustness_percent": 0.0
+  },
+  {
+    "configuration": "C",
+    "name": "Context RAG",
+    "questions": 6,
+    "retrieval_accuracy_percent": 66.7,
+    "answer_accuracy_percent": 83.3,
+    "faithfulness_percent": 66.7,
+    "format_compliance_percent": 83.3,
+    "refusal_robustness_percent": 100.0
+  }
+]

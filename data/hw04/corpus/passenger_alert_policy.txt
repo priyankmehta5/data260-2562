@@ -1,0 +1,7 @@
+Municipal Transit Passenger Alert Policy
+
+For Priority 1 incidents, the first public passenger alert must be issued within five minutes after operations control confirms the incident. Updates must be published at least every fifteen minutes while the disruption remains active.
+
+Alerts should identify the affected route, location, expected delay, available alternatives, and the time of the next update. Approved communication channels include station displays, the transit website, mobile notifications, and official social-media accounts.
+
+Priority 2 incidents require a public alert when the expected disruption exceeds ten minutes. Priority 3 incidents may be included in scheduled service notices.

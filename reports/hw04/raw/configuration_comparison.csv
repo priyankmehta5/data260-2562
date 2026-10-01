@@ -1,0 +1,57 @@
+question_id,question_type,configuration,answer,latency_ms,retrieved_sources
+Q1,one_chunk,A,The first passenger alert must be issued immediately for a P1 incident.,28815.755,
+Q1,one_chunk,B,"For a Priority 1 incident, the first public passenger alert must be issued within **five minutes** after operations control confirms the incident.",4983.955,passenger_alert_policy.txt; passenger_alert_policy.txt; septa_norristown_collision.pdf
+Q1,one_chunk,C,The first passenger alert for a P1 incident must be issued within five minutes after operations control confirms the incident. This is stated in [Source 1].,5382.213,passenger_alert_policy.txt; passenger_alert_policy.txt; septa_norristown_collision.pdf
+Q2,two_chunks,A,A signal failure with an immediate safety threat should be classified as a **critical alert** and passengers should receive updates **immediately**.,2960.948,
+Q2,two_chunks,B,"Based on the retrieved text:
+
+1. **Classification of a signal failure with an immediate safety threat**:  
+   The text from **Source 2** (septa_norristown_collision.pdf) indicates that such a situation is **classified as Open—Acceptable Response**. This classification suggests that the issue is considered acceptable and requires a response, but it does not specify a particular classification like ""Critical"" or ""Emergency"" in the text. However, the context implies that a signal failure with an immediate safety threat is a **high-priority incident** that requires immediate action.
+
+2. **Frequency of passenger updates**:  
+   The text from **Source 1** (passenger_alert_policy.txt) states that **updates must be published at least every fifteen minutes** while the disruption remains active. This frequency applies to **Priority 1 incidents**, which are those with an immediate safety threat.",18713.781,passenger_alert_policy.txt; septa_norristown_collision.pdf; septa_norristown_collision.pdf
+Q2,two_chunks,C,"According to the provided context, a signal failure with an immediate safety threat should be classified as an ""Open—Acceptable Response"" [Source 2]. Passengers should receive updates at least every fifteen minutes while the disruption remains active [Source 1].",6825.476,passenger_alert_policy.txt; septa_norristown_collision.pdf; septa_norristown_collision.pdf
+Q3,similar_information,A,"The transit safety documents describe practices such as regular equipment inspections, emergency response plans, driver training, and compliance with safety regulations.",2703.847,
+Q3,similar_information,B,"The safety-preparation practices described across the transit safety documents include:
+
+1. **Security and Safety Measures**: The documents emphasize the implementation of security and safety measures to prevent unlawful acts, protect persons and property, and ensure the prevention of accidents in transit facilities.
+
+2. **Preventive Design Criteria**: The documents mention the use of preventive design criteria to address potential safety issues, such as improper passenger drop-off and loading, and to ensure that transit facilities are safe and secure.
+
+3. **Fire and Life Safety Considerations**: These documents highlight the importance of fire and life safety considerations, including the installation of warning signs, illumination of public areas, and the design of security fences to prevent trespassing and ensure safety in track areas.
+
+4. **Collaboration with Law Enforcement**: The documents note the involvement of law enforcement agencies, such as the BART Police Department, in the design review of new",19601.384,vta_security_and_system_safety.pdf; vta_security_and_system_safety.pdf; vta_security_and_system_safety.pdf
+Q3,similar_information,C,"The safety-preparation practices described across the transit safety documents include:
+
+1. **Security and Safety Measures**: The documents mention the implementation of security and safety measures for transit facilities, such as the VTA's Protective Services providing security for bus and light rail facilities. These measures include preventive design criteria and protection for people and property in the event of an emergency.
+
+2. **Fire and Life Safety Considerations**: The documents discuss fire and life safety considerations, including the prevention of improper passenger drop-off and loading, and the installation of warning signs to prevent trespassing and warn of dangers in track areas.
+
+3. **Design Review and Compliance**: The BART Police Department is involved in the design review of new facilities to ensure compliance with security and safety standards.
+
+4. **Public Areas and Parking Lots**: The documents note that public areas and parking lots are well illuminated and designed to ensure safety and prevent accidents.",19625.634,vta_security_and_system_safety.pdf; vta_security_and_system_safety.pdf; vta_security_and_system_safety.pdf
+Q4,ambiguous,A,"A transit incident requires a coordinated response, including immediate assessment, evacuation, and deployment of emergency services.",2328.143,
+Q4,ambiguous,B,"The response required for a transit incident depends on its priority level:
+
+- **Priority 1 incidents** (e.g., complete signal-system failure, collision, fire, evacuation, or any condition presenting an immediate threat to passenger safety) must be **escalated immediately to the operations control center and emergency responders**.
+  
+- **Priority 2 incidents** (e.g., major delays, partial route suspension, station closure, and equipment failures that significantly affect service but do not create an immediate safety threat) require a **public alert** when the expected disruption exceeds ten minutes.
+
+- **Priority 3 incidents** may be included in **scheduled service notices**.
+
+Thus, the required response depends on the specific priority of the incident. Priority 1 incidents require immediate escalation and emergency response, while Priority 2 incidents require public alerts if the disruption exceeds ten minutes.",17699.153,incident_priority_policy.txt; passenger_alert_policy.txt; septa_norristown_collision.pdf
+Q4,ambiguous,C,"The response required for a transit incident depends on its priority level. 
+
+- **Priority 1 incidents** must be escalated immediately to the operations control center and emergency responders. [Source 1]
+- **Priority 2 incidents** require a public alert when the expected disruption exceeds ten minutes. [Source 2]
+- **Priority 3 incidents** may be included in scheduled service notices. [Source 3]
+
+I cannot answer this question from the provided documents",10666.292,incident_priority_policy.txt; passenger_alert_policy.txt; septa_norristown_collision.pdf
+Q5,not_in_documents,A,"The exact VTA adult fare in January 2035 will be determined by VTA's annual budget and fare adjustment policy, which is not publicly disclosed.",3365.545,
+Q5,not_in_documents,B,"The exact VTA adult fare in January 2035 is not provided in the retrieved text. The text discusses climate adaptation strategies, infrastructure planning, community engagement, and sustainability initiatives related to VTA's transportation system. It does not include any information about fare structures or financial details for future dates. Therefore, the answer cannot be determined from the given sources.",9643.497,vta_climate_actions.pdf; vta_climate_actions.pdf; vta_climate_actions.pdf
+Q5,not_in_documents,C,I cannot answer this question from the provided documents,3653.49,vta_climate_actions.pdf; vta_climate_actions.pdf; vta_climate_actions.pdf
+Q6,unrelated,A,The 2026 World Series winner was the Los Angeles Dodgers.,1938.63,
+Q6,unrelated,B,"The question is not related to the provided text. The text discusses a transportation safety incident involving SEPTA and its response to a collision, but it does not mention anything about sports, the World Series, or any athletes. Therefore, the answer is:
+
+**The text does not provide information about who won the 2026 World Series.**",9096.783,septa_norristown_collision.pdf; septa_norristown_collision.pdf; septa_norristown_collision.pdf
+Q6,unrelated,C,I cannot answer this question from the provided documents,1500.854,

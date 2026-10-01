@@ -1,0 +1,146 @@
+[
+  {
+    "question_id": "Q1",
+    "question_type": "one_chunk",
+    "configuration": "A",
+    "answer": "The first passenger alert must be issued immediately for a P1 incident.",
+    "latency_ms": 28815.755,
+    "retrieved_sources": ""
+  },
+  {
+    "question_id": "Q1",
+    "question_type": "one_chunk",
+    "configuration": "B",
+    "answer": "For a Priority 1 incident, the first public passenger alert must be issued within **five minutes** after operations control confirms the incident.",
+    "latency_ms": 4983.955,
+    "retrieved_sources": "passenger_alert_policy.txt; passenger_alert_policy.txt; septa_norristown_collision.pdf"
+  },
+  {
+    "question_id": "Q1",
+    "question_type": "one_chunk",
+    "configuration": "C",
+    "answer": "The first passenger alert for a P1 incident must be issued within five minutes after operations control confirms the incident. This is stated in [Source 1].",
+    "latency_ms": 5382.213,
+    "retrieved_sources": "passenger_alert_policy.txt; passenger_alert_policy.txt; septa_norristown_collision.pdf"
+  },
+  {
+    "question_id": "Q2",
+    "question_type": "two_chunks",
+    "configuration": "A",
+    "answer": "A signal failure with an immediate safety threat should be classified as a **critical alert** and passengers should receive updates **immediately**.",
+    "latency_ms": 2960.948,
+    "retrieved_sources": ""
+  },
+  {
+    "question_id": "Q2",
+    "question_type": "two_chunks",
+    "configuration": "B",
+    "answer": "Based on the retrieved text:\n\n1. **Classification of a signal failure with an immediate safety threat**:  \n   The text from **Source 2** (septa_norristown_collision.pdf) indicates that such a situation is **classified as Open—Acceptable Response**. This classification suggests that the issue is considered acceptable and requires a response, but it does not specify a particular classification like \"Critical\" or \"Emergency\" in the text. However, the context implies that a signal failure with an immediate safety threat is a **high-priority incident** that requires immediate action.\n\n2. **Frequency of passenger updates**:  \n   The text from **Source 1** (passenger_alert_policy.txt) states that **updates must be published at least every fifteen minutes** while the disruption remains active. This frequency applies to **Priority 1 incidents**, which are those with an immediate safety threat.",
+    "latency_ms": 18713.781,
+    "retrieved_sources": "passenger_alert_policy.txt; septa_norristown_collision.pdf; septa_norristown_collision.pdf"
+  },
+  {
+    "question_id": "Q2",
+    "question_type": "two_chunks",
+    "configuration": "C",
+    "answer": "According to the provided context, a signal failure with an immediate safety threat should be classified as an \"Open—Acceptable Response\" [Source 2]. Passengers should receive updates at least every fifteen minutes while the disruption remains active [Source 1].",
+    "latency_ms": 6825.476,
+    "retrieved_sources": "passenger_alert_policy.txt; septa_norristown_collision.pdf; septa_norristown_collision.pdf"
+  },
+  {
+    "question_id": "Q3",
+    "question_type": "similar_information",
+    "configuration": "A",
+    "answer": "The transit safety documents describe practices such as regular equipment inspections, emergency response plans, driver training, and compliance with safety regulations.",
+    "latency_ms": 2703.847,
+    "retrieved_sources": ""
+  },
+  {
+    "question_id": "Q3",
+    "question_type": "similar_information",
+    "configuration": "B",
+    "answer": "The safety-preparation practices described across the transit safety documents include:\n\n1. **Security and Safety Measures**: The documents emphasize the implementation of security and safety measures to prevent unlawful acts, protect persons and property, and ensure the prevention of accidents in transit facilities.\n\n2. **Preventive Design Criteria**: The documents mention the use of preventive design criteria to address potential safety issues, such as improper passenger drop-off and loading, and to ensure that transit facilities are safe and secure.\n\n3. **Fire and Life Safety Considerations**: These documents highlight the importance of fire and life safety considerations, including the installation of warning signs, illumination of public areas, and the design of security fences to prevent trespassing and ensure safety in track areas.\n\n4. **Collaboration with Law Enforcement**: The documents note the involvement of law enforcement agencies, such as the BART Police Department, in the design review of new",
+    "latency_ms": 19601.384,
+    "retrieved_sources": "vta_security_and_system_safety.pdf; vta_security_and_system_safety.pdf; vta_security_and_system_safety.pdf"
+  },
+  {
+    "question_id": "Q3",
+    "question_type": "similar_information",
+    "configuration": "C",
+    "answer": "The safety-preparation practices described across the transit safety documents include:\n\n1. **Security and Safety Measures**: The documents mention the implementation of security and safety measures for transit facilities, such as the VTA's Protective Services providing security for bus and light rail facilities. These measures include preventive design criteria and protection for people and property in the event of an emergency.\n\n2. **Fire and Life Safety Considerations**: The documents discuss fire and life safety considerations, including the prevention of improper passenger drop-off and loading, and the installation of warning signs to prevent trespassing and warn of dangers in track areas.\n\n3. **Design Review and Compliance**: The BART Police Department is involved in the design review of new facilities to ensure compliance with security and safety standards.\n\n4. **Public Areas and Parking Lots**: The documents note that public areas and parking lots are well illuminated and designed to ensure safety and prevent accidents.",
+    "latency_ms": 19625.634,
+    "retrieved_sources": "vta_security_and_system_safety.pdf; vta_security_and_system_safety.pdf; vta_security_and_system_safety.pdf"
+  },
+  {
+    "question_id": "Q4",
+    "question_type": "ambiguous",
+    "configuration": "A",
+    "answer": "A transit incident requires a coordinated response, including immediate assessment, evacuation, and deployment of emergency services.",
+    "latency_ms": 2328.143,
+    "retrieved_sources": ""
+  },
+  {
+    "question_id": "Q4",
+    "question_type": "ambiguous",
+    "configuration": "B",
+    "answer": "The response required for a transit incident depends on its priority level:\n\n- **Priority 1 incidents** (e.g., complete signal-system failure, collision, fire, evacuation, or any condition presenting an immediate threat to passenger safety) must be **escalated immediately to the operations control center and emergency responders**.\n  \n- **Priority 2 incidents** (e.g., major delays, partial route suspension, station closure, and equipment failures that significantly affect service but do not create an immediate safety threat) require a **public alert** when the expected disruption exceeds ten minutes.\n\n- **Priority 3 incidents** may be included in **scheduled service notices**.\n\nThus, the required response depends on the specific priority of the incident. Priority 1 incidents require immediate escalation and emergency response, while Priority 2 incidents require public alerts if the disruption exceeds ten minutes.",
+    "latency_ms": 17699.153,
+    "retrieved_sources": "incident_priority_policy.txt; passenger_alert_policy.txt; septa_norristown_collision.pdf"
+  },
+  {
+    "question_id": "Q4",
+    "question_type": "ambiguous",
+    "configuration": "C",
+    "answer": "The response required for a transit incident depends on its priority level. \n\n- **Priority 1 incidents** must be escalated immediately to the operations control center and emergency responders. [Source 1]\n- **Priority 2 incidents** require a public alert when the expected disruption exceeds ten minutes. [Source 2]\n- **Priority 3 incidents** may be included in scheduled service notices. [Source 3]\n\nI cannot answer this question from the provided documents",
+    "latency_ms": 10666.292,
+    "retrieved_sources": "incident_priority_policy.txt; passenger_alert_policy.txt; septa_norristown_collision.pdf"
+  },
+  {
+    "question_id": "Q5",
+    "question_type": "not_in_documents",
+    "configuration": "A",
+    "answer": "The exact VTA adult fare in January 2035 will be determined by VTA's annual budget and fare adjustment policy, which is not publicly disclosed.",
+    "latency_ms": 3365.545,
+    "retrieved_sources": ""
+  },
+  {
+    "question_id": "Q5",
+    "question_type": "not_in_documents",
+    "configuration": "B",
+    "answer": "The exact VTA adult fare in January 2035 is not provided in the retrieved text. The text discusses climate adaptation strategies, infrastructure planning, community engagement, and sustainability initiatives related to VTA's transportation system. It does not include any information about fare structures or financial details for future dates. Therefore, the answer cannot be determined from the given sources.",
+    "latency_ms": 9643.497,
+    "retrieved_sources": "vta_climate_actions.pdf; vta_climate_actions.pdf; vta_climate_actions.pdf"
+  },
+  {
+    "question_id": "Q5",
+    "question_type": "not_in_documents",
+    "configuration": "C",
+    "answer": "I cannot answer this question from the provided documents",
+    "latency_ms": 3653.49,
+    "retrieved_sources": "vta_climate_actions.pdf; vta_climate_actions.pdf; vta_climate_actions.pdf"
+  },
+  {
+    "question_id": "Q6",
+    "question_type": "unrelated",
+    "configuration": "A",
+    "answer": "The 2026 World Series winner was the Los Angeles Dodgers.",
+    "latency_ms": 1938.63,
+    "retrieved_sources": ""
+  },
+  {
+    "question_id": "Q6",
+    "question_type": "unrelated",
+    "configuration": "B",
+    "answer": "The question is not related to the provided text. The text discusses a transportation safety incident involving SEPTA and its response to a collision, but it does not mention anything about sports, the World Series, or any athletes. Therefore, the answer is:\n\n**The text does not provide information about who won the 2026 World Series.**",
+    "latency_ms": 9096.783,
+    "retrieved_sources": "septa_norristown_collision.pdf; septa_norristown_collision.pdf; septa_norristown_collision.pdf"
+  },
+  {
+    "question_id": "Q6",
+    "question_type": "unrelated",
+    "configuration": "C",
+    "answer": "I cannot answer this question from the provided documents",
+    "latency_ms": 1500.854,
+    "retrieved_sources": ""
+  }
+]

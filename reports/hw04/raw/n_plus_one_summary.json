@@ -1,0 +1,59 @@
+[
+  {
+    "version": "naive",
+    "page_size": 10,
+    "request_count": 30,
+    "sql_queries_per_request": 11,
+    "p50_ms": 23.96,
+    "p95_ms": 32.835,
+    "p99_ms": 36.404
+  },
+  {
+    "version": "naive",
+    "page_size": 50,
+    "request_count": 30,
+    "sql_queries_per_request": 51,
+    "p50_ms": 68.424,
+    "p95_ms": 98.369,
+    "p99_ms": 111.576
+  },
+  {
+    "version": "naive",
+    "page_size": 200,
+    "request_count": 30,
+    "sql_queries_per_request": 201,
+    "p50_ms": 230.707,
+    "p95_ms": 322.926,
+    "p99_ms": 396.742
+  },
+  {
+    "version": "optimized",
+    "page_size": 10,
+    "request_count": 30,
+    "sql_queries_per_request": 1,
+    "p50_ms": 13.28,
+    "p95_ms": 16.97,
+    "p99_ms": 18.667,
+    "p50_speedup": 1.8
+  },
+  {
+    "version": "optimized",
+    "page_size": 50,
+    "request_count": 30,
+    "sql_queries_per_request": 1,
+    "p50_ms": 16.561,
+    "p95_ms": 23.029,
+    "p99_ms": 27.154,
+    "p50_speedup": 4.13
+  },
+  {
+    "version": "optimized",
+    "page_size": 200,
+    "request_count": 30,
+    "sql_queries_per_request": 1,
+    "p50_ms": 22.407,
+    "p95_ms": 32.206,
+    "p99_ms": 54.808,
+    "p50_speedup": 10.3
+  }
+]

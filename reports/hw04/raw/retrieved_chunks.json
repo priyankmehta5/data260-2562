@@ -1,0 +1,170 @@
+[
+  {
+    "question_id": "Q1",
+    "question": "How quickly must the first passenger alert be issued for a P1 incident?",
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-1",
+        "score": 0.682065,
+        "text": "Municipal Transit Passenger Alert Policy For Priority 1 incidents, the first public passenger alert must be issued within five minutes after operations control confirms the incident. Updates must be published at least every fifteen minutes while the disruption remains active. Alerts should identify the affected route, location, expected delay, available alternatives, and the time of the next update. Approved communication channels include station displays, the transit website, mobile notificatio"
+      },
+      {
+        "rank": 2,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-2",
+        "score": 0.513327,
+        "text": "displays, the transit website, mobile notifications, and official social-media accounts. Priority 2 incidents require a public alert when the expected disruption exceeds ten minutes. Priority 3 incidents may be included in scheduled service notices."
+      },
+      {
+        "rank": 3,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-72",
+        "score": 0.450489,
+        "text": "AR-15-01. Washington, DC: NTSB. (b) This recommendation is currently classified Open—Acceptable Response. See CAROL for this recommendation’s complete history. Railroad Investigation Report RIR-26-05 17 personnel to train emergency responders on transit emergencies and added estimated times of arrival for SEPTA personnel to the information it provides emergency responders. Both changes are intended to support quickly and effectively securing an accident scene. 3 Probable Cause The National Trans"
+      }
+    ]
+  },
+  {
+    "question_id": "Q2",
+    "question": "How should a signal failure with an immediate safety threat be classified, and how frequently should passengers receive updates?",
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-1",
+        "score": 0.610524,
+        "text": "Municipal Transit Passenger Alert Policy For Priority 1 incidents, the first public passenger alert must be issued within five minutes after operations control confirms the incident. Updates must be published at least every fifteen minutes while the disruption remains active. Alerts should identify the affected route, location, expected delay, available alternatives, and the time of the next update. Approved communication channels include station displays, the transit website, mobile notificatio"
+      },
+      {
+        "rank": 2,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-72",
+        "score": 0.531376,
+        "text": "AR-15-01. Washington, DC: NTSB. (b) This recommendation is currently classified Open—Acceptable Response. See CAROL for this recommendation’s complete history. Railroad Investigation Report RIR-26-05 17 personnel to train emergency responders on transit emergencies and added estimated times of arrival for SEPTA personnel to the information it provides emergency responders. Both changes are intended to support quickly and effectively securing an accident scene. 3 Probable Cause The National Trans"
+      },
+      {
+        "rank": 3,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-74",
+        "score": 0.520771,
+        "text": "d from his duties for unknown reasons and failed to apply the vehicle’s brakes, the automatic train control system was unable to detect the imminent collision and intervene. 4 Lessons Learned This collision could have been prevented by a train control system that did not depend solely on operator vigilance. A system that leaves the operator as a single point of failure is vulnerable to safety risks such as operator fatigue, distraction, or incapacitation. Requiring TBTC on rail transit systems,"
+      }
+    ]
+  },
+  {
+    "question_id": "Q3",
+    "question": "What safety-preparation practices are described across the transit safety documents?",
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "source": "vta_security_and_system_safety.pdf",
+        "chunk_id": "vta_security_and_system_safety.pdf-chunk-3",
+        "score": 0.551316,
+        "text": "improper passenger drop-off and loading. Fire and life safety considerations involve preventive design criteria and those that provide protection for people and property in the event an emergency should occur. 4.11.1 VTA AND OTHER TRANSIT FACILITIES Security and safety measures are already in place to serve current bus transit operations and related pedestrian activities near existing transit facilities and bus stops in the SVRTC. VTA’s Protective Services provides security for VTA bus and ligh"
+      },
+      {
+        "rank": 2,
+        "source": "vta_security_and_system_safety.pdf",
+        "chunk_id": "vta_security_and_system_safety.pdf-chunk-12",
+        "score": 0.549289,
+        "text": "in subways that are inaccessible to the public. Wherever the alignment is at grade, warning signs are posted on the security fences adjacent to the tracks to prevent trespassing and to warn of the dangers of entering the track area containing the electrified third rail. The BART Police Department is also responsible for participating in design review of new facilities to ensure consistency with security and safety standards. For example, public areas and parking lots are well illuminated and des"
+      },
+      {
+        "rank": 3,
+        "source": "vta_security_and_system_safety.pdf",
+        "chunk_id": "vta_security_and_system_safety.pdf-chunk-1",
+        "score": 0.546792,
+        "text": "Silicon Valley Rapid Transit Corridor Final EIS Affected Environment Security and System Safety 4.11-1 4.11 SECURITY AND SYSTEM SAFETY Security refers to the prevention of unlawful acts resulting in harm to persons or damage to property. In a broader sense, it also implies freedom from threats or uncertainty about the likelihood of threatening acts. Crime and antisocial behavior are potential problems in any public environment. System Safety refers to the prevention of accidents to the riding pu"
+      }
+    ]
+  },
+  {
+    "question_id": "Q4",
+    "question": "What response is required for a transit incident?",
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "source": "incident_priority_policy.txt",
+        "chunk_id": "incident_priority_policy.txt-chunk-1",
+        "score": 0.611442,
+        "text": "Municipal Transit Incident Priority Policy Priority 1 incidents include complete signal-system failure, collision, fire, evacuation, or any condition presenting an immediate threat to passenger safety. Priority 1 incidents must be escalated immediately to the operations control center and emergency responders. Priority 2 incidents include major delays, partial route suspension, station closure, and equipment failures that significantly affect service but do not create an immediate safety threat."
+      },
+      {
+        "rank": 2,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-2",
+        "score": 0.582024,
+        "text": "displays, the transit website, mobile notifications, and official social-media accounts. Priority 2 incidents require a public alert when the expected disruption exceeds ten minutes. Priority 3 incidents may be included in scheduled service notices."
+      },
+      {
+        "rank": 3,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-72",
+        "score": 0.557942,
+        "text": "AR-15-01. Washington, DC: NTSB. (b) This recommendation is currently classified Open—Acceptable Response. See CAROL for this recommendation’s complete history. Railroad Investigation Report RIR-26-05 17 personnel to train emergency responders on transit emergencies and added estimated times of arrival for SEPTA personnel to the information it provides emergency responders. Both changes are intended to support quickly and effectively securing an accident scene. 3 Probable Cause The National Trans"
+      }
+    ]
+  },
+  {
+    "question_id": "Q5",
+    "question": "What will the exact VTA adult fare be in January 2035?",
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "source": "vta_climate_actions.pdf",
+        "chunk_id": "vta_climate_actions.pdf-chunk-46",
+        "score": 0.412286,
+        "text": "Clara Valley Water Agency) to reduce the overall vulnerability of VTA's transportation system to the effects of permanent inundation and coastal flooding. Support community participation in these efforts. Engineering & Program Delivery Variable AD-F-3.9: Incorporate future sea-level rise, permanent inundation, and precipitation projections into long-term infrastructure planning processes, influencing decisions on expansion, relocation, or retrofitting of assets. For example, many of VTA's facil"
+      },
+      {
+        "rank": 2,
+        "source": "vta_climate_actions.pdf",
+        "chunk_id": "vta_climate_actions.pdf-chunk-10",
+        "score": 0.356567,
+        "text": "der community about adaptation-related needs that would be mutually beneficial for all parties that use or otherwise rely on VTA's transportation network. External Affairs Mid-Term AD-CC-2.4: Leverage and potentially modify existing mobile applications (e.g., \"VTAlerts\" app), along with social media accounts, to inform the public on climate hazards (e.g., extreme heat, flooding), alternative routes, and climate resilience initiatives, and to provide real-time reports from the public to help VTA"
+      },
+      {
+        "rank": 3,
+        "source": "vta_climate_actions.pdf",
+        "chunk_id": "vta_climate_actions.pdf-chunk-73",
+        "score": 0.332413,
+        "text": "ll contributions to VTA’s operational GHG inventory. Human Resources Low Variable GHG-FE-4.2: Encourage and enable VTA employees to use transit, carpool, bike, and telecommute to work to reduce single-occupancy vehicle commute trips and VMT. Human Resources Medium Variable Materials and Waste (MW) GHG-MW-1.1: Require procurement and operational practices that avoid generation of waste (e.g., reusable materials, reduced packaging, and compostable products). Finance, Budget, & Real Estate Low Near"
+      }
+    ]
+  },
+  {
+    "question_id": "Q6",
+    "question": "Who won the 2026 World Series?",
+    "top_k": 3,
+    "results": [
+      {
+        "rank": 1,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-81",
+        "score": 0.133348,
+        "text": "al Transportation Safety Board Records Management Division, CIO-40 490 L’Enfant Plaza, SW Washington, DC 20594 (800) 877-6799 or (202) 314-6551"
+      },
+      {
+        "rank": 2,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-62",
+        "score": 0.128221,
+        "text": "to 5 mph but did not reconfigure its ATC to enforce the new speed. In the absence of a system to prevent operators from exceeding the new maximum authorized speed, operator performance remains a single point of failure. The rule change will therefore not prevent future collisions involving operator error. SEPTA has installed trip stops at Norristown Station ahead of the bumping posts to automatically apply a train’s air brakes before a collision. However, the available braking distance is limite"
+      },
+      {
+        "rank": 3,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-43",
+        "score": 0.120805,
+        "text": "in the emergency. At the time of the collision, SEPTA dispatchers did not have access to cameras or other sources of information about accidents other than through radio and phone calls, and Norristown Station did not always have a station manager present. No station manager was present at the time of the collision. 1.8 Postaccident Actions On May 22, 2025, in response to the collision, SEPTA issued an operations bulletin imposing a speed restriction near Norristown Station, reducing the maximum"
+      }
+    ]
+  }
+]

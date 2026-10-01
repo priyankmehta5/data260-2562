@@ -1,0 +1,7 @@
+Municipal Transit Incident Priority Policy
+
+Priority 1 incidents include complete signal-system failure, collision, fire, evacuation, or any condition presenting an immediate threat to passenger safety. Priority 1 incidents must be escalated immediately to the operations control center and emergency responders.
+
+Priority 2 incidents include major delays, partial route suspension, station closure, and equipment failures that significantly affect service but do not create an immediate safety threat.
+
+Priority 3 incidents include minor delays, routine maintenance issues, and localized service changes. Dispatchers must record the incident priority, affected route, location, and operational response.

@@ -16,3 +16,7 @@ numpy
 pandas
 pypdf
 cryptography
+SQLAlchemy
+PyMySQL
+python-dotenv
+bcrypt

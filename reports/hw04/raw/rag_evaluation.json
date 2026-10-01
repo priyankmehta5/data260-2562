@@ -1,0 +1,164 @@
+[
+  {
+    "question_id": "Q1",
+    "configuration": "A",
+    "correct_retrieval": false,
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q1",
+    "configuration": "B",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q1",
+    "configuration": "C",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q2",
+    "configuration": "A",
+    "correct_retrieval": false,
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q2",
+    "configuration": "B",
+    "correct_retrieval": false,
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q2",
+    "configuration": "C",
+    "correct_retrieval": false,
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q3",
+    "configuration": "A",
+    "correct_retrieval": false,
+    "correct_answer": true,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q3",
+    "configuration": "B",
+    "correct_retrieval": false,
+    "correct_answer": true,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q3",
+    "configuration": "C",
+    "correct_retrieval": false,
+    "correct_answer": true,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": false
+  },
+  {
+    "question_id": "Q4",
+    "configuration": "A",
+    "correct_retrieval": false,
+    "correct_answer": true,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q4",
+    "configuration": "B",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": false,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q4",
+    "configuration": "C",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q5",
+    "configuration": "A",
+    "correct_retrieval": true,
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": false,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q5",
+    "configuration": "B",
+    "correct_retrieval": true,
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": false,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q5",
+    "configuration": "C",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q6",
+    "configuration": "A",
+    "correct_retrieval": true,
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": false,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q6",
+    "configuration": "B",
+    "correct_retrieval": true,
+    "correct_answer": false,
+    "grounded": false,
+    "refused_when_needed": false,
+    "format_compliance": true
+  },
+  {
+    "question_id": "Q6",
+    "configuration": "C",
+    "correct_retrieval": true,
+    "correct_answer": true,
+    "grounded": true,
+    "refused_when_needed": true,
+    "format_compliance": true
+  }
+]

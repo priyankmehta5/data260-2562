@@ -1,0 +1,141 @@
+[
+  {
+    "question_id": "Q2",
+    "k": 1,
+    "retrieved": [
+      {
+        "rank": 1,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-1",
+        "score": 0.610524,
+        "text": "Municipal Transit Passenger Alert Policy For Priority 1 incidents, the first public passenger alert must be issued within five minutes after operations control confirms the incident. Updates must be published at least every fifteen minutes while the disruption remains active. Alerts should identify the affected route, location, expected delay, available alternatives, and the time of the next update. Approved communication channels include station displays, the transit website, mobile notificatio"
+      }
+    ],
+    "selected_after_filtering": [
+      {
+        "rank": 1,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-1",
+        "score": 0.610524,
+        "text": "Municipal Transit Passenger Alert Policy For Priority 1 incidents, the first public passenger alert must be issued within five minutes after operations control confirms the incident. Updates must be published at least every fifteen minutes while the disruption remains active. Alerts should identify the affected route, location, expected delay, available alternatives, and the time of the next update. Approved communication channels include station displays, the transit website, mobile notificatio"
+      }
+    ],
+    "answer": "The signal failure with an immediate safety threat should be classified as a Priority 1 incident [Source 1]. Passengers should receive updates at least every fifteen minutes while the disruption remains active [Source 1]."
+  },
+  {
+    "question_id": "Q2",
+    "k": 3,
+    "retrieved": [
+      {
+        "rank": 1,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-1",
+        "score": 0.610524,
+        "text": "Municipal Transit Passenger Alert Policy For Priority 1 incidents, the first public passenger alert must be issued within five minutes after operations control confirms the incident. Updates must be published at least every fifteen minutes while the disruption remains active. Alerts should identify the affected route, location, expected delay, available alternatives, and the time of the next update. Approved communication channels include station displays, the transit website, mobile notificatio"
+      },
+      {
+        "rank": 2,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-72",
+        "score": 0.531376,
+        "text": "AR-15-01. Washington, DC: NTSB. (b) This recommendation is currently classified Open—Acceptable Response. See CAROL for this recommendation’s complete history. Railroad Investigation Report RIR-26-05 17 personnel to train emergency responders on transit emergencies and added estimated times of arrival for SEPTA personnel to the information it provides emergency responders. Both changes are intended to support quickly and effectively securing an accident scene. 3 Probable Cause The National Trans"
+      },
+      {
+        "rank": 3,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-74",
+        "score": 0.520771,
+        "text": "d from his duties for unknown reasons and failed to apply the vehicle’s brakes, the automatic train control system was unable to detect the imminent collision and intervene. 4 Lessons Learned This collision could have been prevented by a train control system that did not depend solely on operator vigilance. A system that leaves the operator as a single point of failure is vulnerable to safety risks such as operator fatigue, distraction, or incapacitation. Requiring TBTC on rail transit systems,"
+      }
+    ],
+    "selected_after_filtering": [
+      {
+        "rank": 1,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-1",
+        "score": 0.610524,
+        "text": "Municipal Transit Passenger Alert Policy For Priority 1 incidents, the first public passenger alert must be issued within five minutes after operations control confirms the incident. Updates must be published at least every fifteen minutes while the disruption remains active. Alerts should identify the affected route, location, expected delay, available alternatives, and the time of the next update. Approved communication channels include station displays, the transit website, mobile notificatio"
+      },
+      {
+        "rank": 2,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-72",
+        "score": 0.531376,
+        "text": "AR-15-01. Washington, DC: NTSB. (b) This recommendation is currently classified Open—Acceptable Response. See CAROL for this recommendation’s complete history. Railroad Investigation Report RIR-26-05 17 personnel to train emergency responders on transit emergencies and added estimated times of arrival for SEPTA personnel to the information it provides emergency responders. Both changes are intended to support quickly and effectively securing an accident scene. 3 Probable Cause The National Trans"
+      },
+      {
+        "rank": 3,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-74",
+        "score": 0.520771,
+        "text": "d from his duties for unknown reasons and failed to apply the vehicle’s brakes, the automatic train control system was unable to detect the imminent collision and intervene. 4 Lessons Learned This collision could have been prevented by a train control system that did not depend solely on operator vigilance. A system that leaves the operator as a single point of failure is vulnerable to safety risks such as operator fatigue, distraction, or incapacitation. Requiring TBTC on rail transit systems,"
+      }
+    ],
+    "answer": "According to the provided context, a signal failure with an immediate safety threat should be classified as an \"Open—Acceptable Response\" [Source 2]. Passengers should receive updates at least every fifteen minutes while the disruption remains active [Source 1]."
+  },
+  {
+    "question_id": "Q2",
+    "k": 5,
+    "retrieved": [
+      {
+        "rank": 1,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-1",
+        "score": 0.610524,
+        "text": "Municipal Transit Passenger Alert Policy For Priority 1 incidents, the first public passenger alert must be issued within five minutes after operations control confirms the incident. Updates must be published at least every fifteen minutes while the disruption remains active. Alerts should identify the affected route, location, expected delay, available alternatives, and the time of the next update. Approved communication channels include station displays, the transit website, mobile notificatio"
+      },
+      {
+        "rank": 2,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-72",
+        "score": 0.531376,
+        "text": "AR-15-01. Washington, DC: NTSB. (b) This recommendation is currently classified Open—Acceptable Response. See CAROL for this recommendation’s complete history. Railroad Investigation Report RIR-26-05 17 personnel to train emergency responders on transit emergencies and added estimated times of arrival for SEPTA personnel to the information it provides emergency responders. Both changes are intended to support quickly and effectively securing an accident scene. 3 Probable Cause The National Trans"
+      },
+      {
+        "rank": 3,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-74",
+        "score": 0.520771,
+        "text": "d from his duties for unknown reasons and failed to apply the vehicle’s brakes, the automatic train control system was unable to detect the imminent collision and intervene. 4 Lessons Learned This collision could have been prevented by a train control system that did not depend solely on operator vigilance. A system that leaves the operator as a single point of failure is vulnerable to safety risks such as operator fatigue, distraction, or incapacitation. Requiring TBTC on rail transit systems,"
+      },
+      {
+        "rank": 4,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-2",
+        "score": 0.516623,
+        "text": "displays, the transit website, mobile notifications, and official social-media accounts. Priority 2 incidents require a public alert when the expected disruption exceeds ten minutes. Priority 3 incidents may be included in scheduled service notices."
+      },
+      {
+        "rank": 5,
+        "source": "incident_priority_policy.txt",
+        "chunk_id": "incident_priority_policy.txt-chunk-1",
+        "score": 0.512578,
+        "text": "Municipal Transit Incident Priority Policy Priority 1 incidents include complete signal-system failure, collision, fire, evacuation, or any condition presenting an immediate threat to passenger safety. Priority 1 incidents must be escalated immediately to the operations control center and emergency responders. Priority 2 incidents include major delays, partial route suspension, station closure, and equipment failures that significantly affect service but do not create an immediate safety threat."
+      }
+    ],
+    "selected_after_filtering": [
+      {
+        "rank": 1,
+        "source": "passenger_alert_policy.txt",
+        "chunk_id": "passenger_alert_policy.txt-chunk-1",
+        "score": 0.610524,
+        "text": "Municipal Transit Passenger Alert Policy For Priority 1 incidents, the first public passenger alert must be issued within five minutes after operations control confirms the incident. Updates must be published at least every fifteen minutes while the disruption remains active. Alerts should identify the affected route, location, expected delay, available alternatives, and the time of the next update. Approved communication channels include station displays, the transit website, mobile notificatio"
+      },
+      {
+        "rank": 2,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-72",
+        "score": 0.531376,
+        "text": "AR-15-01. Washington, DC: NTSB. (b) This recommendation is currently classified Open—Acceptable Response. See CAROL for this recommendation’s complete history. Railroad Investigation Report RIR-26-05 17 personnel to train emergency responders on transit emergencies and added estimated times of arrival for SEPTA personnel to the information it provides emergency responders. Both changes are intended to support quickly and effectively securing an accident scene. 3 Probable Cause The National Trans"
+      },
+      {
+        "rank": 3,
+        "source": "septa_norristown_collision.pdf",
+        "chunk_id": "septa_norristown_collision.pdf-chunk-74",
+        "score": 0.520771,
+        "text": "d from his duties for unknown reasons and failed to apply the vehicle’s brakes, the automatic train control system was unable to detect the imminent collision and intervene. 4 Lessons Learned This collision could have been prevented by a train control system that did not depend solely on operator vigilance. A system that leaves the operator as a single point of failure is vulnerable to safety risks such as operator fatigue, distraction, or incapacitation. Requiring TBTC on rail transit systems,"
+      }
+    ],
+    "answer": "The signal failure with an immediate safety threat should be classified as an \"Open—Acceptable Response\" based on the recommendation in [Source 2]. Passengers should receive updates at least every fifteen minutes while the disruption remains active, as specified in [Source 1]."
+  }
+]
