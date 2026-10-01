@@ -1,0 +1,86 @@
+{
+  "homework_number": 4,
+  "sid4": 2562,
+  "commit_hash": "5a5077d8cfa24823fba3d75f0e88cb0fd3aaffca",
+  "model_configuration": {
+    "llm": "qwen3:1.7b",
+    "embedding_model": "sentence-transformers/all-MiniLM-L6-v2",
+    "device": "CPU",
+    "chunk_size": 500,
+    "chunk_overlap": 50,
+    "default_top_k": 3,
+    "port_base": 8762,
+    "database": "s2562_rel"
+  },
+  "seed": 2562,
+  "verify_seed": 262562,
+  "verified_at_utc": "2026-10-01T04:39:21.114321+00:00",
+  "checks": [
+    {
+      "name": "FastAPI responds on PORT_BASE",
+      "passed": true,
+      "details": "GET http://127.0.0.1:8762/docs returned successfully"
+    },
+    {
+      "name": "Login creates a server-side session",
+      "passed": true,
+      "details": "status=200; http_only_session_cookie_received=True"
+    },
+    {
+      "name": "Naive list endpoint returns related data",
+      "passed": true,
+      "details": "status=200; records=10; sql_queries=11"
+    },
+    {
+      "name": "Optimized list endpoint returns related data",
+      "passed": true,
+      "details": "status=200; records=10; sql_queries=1"
+    },
+    {
+      "name": "Required database session variable exists",
+      "passed": true,
+      "details": "Checked code.hw04.backend.database"
+    },
+    {
+      "name": "MySQL seed data exists",
+      "passed": true,
+      "details": "incidents=5000; incident_notes=200"
+    },
+    {
+      "name": "All 180 N+1 requests are saved",
+      "passed": true,
+      "details": "rows=180; groups={('naive', 10): 30, ('optimized', 50): 30, ('naive', 200): 30, ('optimized', 10): 30, ('optimized', 200): 30, ('naive', 50): 30}"
+    },
+    {
+      "name": "RAG corpus contains at least five documents",
+      "passed": true,
+      "details": "files=5; names=['incident_priority_policy.txt', 'passenger_alert_policy.txt', 'septa_norristown_collision.pdf', 'vta_climate_actions.pdf', 'vta_security_and_system_safety.pdf']"
+    },
+    {
+      "name": "Six questions have printed top-k retrievals",
+      "passed": true,
+      "details": "questions=6; top_k_counts=[3, 3, 3, 3, 3, 3]"
+    },
+    {
+      "name": "Three-configuration comparison is complete",
+      "passed": true,
+      "details": "rows=18; configurations=['A', 'B', 'C']"
+    },
+    {
+      "name": "Top-k sweep contains k=1, 3, and 5",
+      "passed": true,
+      "details": "k_values=[1, 3, 5]"
+    },
+    {
+      "name": "Context RAG refuses Q5 and Q6",
+      "passed": true,
+      "details": "answers={'Q5': 'I cannot answer this question from the provided documents', 'Q6': 'I cannot answer this question from the provided documents'}"
+    },
+    {
+      "name": "RAG evaluation contains all 18 rows",
+      "passed": true,
+      "details": "evaluation_rows=18"
+    }
+  ],
+  "overall_passed": true
+}
