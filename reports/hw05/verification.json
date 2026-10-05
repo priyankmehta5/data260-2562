@@ -1,7 +1,7 @@
 {
   "homework": "5",
   "sid4": "2562",
-  "commit_hash": "record after final commit",
+  "commit_hash": "0075108ef6118b79bfda3560c866e1ade6e10ee0",
   "model": "qwen3:1.7b",
   "seed": 2562,
   "verify_seed": 262562,

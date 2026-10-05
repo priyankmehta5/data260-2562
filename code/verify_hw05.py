@@ -78,7 +78,7 @@ def main():
     payload = {
         "homework": "5",
         "sid4": "2562",
-        "commit_hash": "record after final commit",
+        "commit_hash": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=ROOT, text=True).strip(),
         "model": "qwen3:1.7b",
         "seed": 2562,
         "verify_seed": 262562,

@@ -4,7 +4,7 @@
     "call": 1,
     "success": true,
     "attempts": 1,
-    "latency_ms": 9.8059,
+    "latency_ms": 10.4202,
     "result": {
       "ok": true
     }
@@ -14,7 +14,7 @@
     "call": 2,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.943,
+    "latency_ms": 3.7333,
     "result": {
       "ok": true
     }
@@ -24,7 +24,7 @@
     "call": 3,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.8614,
+    "latency_ms": 3.885,
     "result": {
       "ok": true
     }
@@ -34,7 +34,7 @@
     "call": 4,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.8113,
+    "latency_ms": 0.9139,
     "result": {
       "ok": true
     }
@@ -44,7 +44,7 @@
     "call": 5,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9277,
+    "latency_ms": 0.9232,
     "result": {
       "ok": true
     }
@@ -54,7 +54,7 @@
     "call": 6,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.8049,
+    "latency_ms": 0.9306,
     "result": {
       "ok": true
     }
@@ -64,7 +64,7 @@
     "call": 7,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.1378,
+    "latency_ms": 1.0985,
     "result": {
       "ok": true
     }
@@ -74,7 +74,7 @@
     "call": 8,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9253,
+    "latency_ms": 1.1973,
     "result": {
       "ok": true
     }
@@ -84,7 +84,7 @@
     "call": 9,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.871,
+    "latency_ms": 1.3816,
     "result": {
       "ok": true
     }
@@ -94,7 +94,7 @@
     "call": 10,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.797,
+    "latency_ms": 1.1903,
     "result": {
       "ok": true
     }
@@ -104,7 +104,7 @@
     "call": 11,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.8731,
+    "latency_ms": 1.0534,
     "result": {
       "ok": true
     }
@@ -114,7 +114,7 @@
     "call": 12,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9127,
+    "latency_ms": 1.0131,
     "result": {
       "ok": true
     }
@@ -124,7 +124,7 @@
     "call": 13,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.4674,
+    "latency_ms": 0.946,
     "result": {
       "ok": true
     }
@@ -134,7 +134,7 @@
     "call": 14,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.1509,
+    "latency_ms": 0.8591,
     "result": {
       "ok": true
     }
@@ -144,7 +144,7 @@
     "call": 15,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.217,
+    "latency_ms": 0.9901,
     "result": {
       "ok": true
     }
@@ -154,7 +154,7 @@
     "call": 16,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.2524,
+    "latency_ms": 0.9788,
     "result": {
       "ok": true
     }
@@ -164,7 +164,7 @@
     "call": 17,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9929,
+    "latency_ms": 0.9968,
     "result": {
       "ok": true
     }
@@ -174,7 +174,7 @@
     "call": 18,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9916,
+    "latency_ms": 1.0039,
     "result": {
       "ok": true
     }
@@ -184,7 +184,7 @@
     "call": 19,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.0391,
+    "latency_ms": 0.9597,
     "result": {
       "ok": true
     }
@@ -194,7 +194,7 @@
     "call": 20,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.1206,
+    "latency_ms": 0.8581,
     "result": {
       "ok": true
     }
@@ -204,7 +204,7 @@
     "call": 21,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9558,
+    "latency_ms": 1.0268,
     "result": {
       "ok": true
     }
@@ -214,7 +214,7 @@
     "call": 22,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.0277,
+    "latency_ms": 1.1692,
     "result": {
       "ok": true
     }
@@ -224,7 +224,7 @@
     "call": 23,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.0902,
+    "latency_ms": 1.1936,
     "result": {
       "ok": true
     }
@@ -234,7 +234,7 @@
     "call": 24,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.0714,
+    "latency_ms": 0.9632,
     "result": {
       "ok": true
     }
@@ -244,7 +244,7 @@
     "call": 25,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.0917,
+    "latency_ms": 0.9265,
     "result": {
       "ok": true
     }
@@ -254,7 +254,7 @@
     "call": 26,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.2163,
+    "latency_ms": 0.8548,
     "result": {
       "ok": true
     }
@@ -264,7 +264,7 @@
     "call": 27,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.3193,
+    "latency_ms": 0.9687,
     "result": {
       "ok": true
     }
@@ -272,696 +272,6 @@
   {
     "rate": 0.0,
     "call": 28,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.335,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 29,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.1124,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 30,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0952,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 31,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.237,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 32,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.1205,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 33,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9667,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 34,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9718,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 35,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0041,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 36,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0456,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 37,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.3813,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 38,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0369,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 39,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9193,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 40,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.3754,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 41,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9935,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 42,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9136,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 43,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.1944,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 44,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0552,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 45,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8723,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 46,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8804,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 47,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8998,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 48,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9566,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 49,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.1604,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.0,
-    "call": 50,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.4793,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 1,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.088,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 2,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.962,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 3,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9255,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 4,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9626,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 5,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.2638,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 6,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.4676,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 7,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0473,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 8,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8905,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 9,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8657,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 10,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8736,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 11,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8038,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 12,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0143,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 13,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0576,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 14,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8667,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 15,
-    "success": true,
-    "attempts": 2,
-    "latency_ms": 2.4604,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 16,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.2564,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 17,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0558,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 18,
-    "success": true,
-    "attempts": 2,
-    "latency_ms": 2.6189,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 19,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8345,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 20,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8384,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 21,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0189,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 22,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9005,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 23,
-    "success": true,
-    "attempts": 2,
-    "latency_ms": 2.0241,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 24,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8735,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 25,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.8578,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 26,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9008,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 27,
-    "success": true,
-    "attempts": 2,
-    "latency_ms": 2.3209,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 28,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.3338,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 29,
-    "success": true,
-    "attempts": 2,
-    "latency_ms": 3.4248,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 30,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.4941,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 31,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.5372,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 32,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0429,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 33,
-    "success": true,
-    "attempts": 3,
-    "latency_ms": 4.2409,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 34,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.2334,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 35,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.3064,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 36,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0188,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 37,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9977,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 38,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9878,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 39,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 0.9961,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 40,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.3915,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 41,
-    "success": true,
-    "attempts": 2,
-    "latency_ms": 2.7297,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 42,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.3868,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 43,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.129,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 44,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.2588,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 45,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.1514,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 46,
-    "success": true,
-    "attempts": 1,
-    "latency_ms": 1.0883,
-    "result": {
-      "ok": true
-    }
-  },
-  {
-    "rate": 0.2,
-    "call": 47,
     "success": true,
     "attempts": 1,
     "latency_ms": 1.0019,
@@ -970,11 +280,701 @@
     }
   },
   {
+    "rate": 0.0,
+    "call": 29,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9981,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 30,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1888,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 31,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9665,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 32,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9799,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 33,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0038,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 34,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.942,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 35,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.8728,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 36,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0179,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 37,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1312,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 38,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.451,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 39,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.3925,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 40,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0683,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 41,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0184,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 42,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1947,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 43,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1806,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 44,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.2555,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 45,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1907,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 46,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0823,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 47,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1538,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 48,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0646,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 49,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1831,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.0,
+    "call": 50,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.2326,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 1,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0756,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 2,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9867,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 3,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.158,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 4,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0962,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 5,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1757,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 6,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0871,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 7,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1718,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 8,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0884,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 9,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.3053,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 10,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9861,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 11,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.2271,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 12,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0761,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 13,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1744,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 14,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.4143,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 15,
+    "success": true,
+    "attempts": 2,
+    "latency_ms": 2.762,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 16,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9715,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 17,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.8842,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 18,
+    "success": true,
+    "attempts": 2,
+    "latency_ms": 2.3125,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 19,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9924,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 20,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9095,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 21,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.8916,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 22,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9248,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 23,
+    "success": true,
+    "attempts": 2,
+    "latency_ms": 2.9267,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 24,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.2739,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 25,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1119,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 26,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.106,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 27,
+    "success": true,
+    "attempts": 2,
+    "latency_ms": 2.3959,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 28,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.2278,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 29,
+    "success": true,
+    "attempts": 2,
+    "latency_ms": 2.2361,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 30,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9861,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 31,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9987,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 32,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1956,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 33,
+    "success": true,
+    "attempts": 3,
+    "latency_ms": 5.2542,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 34,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.2036,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 35,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1707,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 36,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0208,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 37,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0716,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 38,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.1205,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 39,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9877,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 40,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9745,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 41,
+    "success": true,
+    "attempts": 2,
+    "latency_ms": 2.3072,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 42,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.8008,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 43,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.9086,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 44,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.4416,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 45,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.3893,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 46,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 1.0851,
+    "result": {
+      "ok": true
+    }
+  },
+  {
+    "rate": 0.2,
+    "call": 47,
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.852,
+    "result": {
+      "ok": true
+    }
+  },
+  {
     "rate": 0.2,
     "call": 48,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.2427,
+    "latency_ms": 2.287,
     "result": {
       "ok": true
     }
@@ -984,7 +984,7 @@
     "call": 49,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.6426,
+    "latency_ms": 0.9593,
     "result": {
       "ok": true
     }
@@ -994,7 +994,7 @@
     "call": 50,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.0473,
+    "latency_ms": 0.9045,
     "result": {
       "ok": true
     }
@@ -1004,7 +1004,7 @@
     "call": 1,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.8325,
+    "latency_ms": 0.9642,
     "result": {
       "ok": true
     }
@@ -1014,7 +1014,7 @@
     "call": 2,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.8281,
+    "latency_ms": 0.9727,
     "result": {
       "ok": true
     }
@@ -1024,7 +1024,7 @@
     "call": 3,
     "success": true,
     "attempts": 3,
-    "latency_ms": 5.1184,
+    "latency_ms": 4.6787,
     "result": {
       "ok": true
     }
@@ -1034,7 +1034,7 @@
     "call": 4,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.957,
+    "latency_ms": 1.1592,
     "result": {
       "ok": true
     }
@@ -1044,7 +1044,7 @@
     "call": 5,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9617,
+    "latency_ms": 1.0524,
     "result": {
       "ok": true
     }
@@ -1054,7 +1054,7 @@
     "call": 6,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9651,
+    "latency_ms": 1.0413,
     "result": {
       "ok": true
     }
@@ -1064,7 +1064,7 @@
     "call": 7,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.8875,
+    "latency_ms": 1.3221,
     "result": {
       "ok": true
     }
@@ -1074,7 +1074,7 @@
     "call": 8,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.3177,
+    "latency_ms": 2.4617,
     "result": {
       "ok": true
     }
@@ -1084,7 +1084,7 @@
     "call": 9,
     "success": false,
     "attempts": 3,
-    "latency_ms": 3.6077,
+    "latency_ms": 3.7421,
     "result": "injected timeout"
   },
   {
@@ -1092,7 +1092,7 @@
     "call": 10,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.4478,
+    "latency_ms": 1.8442,
     "result": {
       "ok": true
     }
@@ -1102,7 +1102,7 @@
     "call": 11,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.2906,
+    "latency_ms": 2.2669,
     "result": {
       "ok": true
     }
@@ -1112,7 +1112,7 @@
     "call": 12,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9327,
+    "latency_ms": 0.9893,
     "result": {
       "ok": true
     }
@@ -1122,7 +1122,7 @@
     "call": 13,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.2602,
+    "latency_ms": 2.5529,
     "result": {
       "ok": true
     }
@@ -1132,7 +1132,7 @@
     "call": 14,
     "success": true,
     "attempts": 3,
-    "latency_ms": 4.2915,
+    "latency_ms": 4.8502,
     "result": {
       "ok": true
     }
@@ -1142,7 +1142,7 @@
     "call": 15,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.9377,
+    "latency_ms": 2.5516,
     "result": {
       "ok": true
     }
@@ -1152,7 +1152,7 @@
     "call": 16,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.2504,
+    "latency_ms": 1.2383,
     "result": {
       "ok": true
     }
@@ -1162,7 +1162,7 @@
     "call": 17,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.0793,
+    "latency_ms": 1.0059,
     "result": {
       "ok": true
     }
@@ -1172,7 +1172,7 @@
     "call": 18,
     "success": true,
     "attempts": 3,
-    "latency_ms": 4.2988,
+    "latency_ms": 4.9685,
     "result": {
       "ok": true
     }
@@ -1182,7 +1182,7 @@
     "call": 19,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.4309,
+    "latency_ms": 2.4956,
     "result": {
       "ok": true
     }
@@ -1192,7 +1192,7 @@
     "call": 20,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.1133,
+    "latency_ms": 2.4605,
     "result": {
       "ok": true
     }
@@ -1202,7 +1202,7 @@
     "call": 21,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9705,
+    "latency_ms": 0.9738,
     "result": {
       "ok": true
     }
@@ -1212,7 +1212,7 @@
     "call": 22,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.5939,
+    "latency_ms": 0.9827,
     "result": {
       "ok": true
     }
@@ -1222,7 +1222,7 @@
     "call": 23,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.3632,
+    "latency_ms": 0.9845,
     "result": {
       "ok": true
     }
@@ -1232,7 +1232,7 @@
     "call": 24,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.1188,
+    "latency_ms": 2.4647,
     "result": {
       "ok": true
     }
@@ -1242,7 +1242,7 @@
     "call": 25,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.2225,
+    "latency_ms": 2.45,
     "result": {
       "ok": true
     }
@@ -1252,7 +1252,7 @@
     "call": 26,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.018,
+    "latency_ms": 1.1747,
     "result": {
       "ok": true
     }
@@ -1262,7 +1262,7 @@
     "call": 27,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.6131,
+    "latency_ms": 2.9996,
     "result": {
       "ok": true
     }
@@ -1272,7 +1272,7 @@
     "call": 28,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.3563,
+    "latency_ms": 2.1478,
     "result": {
       "ok": true
     }
@@ -1282,7 +1282,7 @@
     "call": 29,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9779,
+    "latency_ms": 0.9812,
     "result": {
       "ok": true
     }
@@ -1292,7 +1292,7 @@
     "call": 30,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.223,
+    "latency_ms": 2.1171,
     "result": {
       "ok": true
     }
@@ -1302,7 +1302,7 @@
     "call": 31,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.4489,
+    "latency_ms": 2.4151,
     "result": {
       "ok": true
     }
@@ -1312,7 +1312,7 @@
     "call": 32,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9578,
+    "latency_ms": 0.9719,
     "result": {
       "ok": true
     }
@@ -1322,7 +1322,7 @@
     "call": 33,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.7833,
+    "latency_ms": 0.9374,
     "result": {
       "ok": true
     }
@@ -1332,7 +1332,7 @@
     "call": 34,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.281,
+    "latency_ms": 0.9942,
     "result": {
       "ok": true
     }
@@ -1342,7 +1342,7 @@
     "call": 35,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.2534,
+    "latency_ms": 0.9684,
     "result": {
       "ok": true
     }
@@ -1352,7 +1352,7 @@
     "call": 36,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.92,
+    "latency_ms": 0.953,
     "result": {
       "ok": true
     }
@@ -1362,7 +1362,7 @@
     "call": 37,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.0507,
+    "latency_ms": 2.3314,
     "result": {
       "ok": true
     }
@@ -1372,7 +1372,7 @@
     "call": 38,
     "success": true,
     "attempts": 3,
-    "latency_ms": 4.2937,
+    "latency_ms": 4.6212,
     "result": {
       "ok": true
     }
@@ -1382,7 +1382,7 @@
     "call": 39,
     "success": true,
     "attempts": 2,
-    "latency_ms": 1.9334,
+    "latency_ms": 2.5139,
     "result": {
       "ok": true
     }
@@ -1392,7 +1392,7 @@
     "call": 40,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.8532,
+    "latency_ms": 0.9887,
     "result": {
       "ok": true
     }
@@ -1402,7 +1402,7 @@
     "call": 41,
     "success": false,
     "attempts": 3,
-    "latency_ms": 3.3514,
+    "latency_ms": 3.6913,
     "result": "injected timeout"
   },
   {
@@ -1410,7 +1410,7 @@
     "call": 42,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.476,
+    "latency_ms": 1.1797,
     "result": {
       "ok": true
     }
@@ -1420,7 +1420,7 @@
     "call": 43,
     "success": false,
     "attempts": 3,
-    "latency_ms": 3.3248,
+    "latency_ms": 3.5272,
     "result": "injected timeout"
   },
   {
@@ -1428,7 +1428,7 @@
     "call": 44,
     "success": false,
     "attempts": 3,
-    "latency_ms": 3.2864,
+    "latency_ms": 3.6731,
     "result": "injected timeout"
   },
   {
@@ -1436,7 +1436,7 @@
     "call": 45,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.0766,
+    "latency_ms": 2.439,
     "result": {
       "ok": true
     }
@@ -1446,7 +1446,7 @@
     "call": 46,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.9485,
+    "latency_ms": 0.9695,
     "result": {
       "ok": true
     }
@@ -1456,7 +1456,7 @@
     "call": 47,
     "success": true,
     "attempts": 1,
-    "latency_ms": 0.91,
+    "latency_ms": 0.9422,
     "result": {
       "ok": true
     }
@@ -1466,7 +1466,7 @@
     "call": 48,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.4461,
+    "latency_ms": 0.9372,
     "result": {
       "ok": true
     }
@@ -1476,7 +1476,7 @@
     "call": 49,
     "success": true,
     "attempts": 1,
-    "latency_ms": 1.4373,
+    "latency_ms": 0.9691,
     "result": {
       "ok": true
     }
@@ -1486,7 +1486,7 @@
     "call": 50,
     "success": true,
     "attempts": 2,
-    "latency_ms": 2.2011,
+    "latency_ms": 2.9791,
     "result": {
       "ok": true
     }
