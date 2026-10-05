@@ -1,0 +1,41 @@
+[
+  {
+    "case": "first_attempt_success",
+    "success": true,
+    "attempts": 1,
+    "latency_ms": 0.0033,
+    "result": "{'status': 'ok'}"
+  },
+  {
+    "case": "retry_success",
+    "success": true,
+    "attempts": 2,
+    "latency_ms": 1.1706,
+    "result": "{'status': 'recovered'}"
+  },
+  {
+    "case": "exhausted_failure",
+    "success": false,
+    "attempts": 3,
+    "latency_ms": 3.2889,
+    "result": "forced failure"
+  },
+  {
+    "tool": "detail",
+    "case": "safety_block",
+    "result": {
+      "ok": false,
+      "data": null,
+      "error": "safety rule blocked critical-incident detail"
+    }
+  },
+  {
+    "tool": "aggregate",
+    "case": "invalid_inputs",
+    "result": {
+      "ok": false,
+      "data": null,
+      "error": "aggregate accepts no inputs"
+    }
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "user_input": "scenario-1",
+    "steps": [
+      {
+        "turn": 1,
+        "tool": "search",
+        "inputs": {
+          "query": "signal"
+        },
+        "result": {
+          "ok": true,
+          "data": [
+            {
+              "id": 1,
+              "incident_code": "INC-0001",
+              "title": "Signal delay",
+              "severity": 2,
+              "agency_id": 1
+            }
+          ],
+          "error": null
+        }
+      },
+      {
+        "turn": 2,
+        "tool": "search",
+        "inputs": {
+          "query": "signal"
+        },
+        "result": {
+          "ok": true,
+          "data": [
+            {
+              "id": 1,
+              "incident_code": "INC-0001",
+              "title": "Signal delay",
+              "severity": 2,
+              "agency_id": 1
+            }
+          ],
+          "error": null
+        }
+      }
+    ],
+    "stop_reason": "max_steps",
+    "tool_call_count": 2
+  },
+  {
+    "user_input": "scenario-2",
+    "steps": [
+      {
+        "turn": 1,
+        "tool": "detail",
+        "inputs": {
+          "incident_id": 3
+        },
+        "result": {
+          "ok": false,
+          "data": null,
+          "error": "safety rule blocked critical-incident detail"
+        }
+      },
+      {
+        "turn": 2,
+        "tool": "detail",
+        "inputs": {
+          "incident_id": 3
+        },
+        "result": {
+          "ok": false,
+          "data": null,
+          "error": "safety rule blocked critical-incident detail"
+        }
+      }
+    ],
+    "stop_reason": "max_steps",
+    "tool_call_count": 2
+  },
+  {
+    "user_input": "scenario-3",
+    "steps": [
+      {
+        "turn": 1,
+        "tool": "missing",
+        "inputs": {},
+        "result": {
+          "ok": false,
+          "data": null,
+          "error": "unknown tool"
+        }
+      },
+      {
+        "turn": 2,
+        "tool": "missing",
+        "inputs": {},
+        "result": {
+          "ok": false,
+          "data": null,
+          "error": "unknown tool"
+        }
+      }
+    ],
+    "stop_reason": "max_steps",
+    "tool_call_count": 2
+  },
+  {
+    "user_input": "scenario-4",
+    "steps": [
+      {
+        "turn": 1,
+        "tool": "search",
+        "inputs": {
+          "query": "signal"
+        },
+        "result": {
+          "ok": true,
+          "data": [
+            {
+              "id": 1,
+              "incident_code": "INC-0001",
+              "title": "Signal delay",
+              "severity": 2,
+              "agency_id": 1
+            }
+          ],
+          "error": null
+        }
+      },
+      {
+        "turn": 2,
+        "tool": "search",
+        "inputs": {
+          "query": "signal"
+        },
+        "result": {
+          "ok": true,
+          "data": [
+            {
+              "id": 1,
+              "incident_code": "INC-0001",
+              "title": "Signal delay",
+              "severity": 2,
+              "agency_id": 1
+            }
+          ],
+          "error": null
+        }
+      }
+    ],
+    "stop_reason": "max_steps",
+    "tool_call_count": 2
+  }
+]

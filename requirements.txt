@@ -20,3 +20,4 @@ SQLAlchemy
 PyMySQL
 python-dotenv
 bcrypt
+mcp[cli]

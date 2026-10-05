@@ -1,0 +1,86 @@
+[
+  {
+    "user_input": "Find signal incidents",
+    "steps": [
+      {
+        "turn": 1,
+        "tool": "aggregate",
+        "inputs": {},
+        "result": {
+          "ok": true,
+          "data": {
+            "incident_count": 3,
+            "mean_severity": 3.3333333333333335,
+            "agency_count": 1
+          },
+          "error": null
+        }
+      }
+    ],
+    "stop_reason": "completed",
+    "tool_call_count": 1
+  },
+  {
+    "user_input": "Summarize transit totals",
+    "steps": [
+      {
+        "turn": 1,
+        "tool": "aggregate",
+        "inputs": {},
+        "result": {
+          "ok": true,
+          "data": {
+            "incident_count": 3,
+            "mean_severity": 3.3333333333333335,
+            "agency_count": 1
+          },
+          "error": null
+        }
+      }
+    ],
+    "stop_reason": "completed",
+    "tool_call_count": 1
+  },
+  {
+    "user_input": "Look up incident 1",
+    "steps": [
+      {
+        "turn": 1,
+        "tool": "aggregate",
+        "inputs": {},
+        "result": {
+          "ok": true,
+          "data": {
+            "incident_count": 3,
+            "mean_severity": 3.3333333333333335,
+            "agency_count": 1
+          },
+          "error": null
+        }
+      }
+    ],
+    "stop_reason": "completed",
+    "tool_call_count": 1
+  },
+  {
+    "user_input": "Find platform crowding",
+    "steps": [
+      {
+        "turn": 1,
+        "tool": "aggregate",
+        "inputs": {},
+        "result": {
+          "ok": true,
+          "data": {
+            "incident_count": 3,
+            "mean_severity": 3.3333333333333335,
+            "agency_count": 1
+          },
+          "error": null
+        }
+      }
+    ],
+    "stop_reason": "completed",
+    "tool_call_count": 1
+  }
+]

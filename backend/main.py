@@ -1,6 +1,6 @@
 import secrets
-from datetime import datetime, timedelta
 import time
+from datetime import datetime, timedelta
 
 import bcrypt
 from fastapi import (
@@ -16,20 +16,15 @@ from sqlalchemy.orm import Session as DatabaseSession
 
 from .database import Base, engine, get_db
 from .models import Incident, IncidentNote, Session, User
-from .schemas import (
-    IncidentCreate,
-    IncidentResponse,
-    IncidentUpdate,
-    LoginRequest,
-    UserResponse,
-)
+from .routes_hw05 import router as hw5_router
+from .schemas import LoginRequest, UserResponse
 
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="Municipal Transit Incident API",
-    version="4.0.0",
+    version="5.0.0",
 )
 
 app.add_middleware(
@@ -81,7 +76,7 @@ def get_current_user(
 
 @app.get("/")
 def root():
-    return {"message": "HW4 API is running"}
+    return {"message": "HW5 API is running"}
 
 
 @app.post("/api/login", response_model=UserResponse)
@@ -92,7 +87,10 @@ def login(
 ):
     user = (
         database.query(User)
-        .filter(User.email == credentials.email.strip().lower())
+        .filter(
+            User.email
+            == credentials.email.strip().lower()
+        )
         .first()
     )
 
@@ -160,92 +158,11 @@ def session_status(
     return user
 
 
-@app.get("/api/incidents", response_model=list[IncidentResponse])
-def get_incidents(
-    database: DatabaseSession = Depends(get_db),
-    user: User = Depends(get_current_user),
-):
-    return database.query(Incident).order_by(Incident.id).all()
-
-
-@app.get(
-    "/api/incidents/{incident_id}",
-    response_model=IncidentResponse,
+app.include_router(
+    hw5_router,
+    dependencies=[Depends(get_current_user)],
 )
-def get_incident(
-    incident_id: int,
-    database: DatabaseSession = Depends(get_db),
-    user: User = Depends(get_current_user),
-):
-    incident = database.get(Incident, incident_id)
 
-    if incident is None:
-        raise HTTPException(404, "Incident not found")
-
-    return incident
-
-
-@app.post(
-    "/api/incidents",
-    response_model=IncidentResponse,
-    status_code=201,
-)
-def create_incident(
-    data: IncidentCreate,
-    database: DatabaseSession = Depends(get_db),
-    user: User = Depends(get_current_user),
-):
-    incident = Incident(
-        title=data.title.strip(),
-        description=data.description.strip(),
-    )
-
-    database.add(incident)
-    database.commit()
-    database.refresh(incident)
-    return incident
-
-
-@app.put(
-    "/api/incidents/{incident_id}",
-    response_model=IncidentResponse,
-)
-def update_incident(
-    incident_id: int,
-    data: IncidentUpdate,
-    database: DatabaseSession = Depends(get_db),
-    user: User = Depends(get_current_user),
-):
-    incident = database.get(Incident, incident_id)
-
-    if incident is None:
-        raise HTTPException(404, "Incident not found")
-
-    incident.title = data.title.strip()
-    incident.description = data.description.strip()
-
-    database.commit()
-    database.refresh(incident)
-    return incident
-
-
-@app.delete(
-    "/api/incidents/{incident_id}",
-    status_code=204,
-)
-def delete_incident(
-    incident_id: int,
-    database: DatabaseSession = Depends(get_db),
-    user: User = Depends(get_current_user),
-):
-    incident = database.get(Incident, incident_id)
-
-    if incident is None:
-        raise HTTPException(404, "Incident not found")
-
-    database.delete(incident)
-    database.commit()
-    return Response(status_code=204)
 
 @app.get("/api/performance/incidents-naive")
 def get_incidents_naive(
@@ -274,7 +191,9 @@ def get_incidents_naive(
     for incident in incidents:
         notes = (
             database.query(IncidentNote)
-            .filter(IncidentNote.incident_id == incident.id)
+            .filter(
+                IncidentNote.incident_id == incident.id
+            )
             .all()
         )
 
@@ -283,6 +202,9 @@ def get_incidents_naive(
                 "id": incident.id,
                 "title": incident.title,
                 "description": incident.description,
+                "incident_code": incident.incident_code,
+                "severity": incident.severity,
+                "agency_id": incident.agency_id,
                 "notes": [
                     {
                         "id": note.id,
@@ -299,7 +221,9 @@ def get_incidents_naive(
     )
     sql_queries = 1 + len(incidents)
 
-    response.headers["X-SQL-Queries"] = str(sql_queries)
+    response.headers["X-SQL-Queries"] = str(
+        sql_queries
+    )
     response.headers["X-Retrieval-Latency-MS"] = str(
         latency_ms
     )
@@ -357,6 +281,9 @@ def get_incidents_optimized(
                 "id": incident.id,
                 "title": incident.title,
                 "description": incident.description,
+                "incident_code": incident.incident_code,
+                "severity": incident.severity,
+                "agency_id": incident.agency_id,
                 "notes": [],
             }
 
@@ -376,7 +303,9 @@ def get_incidents_optimized(
     )
     sql_queries = 1
 
-    response.headers["X-SQL-Queries"] = str(sql_queries)
+    response.headers["X-SQL-Queries"] = str(
+        sql_queries
+    )
     response.headers["X-Retrieval-Latency-MS"] = str(
         latency_ms
     )

@@ -1,0 +1,74 @@
+[
+  {
+    "tool": "search",
+    "case": "valid",
+    "result": {
+      "ok": true,
+      "data": [
+        {
+          "id": 1,
+          "incident_code": "INC-0001",
+          "title": "Signal delay",
+          "severity": 2,
+          "agency_id": 1
+        }
+      ],
+      "error": null
+    }
+  },
+  {
+    "tool": "search",
+    "case": "invalid",
+    "result": {
+      "ok": false,
+      "data": null,
+      "error": "query must be a non-empty string"
+    }
+  },
+  {
+    "tool": "detail",
+    "case": "valid",
+    "result": {
+      "ok": true,
+      "data": {
+        "id": 1,
+        "incident_code": "INC-0001",
+        "title": "Signal delay",
+        "severity": 2,
+        "agency_id": 1
+      },
+      "error": null
+    }
+  },
+  {
+    "tool": "detail",
+    "case": "invalid",
+    "result": {
+      "ok": false,
+      "data": null,
+      "error": "incident_id must be a positive integer"
+    }
+  },
+  {
+    "tool": "aggregate",
+    "case": "valid",
+    "result": {
+      "ok": true,
+      "data": {
+        "incident_count": 2,
+        "mean_severity": 2.5,
+        "agency_count": 1
+      },
+      "error": null
+    }
+  },
+  {
+    "tool": "aggregate",
+    "case": "invalid",
+    "result": {
+      "ok": false,
+      "data": null,
+      "error": "aggregate accepts no inputs"
+    }
+  }
+]

@@ -1,0 +1,750 @@
+[
+  {
+    "id": "60d94e50-4aed-4959-a97d-9566bef6040f",
+    "timestamp": "2026-10-05T11:37:51.766Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "initialize",
+      "params": {
+        "protocolVersion": "2025-11-25",
+        "capabilities": {
+          "sampling": {},
+          "elicitation": {
+            "form": {},
+            "url": {}
+          },
+          "roots": {
+            "listChanged": true
+          },
+          "tasks": {
+            "list": {},
+            "cancel": {},
+            "requests": {
+              "sampling": {
+                "createMessage": {}
+              },
+              "elicitation": {
+                "create": {}
+              }
+            }
+          },
+          "extensions": {
+            "io.modelcontextprotocol/tasks": {},
+            "io.modelcontextprotocol/ui": {
+              "mimeTypes": [
+                "text/html;profile=mcp-app"
+              ],
+              "elicitation": {}
+            },
+            "io.modelcontextprotocol/skills": {}
+          }
+        },
+        "clientInfo": {
+          "name": "mcp-inspector",
+          "version": "2.9.0"
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 0
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 0,
+      "result": {
+        "capabilities": {
+          "prompts": {
+            "listChanged": false
+          },
+          "resources": {
+            "listChanged": false,
+            "subscribe": false
+          },
+          "tools": {
+            "listChanged": false
+          }
+        },
+        "protocolVersion": "2025-11-25",
+        "serverInfo": {
+          "name": "meals",
+          "version": ""
+        }
+      }
+    },
+    "duration": 1285
+  },
+  {
+    "id": "bb7a3ffc-5023-42f7-9f45-060016e3807f",
+    "timestamp": "2026-10-05T11:37:53.060Z",
+    "direction": "notification",
+    "origin": "client",
+    "message": {
+      "jsonrpc": "2.0",
+      "method": "notifications/initialized"
+    }
+  },
+  {
+    "id": "2aa62a34-11aa-4d55-909e-69e9c0f4b43a",
+    "timestamp": "2026-10-05T11:37:53.094Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "resources/list",
+      "jsonrpc": "2.0",
+      "id": 1,
+      "params": {
+        "_meta": {
+          "progressToken": 1
+        }
+      }
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "resources": []
+      }
+    },
+    "duration": 106
+  },
+  {
+    "id": "3fbfc570-41e5-4f5a-9841-2f7ba4ca1634",
+    "timestamp": "2026-10-05T11:37:53.095Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/list",
+      "jsonrpc": "2.0",
+      "id": 2,
+      "params": {
+        "_meta": {
+          "progressToken": 2
+        }
+      }
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": {
+        "tools": [
+          {
+            "description": "",
+            "inputSchema": {
+              "properties": {
+                "query": {
+                  "title": "Query",
+                  "type": "string"
+                },
+                "limit": {
+                  "default": 5,
+                  "title": "Limit",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "query"
+              ],
+              "type": "object",
+              "title": "search_meals_by_nameArguments"
+            },
+            "name": "search_meals_by_name",
+            "outputSchema": {
+              "properties": {
+                "result": {
+                  "items": {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  "title": "Result",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "result"
+              ],
+              "type": "object",
+              "title": "search_meals_by_nameOutput"
+            }
+          },
+          {
+            "description": "",
+            "inputSchema": {
+              "properties": {
+                "ingredient": {
+                  "title": "Ingredient",
+                  "type": "string"
+                },
+                "limit": {
+                  "default": 12,
+                  "title": "Limit",
+                  "type": "integer"
+                }
+              },
+              "required": [
+                "ingredient"
+              ],
+              "type": "object",
+              "title": "meals_by_ingredientArguments"
+            },
+            "name": "meals_by_ingredient",
+            "outputSchema": {
+              "properties": {
+                "result": {
+                  "items": {
+                    "additionalProperties": true,
+                    "type": "object"
+                  },
+                  "title": "Result",
+                  "type": "array"
+                }
+              },
+              "required": [
+                "result"
+              ],
+              "type": "object",
+              "title": "meals_by_ingredientOutput"
+            }
+          },
+          {
+            "description": "",
+            "inputSchema": {
+              "properties": {},
+              "type": "object",
+              "title": "random_mealArguments"
+            },
+            "name": "random_meal",
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": true,
+              "title": "random_mealDictOutput"
+            }
+          },
+          {
+            "description": "",
+            "inputSchema": {
+              "properties": {
+                "id": {
+                  "anyOf": [
+                    {
+                      "type": "string"
+                    },
+                    {
+                      "type": "integer"
+                    }
+                  ],
+                  "title": "Id"
+                }
+              },
+              "required": [
+                "id"
+              ],
+              "type": "object",
+              "title": "meal_detailsArguments"
+            },
+            "name": "meal_details",
+            "outputSchema": {
+              "type": "object",
+              "additionalProperties": true,
+              "title": "meal_detailsDictOutput"
+            }
+          }
+        ]
+      }
+    },
+    "duration": 141
+  },
+  {
+    "id": "821fd7d1-4501-4f75-9521-ad65a8a48a21",
+    "timestamp": "2026-10-05T11:37:53.095Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "prompts/list",
+      "jsonrpc": "2.0",
+      "id": 3,
+      "params": {
+        "_meta": {
+          "progressToken": 3
+        }
+      }
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "prompts": []
+      }
+    },
+    "duration": 172
+  },
+  {
+    "id": "c07d6a1e-3a53-4e0c-924f-8b4649f0c2bb",
+    "timestamp": "2026-10-05T11:37:53.095Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "resources/templates/list",
+      "jsonrpc": "2.0",
+      "id": 4,
+      "params": {
+        "_meta": {
+          "progressToken": 4
+        }
+      }
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "result": {
+        "resourceTemplates": []
+      }
+    },
+    "duration": 202
+  },
+  {
+    "id": "763d563e-7137-4054-ba69-857c0f11dd54",
+    "timestamp": "2026-10-05T11:38:50.018Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/call",
+      "params": {
+        "name": "search_meals_by_name",
+        "arguments": {
+          "limit": 5,
+          "query": "{   \"query\": \"Arrabiata\",   \"limit\": 5 }"
+        },
+        "_meta": {
+          "progressToken": 5
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 5
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 5,
+      "result": {
+        "content": [],
+        "isError": false,
+        "structuredContent": {
+          "result": []
+        }
+      }
+    },
+    "duration": 1964
+  },
+  {
+    "id": "5d02b0a2-3840-4f7d-9e96-005b2ee82520",
+    "timestamp": "2026-10-05T11:39:06.562Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/call",
+      "params": {
+        "name": "search_meals_by_name",
+        "arguments": {
+          "limit": 5,
+          "query": "{   \"query\": \"Arrabiata\"}"
+        },
+        "_meta": {
+          "progressToken": 6
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 6
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 6,
+      "result": {
+        "content": [],
+        "isError": false,
+        "structuredContent": {
+          "result": []
+        }
+      }
+    },
+    "duration": 565
+  },
+  {
+    "id": "5c685a31-2716-4322-a850-1aaea082654c",
+    "timestamp": "2026-10-05T11:39:17.328Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/call",
+      "params": {
+        "name": "search_meals_by_name",
+        "arguments": {
+          "limit": 5,
+          "query": "Arrabiata"
+        },
+        "_meta": {
+          "progressToken": 7
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 7
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 7,
+      "result": {
+        "content": [
+          {
+            "text": "{\n  \"id\": \"52771\",\n  \"name\": \"Spicy Arrabiata Penne\",\n  \"area\": \"Italian\",\n  \"category\": \"Vegetarian\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg\"\n}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "result": [
+            {
+              "id": "52771",
+              "name": "Spicy Arrabiata Penne",
+              "area": "Italian",
+              "category": "Vegetarian",
+              "thumb": "https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg"
+            }
+          ]
+        }
+      }
+    },
+    "duration": 865
+  },
+  {
+    "id": "9e12cfd9-4b16-4bfb-8656-a748f1769fca",
+    "timestamp": "2026-10-05T11:40:13.314Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/call",
+      "params": {
+        "name": "meals_by_ingredient",
+        "arguments": {
+          "limit": 5,
+          "ingredient": "chicken"
+        },
+        "_meta": {
+          "progressToken": 8
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 8
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 8,
+      "result": {
+        "content": [
+          {
+            "text": "{\n  \"id\": \"52940\",\n  \"name\": \"Brown Stew Chicken\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg\"\n}",
+            "type": "text"
+          },
+          {
+            "text": "{\n  \"id\": \"53161\",\n  \"name\": \"Chicken & chorizo rice pot\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/fk80jp1763280767.jpg\"\n}",
+            "type": "text"
+          },
+          {
+            "text": "{\n  \"id\": \"52846\",\n  \"name\": \"Chicken & mushroom Hotpot\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/uuuspp1511297945.jpg\"\n}",
+            "type": "text"
+          },
+          {
+            "text": "{\n  \"id\": \"52796\",\n  \"name\": \"Chicken Alfredo Primavera\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/syqypv1486981727.jpg\"\n}",
+            "type": "text"
+          },
+          {
+            "text": "{\n  \"id\": \"52934\",\n  \"name\": \"Chicken Basquaise\",\n  \"thumb\": \"https://www.themealdb.com/images/media/meals/wruvqv1511880994.jpg\"\n}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "result": [
+            {
+              "id": "52940",
+              "name": "Brown Stew Chicken",
+              "thumb": "https://www.themealdb.com/images/media/meals/sypxpx1515365095.jpg"
+            },
+            {
+              "id": "53161",
+              "name": "Chicken & chorizo rice pot",
+              "thumb": "https://www.themealdb.com/images/media/meals/fk80jp1763280767.jpg"
+            },
+            {
+              "id": "52846",
+              "name": "Chicken & mushroom Hotpot",
+              "thumb": "https://www.themealdb.com/images/media/meals/uuuspp1511297945.jpg"
+            },
+            {
+              "id": "52796",
+              "name": "Chicken Alfredo Primavera",
+              "thumb": "https://www.themealdb.com/images/media/meals/syqypv1486981727.jpg"
+            },
+            {
+              "id": "52934",
+              "name": "Chicken Basquaise",
+              "thumb": "https://www.themealdb.com/images/media/meals/wruvqv1511880994.jpg"
+            }
+          ]
+        }
+      }
+    },
+    "duration": 612
+  },
+  {
+    "id": "31734054-55e0-4d94-bfb6-7a28685dd8b8",
+    "timestamp": "2026-10-05T11:41:01.452Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/call",
+      "params": {
+        "name": "random_meal",
+        "arguments": {},
+        "_meta": {
+          "progressToken": 9
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 9
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 9,
+      "result": {
+        "content": [
+          {
+            "text": "{\n  \"id\": \"53160\",\n  \"name\": \"Pisto con huevos\",\n  \"category\": \"Vegetarian\",\n  \"area\": \"Spanish\",\n  \"instructions\": \"step 1\\r\\nHeat the oil in a large flameproof casserole dish or a cast-iron skillet over a low heat. Add the onions and a sprinkle of salt, cover and cook gently for 15 mins, stirring occasionally. Add the garlic and cook for another 2 mins.\\r\\n\\r\\nstep 2\\r\\nNext, throw in the peppers and cook over a medium heat, covered, for about 5 mins, stirring every so often, until the peppers are just tender.\\r\\n\\r\\nstep 3\\r\\nMix in the oregano, thyme, bay leaves, some black pepper and a little salt, if needed. Tip in the courgettes and aubergine, combine thoroughly, and cook over a medium heat, covered, for 10 mins. Stir in the tomatoes, cover and cook for 20 mins, stirring occasionally.\\r\\n\\r\\nstep 4\\r\\nCarefully crack the eggs over the pisto – try not to break the yolks. Cook in the sauce on a medium heat for 5-6 mins until the eggs are cooked through but still a little soft, then scatter with parsley before serving\",\n  \"image\": \"https://www.themealdb.com/images/media/meals/0nswfe1763279040.jpg\",\n  \"source\": \"https://www.bbcgoodfood.com/recipes/pisto-con-huevos\",\n  \"youtube\": \"https://www.youtube.com/shorts/T43aUS9bG_0\",\n  \"ingredients\": [\n    {\n      \"name\": \"Olive Oil\",\n      \"measure\": \"2 tblsp\"\n    },\n    {\n      \"name\": \"Onion\",\n      \"measure\": \"2\"\n    },\n    {\n      \"name\": \"Garlic Clove\",\n      \"measure\": \"4 Chopped\"\n    },\n    {\n      \"name\": \"Mixed peppers\",\n      \"measure\": \"5\"\n    },\n    {\n      \"name\": \"Oregano\",\n      \"measure\": \"1 teaspoon\"\n    },\n    {\n      \"name\": \"Thyme\",\n      \"measure\": \"Sprigs of fresh\"\n    },\n    {\n      \"name\": \"Bay Leaves\",\n      \"measure\": \"4 leaves\"\n    },\n    {\n      \"name\": \"Courgettes\",\n      \"measure\": \"2 chopped\"\n    },\n    {\n      \"name\": \"Aubergine\",\n      \"measure\": \"1 chopped\"\n    },\n    {\n      \"name\": \"Tomato\",\n      \"measure\": \"4 large\"\n    },\n    {\n      \"name\": \"Egg\",\n      \"measure\": \"4 large\"\n    },\n    {\n      \"name\": \"Parsley\",\n      \"measure\": \"Handful\"\n    }\n  ]\n}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "id": "53160",
+          "name": "Pisto con huevos",
+          "category": "Vegetarian",
+          "area": "Spanish",
+          "instructions": "step 1\r\nHeat the oil in a large flameproof casserole dish or a cast-iron skillet over a low heat. Add the onions and a sprinkle of salt, cover and cook gently for 15 mins, stirring occasionally. Add the garlic and cook for another 2 mins.\r\n\r\nstep 2\r\nNext, throw in the peppers and cook over a medium heat, covered, for about 5 mins, stirring every so often, until the peppers are just tender.\r\n\r\nstep 3\r\nMix in the oregano, thyme, bay leaves, some black pepper and a little salt, if needed. Tip in the courgettes and aubergine, combine thoroughly, and cook over a medium heat, covered, for 10 mins. Stir in the tomatoes, cover and cook for 20 mins, stirring occasionally.\r\n\r\nstep 4\r\nCarefully crack the eggs over the pisto – try not to break the yolks. Cook in the sauce on a medium heat for 5-6 mins until the eggs are cooked through but still a little soft, then scatter with parsley before serving",
+          "image": "https://www.themealdb.com/images/media/meals/0nswfe1763279040.jpg",
+          "source": "https://www.bbcgoodfood.com/recipes/pisto-con-huevos",
+          "youtube": "https://www.youtube.com/shorts/T43aUS9bG_0",
+          "ingredients": [
+            {
+              "name": "Olive Oil",
+              "measure": "2 tblsp"
+            },
+            {
+              "name": "Onion",
+              "measure": "2"
+            },
+            {
+              "name": "Garlic Clove",
+              "measure": "4 Chopped"
+            },
+            {
+              "name": "Mixed peppers",
+              "measure": "5"
+            },
+            {
+              "name": "Oregano",
+              "measure": "1 teaspoon"
+            },
+            {
+              "name": "Thyme",
+              "measure": "Sprigs of fresh"
+            },
+            {
+              "name": "Bay Leaves",
+              "measure": "4 leaves"
+            },
+            {
+              "name": "Courgettes",
+              "measure": "2 chopped"
+            },
+            {
+              "name": "Aubergine",
+              "measure": "1 chopped"
+            },
+            {
+              "name": "Tomato",
+              "measure": "4 large"
+            },
+            {
+              "name": "Egg",
+              "measure": "4 large"
+            },
+            {
+              "name": "Parsley",
+              "measure": "Handful"
+            }
+          ]
+        }
+      }
+    },
+    "duration": 651
+  },
+  {
+    "id": "4f75046e-bf15-470e-8b4f-ebbf4d957757",
+    "timestamp": "2026-10-05T11:42:25.074Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/call",
+      "params": {
+        "name": "meal_details",
+        "arguments": {
+          "id": 52771
+        },
+        "_meta": {
+          "progressToken": 10
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 10
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 10,
+      "result": {
+        "content": [
+          {
+            "text": "Error executing tool meal_details",
+            "type": "text"
+          }
+        ],
+        "isError": true
+      }
+    },
+    "duration": 1065
+  },
+  {
+    "id": "530b29b3-8212-47be-9655-f545a31dc0a0",
+    "timestamp": "2026-10-05T11:42:35.790Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/call",
+      "params": {
+        "name": "meal_details",
+        "arguments": {
+          "id": 52771
+        },
+        "_meta": {
+          "progressToken": 11
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 11
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 11,
+      "result": {
+        "content": [
+          {
+            "text": "Error executing tool meal_details",
+            "type": "text"
+          }
+        ],
+        "isError": true
+      }
+    },
+    "duration": 674
+  },
+  {
+    "id": "b73bb8db-9ec0-476a-8269-3ae3eee0d024",
+    "timestamp": "2026-10-05T11:42:57.962Z",
+    "direction": "request",
+    "origin": "client",
+    "message": {
+      "method": "tools/call",
+      "params": {
+        "name": "meal_details",
+        "arguments": {
+          "id": 53160
+        },
+        "_meta": {
+          "progressToken": 12
+        }
+      },
+      "jsonrpc": "2.0",
+      "id": 12
+    },
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 12,
+      "result": {
+        "content": [
+          {
+            "text": "{\n  \"id\": \"53160\",\n  \"name\": \"Pisto con huevos\",\n  \"category\": \"Vegetarian\",\n  \"area\": \"Spanish\",\n  \"instructions\": \"step 1\\r\\nHeat the oil in a large flameproof casserole dish or a cast-iron skillet over a low heat. Add the onions and a sprinkle of salt, cover and cook gently for 15 mins, stirring occasionally. Add the garlic and cook for another 2 mins.\\r\\n\\r\\nstep 2\\r\\nNext, throw in the peppers and cook over a medium heat, covered, for about 5 mins, stirring every so often, until the peppers are just tender.\\r\\n\\r\\nstep 3\\r\\nMix in the oregano, thyme, bay leaves, some black pepper and a little salt, if needed. Tip in the courgettes and aubergine, combine thoroughly, and cook over a medium heat, covered, for 10 mins. Stir in the tomatoes, cover and cook for 20 mins, stirring occasionally.\\r\\n\\r\\nstep 4\\r\\nCarefully crack the eggs over the pisto – try not to break the yolks. Cook in the sauce on a medium heat for 5-6 mins until the eggs are cooked through but still a little soft, then scatter with parsley before serving\",\n  \"image\": \"https://www.themealdb.com/images/media/meals/0nswfe1763279040.jpg\",\n  \"source\": \"https://www.bbcgoodfood.com/recipes/pisto-con-huevos\",\n  \"youtube\": \"https://www.youtube.com/shorts/T43aUS9bG_0\",\n  \"ingredients\": [\n    {\n      \"name\": \"Olive Oil\",\n      \"measure\": \"2 tblsp\"\n    },\n    {\n      \"name\": \"Onion\",\n      \"measure\": \"2\"\n    },\n    {\n      \"name\": \"Garlic Clove\",\n      \"measure\": \"4 Chopped\"\n    },\n    {\n      \"name\": \"Mixed peppers\",\n      \"measure\": \"5\"\n    },\n    {\n      \"name\": \"Oregano\",\n      \"measure\": \"1 teaspoon\"\n    },\n    {\n      \"name\": \"Thyme\",\n      \"measure\": \"Sprigs of fresh\"\n    },\n    {\n      \"name\": \"Bay Leaves\",\n      \"measure\": \"4 leaves\"\n    },\n    {\n      \"name\": \"Courgettes\",\n      \"measure\": \"2 chopped\"\n    },\n    {\n      \"name\": \"Aubergine\",\n      \"measure\": \"1 chopped\"\n    },\n    {\n      \"name\": \"Tomato\",\n      \"measure\": \"4 large\"\n    },\n    {\n      \"name\": \"Egg\",\n      \"measure\": \"4 large\"\n    },\n    {\n      \"name\": \"Parsley\",\n      \"measure\": \"Handful\"\n    }\n  ]\n}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "structuredContent": {
+          "id": "53160",
+          "name": "Pisto con huevos",
+          "category": "Vegetarian",
+          "area": "Spanish",
+          "instructions": "step 1\r\nHeat the oil in a large flameproof casserole dish or a cast-iron skillet over a low heat. Add the onions and a sprinkle of salt, cover and cook gently for 15 mins, stirring occasionally. Add the garlic and cook for another 2 mins.\r\n\r\nstep 2\r\nNext, throw in the peppers and cook over a medium heat, covered, for about 5 mins, stirring every so often, until the peppers are just tender.\r\n\r\nstep 3\r\nMix in the oregano, thyme, bay leaves, some black pepper and a little salt, if needed. Tip in the courgettes and aubergine, combine thoroughly, and cook over a medium heat, covered, for 10 mins. Stir in the tomatoes, cover and cook for 20 mins, stirring occasionally.\r\n\r\nstep 4\r\nCarefully crack the eggs over the pisto – try not to break the yolks. Cook in the sauce on a medium heat for 5-6 mins until the eggs are cooked through but still a little soft, then scatter with parsley before serving",
+          "image": "https://www.themealdb.com/images/media/meals/0nswfe1763279040.jpg",
+          "source": "https://www.bbcgoodfood.com/recipes/pisto-con-huevos",
+          "youtube": "https://www.youtube.com/shorts/T43aUS9bG_0",
+          "ingredients": [
+            {
+              "name": "Olive Oil",
+              "measure": "2 tblsp"
+            },
+            {
+              "name": "Onion",
+              "measure": "2"
+            },
+            {
+              "name": "Garlic Clove",
+              "measure": "4 Chopped"
+            },
+            {
+              "name": "Mixed peppers",
+              "measure": "5"
+            },
+            {
+              "name": "Oregano",
+              "measure": "1 teaspoon"
+            },
+            {
+              "name": "Thyme",
+              "measure": "Sprigs of fresh"
+            },
+            {
+              "name": "Bay Leaves",
+              "measure": "4 leaves"
+            },
+            {
+              "name": "Courgettes",
+              "measure": "2 chopped"
+            },
+            {
+              "name": "Aubergine",
+              "measure": "1 chopped"
+            },
+            {
+              "name": "Tomato",
+              "measure": "4 large"
+            },
+            {
+              "name": "Egg",
+              "measure": "4 large"
+            },
+            {
+              "name": "Parsley",
+              "measure": "Handful"
+            }
+          ]
+        }
+      }
+    },
+    "duration": 622
+  }
+]

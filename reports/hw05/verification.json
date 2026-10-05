@@ -1,0 +1,109 @@
+{
+  "homework": "5",
+  "sid4": "2562",
+  "commit_hash": "record after final commit",
+  "model": "qwen3:1.7b",
+  "seed": 2562,
+  "verify_seed": 262562,
+  "checks": [
+    {
+      "name": "offline test runner",
+      "passed": true,
+      "output": "PASS search valid\nPASS search invalid\nPASS detail valid\nPASS detail invalid\nPASS aggregate valid\nPASS aggregate invalid\nPASS safety blocked\nPASS max steps\n8/8\n"
+    },
+    {
+      "name": "offline runner reports 8/8",
+      "passed": true
+    },
+    {
+      "name": "150 raw records",
+      "passed": true,
+      "count": 150
+    },
+    {
+      "name": "50 calls at each rate",
+      "passed": true,
+      "rates": {
+        "0.0": 50,
+        "0.2": 50,
+        "0.5": 50
+      }
+    },
+    {
+      "name": "retry demonstrations",
+      "passed": true
+    },
+    {
+      "name": "four offline agent scenarios",
+      "passed": true,
+      "count": 4
+    },
+    {
+      "name": "four local-model scenarios",
+      "passed": true
+    },
+    {
+      "name": "agent JSONL exists",
+      "passed": true
+    },
+    {
+      "name": "reflection is 200-300 words",
+      "passed": true
+    },
+    {
+      "name": "six offline domain cases",
+      "passed": true
+    },
+    {
+      "name": "domain cases include valid and invalid for all tools",
+      "passed": true
+    },
+    {
+      "name": "TheMealDB Inspector export",
+      "passed": true
+    },
+    {
+      "name": "transit Inspector export",
+      "passed": true
+    },
+    {
+      "name": "code/mcp/meals_server.py syntax",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "code/mcp/transit_server.py syntax",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "code/hw05_tools.py syntax",
+      "passed": true,
+      "output": ""
+    },
+    {
+      "name": "Redux dependencies",
+      "passed": true
+    },
+    {
+      "name": "Redux thunks and credentials",
+      "passed": true
+    },
+    {
+      "name": "configuration values recorded",
+      "passed": true
+    },
+    {
+      "name": "FastAPI smoke test on port 8762",
+      "passed": true,
+      "detail": "{\"message\":\"HW5 API is running\"}"
+    },
+    {
+      "name": "MCP Inspector tool-call evidence",
+      "passed": true,
+      "meals_export": "inspector-meals-complete.json",
+      "transit_export": "inspector-transit-complete.json"
+    }
+  ],
+  "overall_pass": true
+}
