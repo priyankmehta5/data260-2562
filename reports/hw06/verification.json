@@ -1,0 +1,159 @@
+{
+  "homework": "6",
+  "sid4": "2562",
+  "commit_hash": "d923625e48af8558bc75cfbe410f5550f39bdaef",
+  "model": "qwen3:1.7b",
+  "seed": 2562,
+  "verify_seed": 262562,
+  "checks": [
+    {
+      "name": "offline HW6 tests",
+      "passed": true,
+      "output": "PASS document validation\nPASS document CRUD\nPASS chat memory\nPASS file memory\n4/4\n"
+    },
+    {
+      "name": "memory-cost experiments",
+      "passed": true,
+      "output": "[\n  {\n    \"setting\": \"SHORT_TERM_N=4\",\n    \"mean_prompt_tokens_per_turn\": 26.8,\n    \"mean_latency_ms\": 1.001,\n    \"mean_probe_quality\": 1\n  },\n  {\n    \"setting\": \"SHORT_TERM_N=12\",\n    \"mean_prompt_tokens_per_turn\": 62.8,\n    \"mean_latency_ms\": 1.0,\n    \"mean_probe_quality\": 1\n  },\n  {\n    \"setting\": \"SHORT_TERM_N=30\",\n    \"mean_prompt_tokens_per_turn\": 97,\n    \"mean_latency_ms\": 1.001,\n    \"mean_probe_quality\": 1\n  },\n  {\n    \"setting\": \"eviction_last_6\",\n    \"mean_prompt_tokens_per_turn\": 37,\n    \"mean_latency_ms\": 1.001,\n    \"mean_probe_quality\": 3.0\n  }\n]\n"
+    },
+    {
+      "name": "raw experiment files",
+      "passed": true
+    },
+    {
+      "name": "five memory probes",
+      "passed": true
+    },
+    {
+      "name": "consolidated memory under 40 lines",
+      "passed": true
+    },
+    {
+      "name": "agent instructions cover HW6 categories",
+      "passed": true
+    },
+    {
+      "name": "HW6 routes present",
+      "passed": true
+    },
+    {
+      "name": "memory commands present",
+      "passed": true
+    },
+    {
+      "name": "original and consolidated memory fixtures",
+      "passed": true
+    },
+    {
+      "name": "memory comparison present",
+      "passed": true
+    },
+    {
+      "name": "MongoDB ping on 127.0.0.1:27017",
+      "passed": true,
+      "detail": {
+        "ok": 1.0
+      }
+    },
+    {
+      "name": "FastAPI root and POST /api/chat smoke test",
+      "passed": true,
+      "detail": {
+        "reply": "Municipal transit assistant response: verification message",
+        "used": {
+          "short_term_messages": [
+            {
+              "user_id": "verify-hw06",
+              "session_id": "verify-session",
+              "role": "user",
+              "content": "verification message",
+              "created_at": "2026-10-22T07:41:29.212000",
+              "id": "6ad9be29a97b9b34c655d3bd"
+            },
+            {
+              "user_id": "verify-hw06",
+              "session_id": "verify-session",
+              "role": "assistant",
+              "content": "Municipal transit assistant response: verification message",
+              "created_at": "2026-10-22T07:41:29.217000",
+              "id": "6ad9be29a97b9b34c655d3bf"
+            },
+            {
+              "user_id": "verify-hw06",
+              "session_id": "verify-session",
+              "role": "user",
+              "content": "verification message",
+              "created_at": "2026-10-22T10:37:28.212000",
+              "id": "6ad9e768cdbd2bdccebd409c"
+            },
+            {
+              "user_id": "verify-hw06",
+              "session_id": "verify-session",
+              "role": "assistant",
+              "content": "Municipal transit assistant response: verification message",
+              "created_at": "2026-10-22T10:37:28.251000",
+              "id": "6ad9e768cdbd2bdccebd409e"
+            },
+            {
+              "user_id": "verify-hw06",
+              "session_id": "verify-session",
+              "role": "user",
+              "content": "verification message",
+              "created_at": "2026-10-22T11:06:43.572000",
+              "id": "6ad9ee43cdbd2bdccebd40a0"
+            },
+            {
+              "user_id": "verify-hw06",
+              "session_id": "verify-session",
+              "role": "assistant",
+              "content": "Municipal transit assistant response: verification message",
+              "created_at": "2026-10-22T11:06:43.589000",
+              "id": "6ad9ee43cdbd2bdccebd40a2"
+            }
+          ],
+          "short_term_count": 6,
+          "long_term_summary": null,
+          "episodic_facts": [
+            {
+              "user_id": "verify-hw06",
+              "session_id": "verify-session",
+              "fact": "verification message",
+              "importance": 0.5,
+              "embedding": [
+                0.7071067811865475,
+                0.7071067811865475
+              ],
+              "created_at": "2026-10-22T11:06:43.572000",
+              "id": "6ad9ee43cdbd2bdccebd40a1"
+            },
+            {
+              "user_id": "verify-hw06",
+              "session_id": "verify-session",
+              "fact": "verification message",
+              "importance": 0.5,
+              "embedding": [
+                0.7071067811865475,
+                0.7071067811865475
+              ],
+              "created_at": "2026-10-22T10:37:28.212000",
+              "id": "6ad9e768cdbd2bdccebd409d"
+            },
+            {
+              "user_id": "verify-hw06",
+              "session_id": "verify-session",
+              "fact": "verification message",
+              "importance": 0.5,
+              "embedding": [
+                0.7071067811865475,
+                0.7071067811865475
+              ],
+              "created_at": "2026-10-22T07:41:29.212000",
+              "id": "6ad9be29a97b9b34c655d3be"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "overall_pass": true
+}

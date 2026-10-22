@@ -1,0 +1,21 @@
+- question: Which incident had signal delay?
+  expected:
+  - signal
+  - incident
+  rubric: 1=no answer; 3=partial; 5=correct supported answer
+- question: Which agency owns the incident?
+  expected:
+  - agency
+  rubric: 1=no answer; 3=partial; 5=correct supported answer
+- question: What is the safety priority?
+  expected:
+  - safety
+  rubric: 1=no answer; 3=partial; 5=correct supported answer
+- question: What should be summarized?
+  expected:
+  - summary
+  rubric: 1=no answer; 3=partial; 5=correct supported answer
+- question: What is the current status?
+  expected:
+  - status
+  rubric: 1=no answer; 3=partial; 5=correct supported answer

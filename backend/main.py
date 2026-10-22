@@ -17,6 +17,7 @@ from sqlalchemy.orm import Session as DatabaseSession
 from .database import Base, engine, get_db
 from .models import Incident, IncidentNote, Session, User
 from .routes_hw05 import router as hw5_router
+from .routes_hw06 import router as hw6_router
 from .schemas import LoginRequest, UserResponse
 
 
@@ -24,7 +25,7 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="Municipal Transit Incident API",
-    version="5.0.0",
+    version="6.0.0",
 )
 
 app.add_middleware(
@@ -162,6 +163,7 @@ app.include_router(
     hw5_router,
     dependencies=[Depends(get_current_user)],
 )
+app.include_router(hw6_router)
 
 
 @app.get("/api/performance/incidents-naive")

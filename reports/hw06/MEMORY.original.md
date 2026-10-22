@@ -1,0 +1,56 @@
+# Original Memory Fixture
+
+Last consolidated: 2024-01-01T00:00:00Z
+
+- The project uses FastAPI.
+- The project uses FastAPI.
+- The project uses MongoDB.
+- The project uses MongoDB.
+- The domain is municipal transit incidents.
+- The domain is municipal transit incidents.
+- The application port is 8000.
+- The application port is 8762.
+- The local model is qwen2:1.5b.
+- The local model is qwen3:1.7b.
+- Redux Toolkit is used by the frontend.
+- MongoDB stores messages.
+- MongoDB stores summaries.
+- MongoDB stores episodes.
+- Memory commands include /memory.
+- Memory commands include /compact.
+- Memory commands include /dream.
+- Memory commands include /help.
+- The short-term window is configurable.
+- The short-term window is configurable.
+- Summaries are created periodically.
+- Summaries are created periodically.
+- Episodes have importance scores.
+- Episodes have importance scores.
+- Episodes contain embeddings.
+- Episodes contain embeddings.
+- The API uses Pydantic.
+- The API uses Pydantic.
+- The repository uses Python.
+- The repository uses Python.
+- Tests use deterministic fixtures.
+- Tests use deterministic fixtures.
+- Reports store raw JSON.
+- Reports store raw JSON.
+- Reports store raw CSV.
+- Reports store raw CSV.
+- The agent must preserve credentials.
+- The agent must never commit credentials.
+- Generated dependencies are excluded.
+- Generated dependencies are excluded.
+- MongoDB data must be inspectable.
+- MongoDB data must be inspectable.
+- A session may be optional for lifetime summaries.
+- A session may be optional for lifetime summaries.
+- The report includes screenshots.
+- The report includes screenshots.
+- The final tag is hw6.
+- The final tag is hw6.
+- Verification records pass or fail.
+- Verification records pass or fail.
+- The report is concise.
+- The report is concise.

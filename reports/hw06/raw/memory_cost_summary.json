@@ -1,0 +1,26 @@
+[
+  {
+    "setting": "SHORT_TERM_N=4",
+    "mean_prompt_tokens_per_turn": 26.8,
+    "mean_latency_ms": 1.001,
+    "mean_probe_quality": 1
+  },
+  {
+    "setting": "SHORT_TERM_N=12",
+    "mean_prompt_tokens_per_turn": 62.8,
+    "mean_latency_ms": 1.0,
+    "mean_probe_quality": 1
+  },
+  {
+    "setting": "SHORT_TERM_N=30",
+    "mean_prompt_tokens_per_turn": 97,
+    "mean_latency_ms": 1.001,
+    "mean_probe_quality": 1
+  },
+  {
+    "setting": "eviction_last_6",
+    "mean_prompt_tokens_per_turn": 37,
+    "mean_latency_ms": 1.001,
+    "mean_probe_quality": 3.0
+  }
+]

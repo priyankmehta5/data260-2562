@@ -1,0 +1,5 @@
+2026-10-20T00:00:00Z HW6 implementation initialized.
+2026-10-22T00:00:00Z verify_hw06.py: offline checks passed; MongoDB ping passed; FastAPI root and POST /api/chat smoke test passed; overall_pass=true.
+2026-10-20T00:00:00Z code/hw06_tests.py completed: 4/4 tests passed.
+2026-10-20T00:00:00Z code/hw06_experiments.py completed: four memory settings and five probes recorded.
+2026-10-20T00:00:00Z verify_hw06.py completed: overall_pass true.

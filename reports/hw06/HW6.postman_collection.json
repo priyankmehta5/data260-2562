@@ -1,0 +1,23 @@
+{
+  "info": {
+    "name": "DATA260 HW6 MongoDB and Memory",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {"key": "base_url", "value": "http://127.0.0.1:8762"},
+    {"key": "document_id", "value": "replace-after-create"},
+    {"key": "user_id", "value": "priyank-2562"},
+    {"key": "session_id", "value": "hw6-session-1"}
+  ],
+  "item": [
+    {"name": "Create document", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\n  \"title\": \"Signal delay follow-up\",\n  \"description\": \"Review the transit signal incident\",\n  \"status\": \"open\",\n  \"category\": \"operations\",\n  \"due_at\": \"2026-10-21T12:00:00Z\"\n}"}, "url": "{{base_url}}/api/documents"}},
+    {"name": "List documents", "request": {"method": "GET", "url": "{{base_url}}/api/documents"}},
+    {"name": "Get document", "request": {"method": "GET", "url": "{{base_url}}/api/documents/{{document_id}}"}},
+    {"name": "Update document", "request": {"method": "PUT", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\n  \"status\": \"done\"\n}"}, "url": "{{base_url}}/api/documents/{{document_id}}"}},
+    {"name": "Delete document", "request": {"method": "DELETE", "url": "{{base_url}}/api/documents/{{document_id}}"}},
+    {"name": "Chat message", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\n  \"user_id\": \"{{user_id}}\",\n  \"session_id\": \"{{session_id}}\",\n  \"message\": \"The signal delay is affecting the morning route.\"\n}"}, "url": "{{base_url}}/api/chat"}},
+    {"name": "Memory view", "request": {"method": "GET", "url": "{{base_url}}/api/memory/{{user_id}}"}},
+    {"name": "Aggregate view", "request": {"method": "GET", "url": "{{base_url}}/api/aggregate/{{user_id}}"}},
+    {"name": "Memory help", "request": {"method": "POST", "header": [{"key": "Content-Type", "value": "application/json"}], "body": {"mode": "raw", "raw": "{\n  \"command\": \"/help\"\n}"}, "url": "{{base_url}}/api/memory/command"}}
+  ]
+}

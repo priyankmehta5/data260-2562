@@ -21,3 +21,4 @@ PyMySQL
 python-dotenv
 bcrypt
 mcp[cli]
+pymongo==4.15.3
