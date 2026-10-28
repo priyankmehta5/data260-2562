@@ -46,7 +46,47 @@
     ],
     "stop_reason": "completed",
     "tool_call_count": 2,
-    "latency_ms": 0.1941
+    "latency_ms": 0.0776,
+    "model_adapter": "deterministic_fixture",
+    "messages": [
+      {
+        "role": "user",
+        "content": "verification task A"
+      },
+      {
+        "role": "tool",
+        "name": "search",
+        "content": {
+          "ok": true,
+          "data": [
+            {
+              "id": 1,
+              "incident_code": "INC-0001",
+              "title": "Signal delay",
+              "severity": 2,
+              "agency_id": 1
+            }
+          ],
+          "error": null
+        }
+      },
+      {
+        "role": "tool",
+        "name": "detail",
+        "content": {
+          "ok": true,
+          "data": {
+            "id": 1,
+            "incident_code": "INC-0001",
+            "title": "Signal delay",
+            "severity": 2,
+            "agency_id": 1
+          },
+          "error": null
+        }
+      }
+    ],
+    "token_count": 103
   },
   {
     "user_input": "verification task B",
@@ -89,7 +129,43 @@
     ],
     "stop_reason": "completed",
     "tool_call_count": 2,
-    "latency_ms": 0.2721
+    "latency_ms": 0.0545,
+    "model_adapter": "deterministic_fixture",
+    "messages": [
+      {
+        "role": "user",
+        "content": "verification task B"
+      },
+      {
+        "role": "tool",
+        "name": "aggregate",
+        "content": {
+          "ok": true,
+          "data": {
+            "incident_count": 3,
+            "mean_severity": 3.3333333333333335,
+            "agency_count": 1
+          },
+          "error": null
+        }
+      },
+      {
+        "role": "tool",
+        "name": "detail",
+        "content": {
+          "ok": true,
+          "data": {
+            "id": 2,
+            "incident_code": "INC-0002",
+            "title": "Platform crowding",
+            "severity": 3,
+            "agency_id": 1
+          },
+          "error": null
+        }
+      }
+    ],
+    "token_count": 100
   },
   {
     "user_input": "verification task C",
@@ -149,6 +225,53 @@
     ],
     "stop_reason": "completed",
     "tool_call_count": 3,
-    "latency_ms": 0.188
+    "latency_ms": 0.0567,
+    "model_adapter": "deterministic_fixture",
+    "messages": [
+      {
+        "role": "user",
+        "content": "verification task C"
+      },
+      {
+        "role": "tool",
+        "name": "search",
+        "content": {
+          "ok": true,
+          "data": [],
+          "error": null
+        }
+      },
+      {
+        "role": "tool",
+        "name": "detail",
+        "content": {
+          "ok": true,
+          "data": {
+            "id": 1,
+            "incident_code": "INC-0001",
+            "title": "Signal delay",
+            "severity": 2,
+            "agency_id": 1
+          },
+          "error": null
+        }
+      },
+      {
+        "role": "tool",
+        "name": "detail",
+        "content": {
+          "ok": true,
+          "data": {
+            "id": 2,
+            "incident_code": "INC-0002",
+            "title": "Platform crowding",
+            "severity": 3,
+            "agency_id": 1
+          },
+          "error": null
+        }
+      }
+    ],
+    "token_count": 126
   }
 ]

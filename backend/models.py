@@ -1,6 +1,7 @@
 from datetime import datetime
 
 from sqlalchemy import (
+    CheckConstraint,
     DateTime,
     ForeignKey,
     Integer,
@@ -126,6 +127,7 @@ class IncidentNote(Base):
 
 class User(Base):
     __tablename__ = "users"
+    __table_args__ = (CheckConstraint("role IN ('reader', 'writer', 'moderator')", name="ck_users_role"),)
 
     id: Mapped[int] = mapped_column(
         Integer,

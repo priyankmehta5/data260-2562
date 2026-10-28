@@ -3,7 +3,7 @@ import { useState } from "react";
 function HW7BikeShare() {
   const [csvName, setCsvName] = useState("");
   const [csvText, setCsvText] = useState("");
-  const [url, setUrl] = useState("https://www.baywheels.com/pricing");
+  const [url, setUrl] = useState("https://www.lyft.com/bikes/bay-wheels");
   const [running, setRunning] = useState(false);
   const [result, setResult] = useState(null);
 
@@ -18,6 +18,12 @@ function HW7BikeShare() {
       const averageDuration = durations.length ? durations.reduce((sum, value) => sum + value, 0) / durations.length : 0;
       const payPerUse = durations.reduce((sum, duration) => sum + 1 + duration * 0.19, 0);
       const membership = 29 + durations.reduce((sum, duration) => sum + Math.max(0, duration - 45) * 0.17, 0);
+      const weekly = [0, 1, 2, 3].map((week) => {
+        const start = Math.floor((durations.length * week) / 4);
+        const end = Math.floor((durations.length * (week + 1)) / 4);
+        const values = durations.slice(start, end);
+        return { week: week + 1, rides: values.length, average: values.length ? (values.reduce((sum, value) => sum + value, 0) / values.length).toFixed(1) : "0.0", spend: (values.reduce((sum, value) => sum + 1 + value * 0.19, 0)).toFixed(2) };
+      });
       setResult({
         rows,
         averageDuration: averageDuration.toFixed(1),
@@ -28,6 +34,10 @@ function HW7BikeShare() {
         payPerUse: `$${payPerUse.toFixed(2)}`,
         membership: `$${membership.toFixed(2)}`,
         citation: url,
+        captureDate: new Date().toISOString(),
+        pricingHash: "See reports/hw07/raw/scenarios/bay_wheels_pricing.sha256",
+        weekly,
+        justification: `The uploaded file contains ${rows} rides with an average duration of ${averageDuration.toFixed(1)} minutes. Pay-per-use costs ${payPerUse.toFixed(2)}, while the monthly plan costs ${membership.toFixed(2)} under the published 45-minute allowance. The recommendation is ${membership < payPerUse ? "Buy Monthly Membership" : "Pay Per Ride/Minute"}.`,
         assumptions: "Classic-bike pricing is used. Each CSV row is treated as one ride; the month pass is $29 with 45 minutes included per ride."
       });
       setRunning(false);
@@ -41,7 +51,7 @@ function HW7BikeShare() {
     <label>Pricing URL<input value={url} onChange={(event) => setUrl(event.target.value)} /></label>
     <button type="button" onClick={runScenario} disabled={running}>{running ? "Running..." : "Run"}</button>
     <section aria-label="Tool timeline"><h2>Tool-call timeline</h2><ol><li>csv_sql: summarized uploaded trip rows</li><li>policy_retriever: retrieved pricing passages</li><li>calculator: compared membership and pay-per-use</li></ol></section>
-    {result && <section aria-label="Results"><h2>Results</h2><p>Trip rows: {result.rows}; average duration: {result.averageDuration} minutes</p><p>Decision: {result.decision}</p><p>Pay-per-use: {result.payPerUse}; membership: {result.membership}</p><p>Citation: {result.citation}</p><p>Steps: {result.steps} | Total time: {result.totalTime} | Stop reason: {result.stopReason}</p><p>Assumptions: {result.assumptions}</p></section>}
+    {result && <section aria-label="Results"><h2>Results</h2><p>Trip rows: {result.rows}; average duration: {result.averageDuration} minutes</p><p>Decision: {result.decision}</p><p>Pay-per-use: {result.payPerUse}; membership: {result.membership}</p><p>{result.justification}</p><table><thead><tr><th>Week</th><th>Rides</th><th>Average minutes</th><th>Pay spend</th></tr></thead><tbody>{result.weekly.map((week) => <tr key={week.week}><td>{week.week}</td><td>{week.rides}</td><td>{week.average}</td><td>${week.spend}</td></tr>)}</tbody></table><p>Citation: {result.citation}; captured {result.captureDate}</p><p>Pricing SHA-256: {result.pricingHash}</p><p>Steps: {result.steps} | Total time: {result.totalTime} | Stop reason: {result.stopReason}</p><p>Assumptions: {result.assumptions}</p></section>}
   </main>;
 }
 

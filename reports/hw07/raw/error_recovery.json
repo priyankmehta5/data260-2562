@@ -1,48 +1,10 @@
 {
   "user_input": "Find the nonexistent incident",
-  "task": "A",
+  "task": "RECOVERY",
   "steps": [
     {
       "step": 1,
       "role": "tool",
-      "tool": "search",
-      "inputs": {
-        "query": "signal"
-      },
-      "result": {
-        "ok": true,
-        "data": [
-          {
-            "id": 1,
-            "incident_code": "INC-0001",
-            "title": "Signal delay",
-            "severity": 2,
-            "agency_id": 1
-          }
-        ],
-        "error": null
-      }
-    },
-    {
-      "step": 2,
-      "role": "tool",
-      "tool": "detail",
-      "inputs": {
-        "incident_id": 1
-      },
-      "result": {
-        "ok": true,
-        "data": {
-          "id": 1,
-          "incident_code": "INC-0001",
-          "title": "Signal delay",
-          "severity": 2,
-          "agency_id": 1
-        },
-        "error": null
-      }
-    },
-    {
       "tool": "detail",
       "inputs": {
         "incident_id": 999999
@@ -55,6 +17,29 @@
     }
   ],
   "stop_reason": "completed",
-  "tool_call_count": 2,
-  "latency_ms": 0.2118
+  "tool_call_count": 1,
+  "latency_ms": 0.0275,
+  "model_adapter": "deterministic_fixture",
+  "messages": [
+    {
+      "role": "user",
+      "content": "Find the nonexistent incident"
+    },
+    {
+      "role": "tool",
+      "name": "detail",
+      "content": {
+        "ok": false,
+        "data": null,
+        "error": "incident not found"
+      }
+    }
+  ],
+  "token_count": 42,
+  "recovery_observation": {
+    "ok": false,
+    "data": null,
+    "error": "incident not found"
+  },
+  "recovery_action": "returned a useful not-found envelope without crashing"
 }

@@ -6,6 +6,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 101,
+    "latency_ms": 0.0498,
     "stop_reason": "completed"
   },
   {
@@ -15,6 +17,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 98,
+    "latency_ms": 0.0379,
     "stop_reason": "completed"
   },
   {
@@ -24,6 +28,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 3,
+    "tokens": 123,
+    "latency_ms": 0.0337,
     "stop_reason": "completed"
   },
   {
@@ -33,6 +39,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 101,
+    "latency_ms": 0.0239,
     "stop_reason": "completed"
   },
   {
@@ -42,6 +50,8 @@
     "well_formed": false,
     "failure_type": "malformed arguments",
     "tool_calls": 2,
+    "tokens": 98,
+    "latency_ms": 0.0243,
     "stop_reason": "completed"
   },
   {
@@ -51,6 +61,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 3,
+    "tokens": 123,
+    "latency_ms": 0.0283,
     "stop_reason": "completed"
   },
   {
@@ -60,6 +72,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 101,
+    "latency_ms": 0.0212,
     "stop_reason": "completed"
   },
   {
@@ -69,6 +83,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 98,
+    "latency_ms": 0.0223,
     "stop_reason": "completed"
   },
   {
@@ -78,6 +94,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 3,
+    "tokens": 123,
+    "latency_ms": 0.0277,
     "stop_reason": "completed"
   },
   {
@@ -87,6 +105,8 @@
     "well_formed": false,
     "failure_type": "malformed arguments",
     "tool_calls": 2,
+    "tokens": 101,
+    "latency_ms": 0.0208,
     "stop_reason": "completed"
   },
   {
@@ -96,6 +116,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 98,
+    "latency_ms": 0.0222,
     "stop_reason": "completed"
   },
   {
@@ -105,6 +127,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 3,
+    "tokens": 124,
+    "latency_ms": 0.0271,
     "stop_reason": "completed"
   },
   {
@@ -114,6 +138,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 101,
+    "latency_ms": 0.021,
     "stop_reason": "completed"
   },
   {
@@ -123,6 +149,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 98,
+    "latency_ms": 0.0212,
     "stop_reason": "completed"
   },
   {
@@ -132,6 +160,8 @@
     "well_formed": false,
     "failure_type": "malformed arguments",
     "tool_calls": 3,
+    "tokens": 124,
+    "latency_ms": 0.0263,
     "stop_reason": "completed"
   },
   {
@@ -141,6 +171,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 101,
+    "latency_ms": 0.02,
     "stop_reason": "completed"
   },
   {
@@ -150,6 +182,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 98,
+    "latency_ms": 0.0209,
     "stop_reason": "completed"
   },
   {
@@ -159,6 +193,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 3,
+    "tokens": 124,
+    "latency_ms": 0.0507,
     "stop_reason": "completed"
   },
   {
@@ -168,6 +204,8 @@
     "well_formed": true,
     "failure_type": null,
     "tool_calls": 2,
+    "tokens": 101,
+    "latency_ms": 0.0255,
     "stop_reason": "completed"
   },
   {
@@ -177,6 +215,8 @@
     "well_formed": false,
     "failure_type": "malformed arguments",
     "tool_calls": 2,
+    "tokens": 98,
+    "latency_ms": 0.0232,
     "stop_reason": "completed"
   }
 ]
