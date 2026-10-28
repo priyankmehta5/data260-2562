@@ -1,0 +1,1 @@
+Bay Wheels pricing fixture. Annual membership is 149 dollars. Member rides include 45 minutes. Extra time is charged per minute. A single ride has an unlock fee and per-minute charge.

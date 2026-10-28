@@ -1,0 +1,14 @@
+repos:
+  - repo: local
+    hooks:
+      - id: ruff-check
+        name: ruff check
+        entry: .venv/Scripts/python.exe -m ruff check backend/hw07_auth.py backend/routes_hw07.py code/hw07_tools.py code/verify_hw07.py verify_hw07.py
+        language: system
+        pass_filenames: false
+        always_run: true
+      - id: python-compile
+        name: python compile check
+        entry: .venv/Scripts/python.exe -m compileall backend code
+        language: system
+        pass_filenames: false

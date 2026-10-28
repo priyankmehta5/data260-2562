@@ -8,6 +8,7 @@ import DeleteRecord from "./DeleteRecord";
 import Home from "./Home";
 import Login from "./Login";
 import UpdateRecord from "./UpdateRecord";
+import HW7BikeShare from "./HW7BikeShare";
 import "./App.css";
 function App() {
   const dispatch = useDispatch();
@@ -29,6 +30,7 @@ function App() {
     <Route path="/create" element={<CreateRecord pageTitle="Create Incident" />} />
     <Route path="/update/:id" element={<UpdateRecord pageTitle="Update Incident" />} />
     <Route path="/delete/:id" element={<DeleteRecord pageTitle="Delete Incident" />} />
+    <Route path="/hw7/bikeshare" element={<HW7BikeShare />} />
     <Route path="*" element={<Navigate to="/" replace />} />
   </Routes></BrowserRouter>;
 }

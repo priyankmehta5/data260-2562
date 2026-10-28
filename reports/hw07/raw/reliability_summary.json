@@ -1,0 +1,11 @@
+{
+  "attempts": 20,
+  "before_repair_rate": 0.0,
+  "after_repair_rate": 1.0,
+  "failure_classification": {
+    "malformed arguments": 4,
+    "unknown tool": 0,
+    "text when a tool was required": 0,
+    "lost multi-step chain": 0
+  }
+}

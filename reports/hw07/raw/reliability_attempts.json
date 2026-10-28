@@ -1,0 +1,182 @@
+[
+  {
+    "attempt": 1,
+    "task": "A",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 2,
+    "task": "B",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 3,
+    "task": "C",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 3,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 4,
+    "task": "A",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 5,
+    "task": "B",
+    "phase": "before_repair",
+    "well_formed": false,
+    "failure_type": "malformed arguments",
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 6,
+    "task": "C",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 3,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 7,
+    "task": "A",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 8,
+    "task": "B",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 9,
+    "task": "C",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 3,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 10,
+    "task": "A",
+    "phase": "before_repair",
+    "well_formed": false,
+    "failure_type": "malformed arguments",
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 11,
+    "task": "B",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 12,
+    "task": "C",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 3,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 13,
+    "task": "A",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 14,
+    "task": "B",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 15,
+    "task": "C",
+    "phase": "before_repair",
+    "well_formed": false,
+    "failure_type": "malformed arguments",
+    "tool_calls": 3,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 16,
+    "task": "A",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 17,
+    "task": "B",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 18,
+    "task": "C",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 3,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 19,
+    "task": "A",
+    "phase": "after_repair",
+    "well_formed": true,
+    "failure_type": null,
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  },
+  {
+    "attempt": 20,
+    "task": "B",
+    "phase": "before_repair",
+    "well_formed": false,
+    "failure_type": "malformed arguments",
+    "tool_calls": 2,
+    "stop_reason": "completed"
+  }
+]

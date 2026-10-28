@@ -1,0 +1,65 @@
+[
+  {
+    "task": "A",
+    "original_success": true,
+    "reflexion_success": true,
+    "original_tool_calls": 2,
+    "reflexion_tool_calls": 2,
+    "retry_count": 0,
+    "original_tokens": 36,
+    "reflexion_tokens": 40,
+    "original_latency_ms": 0.1926,
+    "reflexion_latency_ms": 0.1077,
+    "verifier_false_rejection": false,
+    "reflections": []
+  },
+  {
+    "task": "B",
+    "original_success": true,
+    "reflexion_success": true,
+    "original_tool_calls": 2,
+    "reflexion_tool_calls": 2,
+    "retry_count": 1,
+    "original_tokens": 36,
+    "reflexion_tokens": 40,
+    "original_latency_ms": 0.1468,
+    "reflexion_latency_ms": 0.097,
+    "verifier_false_rejection": false,
+    "reflections": [
+      {
+        "task": "B",
+        "evidence": {
+          "step": 1,
+          "role": "tool",
+          "tool": "aggregate",
+          "inputs": {},
+          "result": {
+            "ok": true,
+            "data": {
+              "incident_count": 3,
+              "mean_severity": 3.3333333333333335,
+              "agency_count": 1
+            },
+            "error": null
+          }
+        },
+        "failure": "verification did not meet the required multi-step outcome",
+        "revised_strategy": "continue with the missing detail lookup"
+      }
+    ]
+  },
+  {
+    "task": "C",
+    "original_success": true,
+    "reflexion_success": true,
+    "original_tool_calls": 3,
+    "reflexion_tool_calls": 3,
+    "retry_count": 0,
+    "original_tokens": 54,
+    "reflexion_tokens": 60,
+    "original_latency_ms": 0.126,
+    "reflexion_latency_ms": 0.1131,
+    "verifier_false_rejection": false,
+    "reflections": []
+  }
+]

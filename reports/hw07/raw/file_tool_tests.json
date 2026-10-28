@@ -1,0 +1,67 @@
+{
+  "integration": {
+    "glob_count": 3,
+    "search_matches": [
+      {
+        "path": "D:\\Grad Prep\\SJSU\\GitHub\\data260-2562\\reports\\hw07\\raw\\file_tool_sandbox\\b.py",
+        "line": 1,
+        "text": "DEBUG = True"
+      }
+    ],
+    "read_contains_DEBUG": true
+  },
+  "safety_gate": [
+    {
+      "command": "Get-Location",
+      "allowed": true,
+      "reason": "matched SAFE_PREFIXES"
+    },
+    {
+      "command": "Get-ChildItem",
+      "allowed": true,
+      "reason": "matched SAFE_PREFIXES"
+    },
+    {
+      "command": "Get-Content file.txt",
+      "allowed": true,
+      "reason": "matched SAFE_PREFIXES"
+    },
+    {
+      "command": "python --version",
+      "allowed": true,
+      "reason": "matched SAFE_PREFIXES"
+    },
+    {
+      "command": "git status",
+      "allowed": true,
+      "reason": "matched SAFE_PREFIXES"
+    },
+    {
+      "command": "Remove-Item sandbox -Recurse",
+      "allowed": false,
+      "reason": "destructive command requires explicit confirmation"
+    },
+    {
+      "command": "sudo rm -rf /tmp/x",
+      "allowed": false,
+      "reason": "destructive command requires explicit confirmation"
+    },
+    {
+      "command": "chmod 777 file",
+      "allowed": false,
+      "reason": "destructive command requires explicit confirmation"
+    },
+    {
+      "command": "echo x > C:\\Windows\\x",
+      "allowed": false,
+      "reason": "destructive command requires explicit confirmation"
+    },
+    {
+      "command": "format C:",
+      "allowed": false,
+      "reason": "destructive command requires explicit confirmation"
+    }
+  ],
+  "pass_count": 5,
+  "blocked_count": 5
+}

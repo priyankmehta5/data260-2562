@@ -1,0 +1,67 @@
+{
+  "homework": "7",
+  "sid4": "2562",
+  "commit_hash": "07617895bc89bdb87f7d37495598f37cfa3dadfc",
+  "model": "qwen3:1.7b",
+  "seed": 2562,
+  "verify_seed": 262562,
+  "checks": [
+    {
+      "name": "HW7 offline evidence generator",
+      "passed": true,
+      "output": "\",\n      \"after_tool\": \"only aggregate rows returned\"\n    }\n  ],\n  \"schemas\": {\n    \"csv_sql\": {\n      \"input\": {\n        \"sql\": \"string; SELECT only\"\n      },\n      \"output\": \"rows, row_count, source\"\n    },\n    \"policy_retriever\": {\n      \"input\": {\n        \"url\": \"string\",\n        \"query\": \"string\",\n        \"k\": \"integer 1..10\"\n      },\n      \"output\": \"passages with text, source, score\"\n    },\n    \"calculator\": {\n      \"input\": {\n        \"expression\": \"safe arithmetic string\",\n        \"units\": \"optional string\"\n      },\n      \"output\": \"value and optional units\"\n    },\n    \"envelope\": {\n      \"required\": [\n        \"success\",\n        \"data\",\n        \"error\",\n        \"source\",\n        \"ts\"\n      ]\n    }\n  },\n  \"file_tools\": {\n    \"integration\": {\n      \"glob_count\": 3,\n      \"search_matches\": [\n        {\n          \"path\": \"D:\\\\Grad Prep\\\\SJSU\\\\GitHub\\\\data260-2562\\\\reports\\\\hw07\\\\raw\\\\file_tool_sandbox\\\\b.py\",\n          \"line\": 1,\n          \"text\": \"DEBUG = True\"\n        }\n      ],\n      \"read_contains_DEBUG\": true\n    },\n    \"safety_gate\": [\n      {\n        \"command\": \"Get-Location\",\n        \"allowed\": true,\n        \"reason\": \"matched SAFE_PREFIXES\"\n      },\n      {\n        \"command\": \"Get-ChildItem\",\n        \"allowed\": true,\n        \"reason\": \"matched SAFE_PREFIXES\"\n      },\n      {\n        \"command\": \"Get-Content file.txt\",\n        \"allowed\": true,\n        \"reason\": \"matched SAFE_PREFIXES\"\n      },\n      {\n        \"command\": \"python --version\",\n        \"allowed\": true,\n        \"reason\": \"matched SAFE_PREFIXES\"\n      },\n      {\n        \"command\": \"git status\",\n        \"allowed\": true,\n        \"reason\": \"matched SAFE_PREFIXES\"\n      },\n      {\n        \"command\": \"Remove-Item sandbox -Recurse\",\n        \"allowed\": false,\n        \"reason\": \"destructive command requires explicit confirmation\"\n      },\n      {\n        \"command\": \"sudo rm -rf /tmp/x\",\n        \"allowed\": false,\n        \"reason\": \"destructive command requires explicit confirmation\"\n      },\n      {\n        \"command\": \"chmod 777 file\",\n        \"allowed\": false,\n        \"reason\": \"destructive command requires explicit confirmation\"\n      },\n      {\n        \"command\": \"echo x > C:\\\\Windows\\\\x\",\n        \"allowed\": false,\n        \"reason\": \"destructive command requires explicit confirmation\"\n      },\n      {\n        \"command\": \"format C:\",\n        \"allowed\": false,\n        \"reason\": \"destructive command requires explicit confirmation\"\n      }\n    ],\n    \"pass_count\": 5,\n    \"blocked_count\": 5\n  }\n}\n"
+    },
+    {
+      "name": "required raw evidence files",
+      "passed": true
+    },
+    {
+      "name": "three verification tasks",
+      "passed": true
+    },
+    {
+      "name": "20 reliability attempts",
+      "passed": true
+    },
+    {
+      "name": "two bike-share scenarios with 500 rows",
+      "passed": true
+    },
+    {
+      "name": "three prompt-injection attacks",
+      "passed": true
+    },
+    {
+      "name": "file-tool integration and 5/5 safety gate",
+      "passed": true
+    },
+    {
+      "name": "JWT implementation present",
+      "passed": true
+    },
+    {
+      "name": "ReAct UI present",
+      "passed": true
+    },
+    {
+      "name": "lint configuration present",
+      "passed": true
+    },
+    {
+      "name": "written threat model present",
+      "passed": true
+    },
+    {
+      "name": "live JWT authentication smoke test",
+      "passed": true,
+      "output": {
+        "no_token": 401,
+        "invalid_login": 401,
+        "valid_login": 200,
+        "me": 200,
+        "role": "reader"
+      }
+    }
+  ],
+  "overall_pass": true
+}

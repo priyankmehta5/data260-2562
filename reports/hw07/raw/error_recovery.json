@@ -1,0 +1,60 @@
+{
+  "user_input": "Find the nonexistent incident",
+  "task": "A",
+  "steps": [
+    {
+      "step": 1,
+      "role": "tool",
+      "tool": "search",
+      "inputs": {
+        "query": "signal"
+      },
+      "result": {
+        "ok": true,
+        "data": [
+          {
+            "id": 1,
+            "incident_code": "INC-0001",
+            "title": "Signal delay",
+            "severity": 2,
+            "agency_id": 1
+          }
+        ],
+        "error": null
+      }
+    },
+    {
+      "step": 2,
+      "role": "tool",
+      "tool": "detail",
+      "inputs": {
+        "incident_id": 1
+      },
+      "result": {
+        "ok": true,
+        "data": {
+          "id": 1,
+          "incident_code": "INC-0001",
+          "title": "Signal delay",
+          "severity": 2,
+          "agency_id": 1
+        },
+        "error": null
+      }
+    },
+    {
+      "tool": "detail",
+      "inputs": {
+        "incident_id": 999999
+      },
+      "result": {
+        "ok": false,
+        "data": null,
+        "error": "incident not found"
+      }
+    }
+  ],
+  "stop_reason": "completed",
+  "tool_call_count": 2,
+  "latency_ms": 0.1919
+}

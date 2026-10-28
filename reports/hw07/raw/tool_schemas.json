@@ -1,0 +1,32 @@
+{
+  "csv_sql": {
+    "input": {
+      "sql": "string; SELECT only"
+    },
+    "output": "rows, row_count, source"
+  },
+  "policy_retriever": {
+    "input": {
+      "url": "string",
+      "query": "string",
+      "k": "integer 1..10"
+    },
+    "output": "passages with text, source, score"
+  },
+  "calculator": {
+    "input": {
+      "expression": "safe arithmetic string",
+      "units": "optional string"
+    },
+    "output": "value and optional units"
+  },
+  "envelope": {
+    "required": [
+      "success",
+      "data",
+      "error",
+      "source",
+      "ts"
+    ]
+  }
+}

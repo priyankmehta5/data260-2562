@@ -18,6 +18,7 @@ from .database import Base, engine, get_db
 from .models import Incident, IncidentNote, Session, User
 from .routes_hw05 import router as hw5_router
 from .routes_hw06 import router as hw6_router
+from .routes_hw07 import router as hw7_router
 from .schemas import LoginRequest, UserResponse
 
 
@@ -25,7 +26,7 @@ Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title="Municipal Transit Incident API",
-    version="6.0.0",
+    version="7.0.0",
 )
 
 app.add_middleware(
@@ -159,6 +160,7 @@ def session_status(
     return user
 
 
+app.include_router(hw7_router)
 app.include_router(
     hw5_router,
     dependencies=[Depends(get_current_user)],

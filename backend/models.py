@@ -136,6 +136,11 @@ class User(Base):
         String(100),
         nullable=False,
     )
+    username: Mapped[str | None] = mapped_column(
+        String(100),
+        unique=True,
+        nullable=True,
+    )
     email: Mapped[str] = mapped_column(
         String(255),
         unique=True,
@@ -144,6 +149,12 @@ class User(Base):
     password_hash: Mapped[str] = mapped_column(
         String(255),
         nullable=False,
+    )
+    role: Mapped[str] = mapped_column(
+        String(20),
+        nullable=False,
+        default="reader",
+        server_default="reader",
     )
 
 

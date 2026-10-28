@@ -1,0 +1,22 @@
+[
+  {
+    "task": "B",
+    "evidence": {
+      "step": 1,
+      "role": "tool",
+      "tool": "aggregate",
+      "inputs": {},
+      "result": {
+        "ok": true,
+        "data": {
+          "incident_count": 3,
+          "mean_severity": 3.3333333333333335,
+          "agency_count": 1
+        },
+        "error": null
+      }
+    },
+    "failure": "verification did not meet the required multi-step outcome",
+    "revised_strategy": "continue with the missing detail lookup"
+  }
+]
