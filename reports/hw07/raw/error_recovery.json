@@ -56,5 +56,5 @@
   ],
   "stop_reason": "completed",
   "tool_call_count": 2,
-  "latency_ms": 0.1701
+  "latency_ms": 0.2118
 }

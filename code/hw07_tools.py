@@ -24,7 +24,7 @@ REPORTS = ROOT / "reports" / "hw07"
 RAW = REPORTS / "raw"
 SCENARIOS = RAW / "scenarios"
 COURSE_SANDBOX = (RAW / "file_tool_sandbox").resolve()
-PRICING_URL = "https://www.baywheels.com/pricing"
+PRICING_URL = "https://www.lyft.com/bikes/bay-wheels"
 
 
 def envelope(success: bool, data: Any = None, error: str | None = None, source: str | None = None):
@@ -313,10 +313,10 @@ def calculator(expression: str, units: str | None = None):
 
 def run_bike_scenarios():
     SCENARIOS.mkdir(parents=True, exist_ok=True)
-    pricing = "Bay Wheels pricing fixture. Annual membership is 149 dollars. Member rides include 45 minutes. Extra time is charged per minute. A single ride has an unlock fee and per-minute charge."
+    pricing = "Lyft Bikes pricing snapshot. Single ride: $1.00 to unlock, then $0.19/min. Day pass: $15/day with 30 minutes free, then $0.19/min. Month pass: $29/month with 45 minutes free, then $0.17/min. Lyft Bike: $165/year with 45 minutes free, then $0.17/min. Lyft Pink All Access: $199/year with 45 minutes free, then $0.17/min. Ebike single ride: $1.00 unlock plus $0.49/min; passes have free unlocks and $0.17/min."
     snapshot_hash = hashlib.sha256(pricing.encode()).hexdigest()
     rows = []
-    for case, trips, member_cost in (("membership_wins", 650, 149.0), ("pay_wins", 600, 149.0)):
+    for case, trips, member_cost in (("membership_wins", 650, 29.0), ("pay_wins", 600, 29.0)):
         path = SCENARIOS / f"{case}.csv"
         with path.open("w", newline="", encoding="utf-8") as stream:
             writer = csv.writer(stream)
@@ -325,11 +325,9 @@ def run_bike_scenarios():
                 writer.writerow(
                     [f"2026-10-{(index % 28) + 1:02d}T08:00:00", 35 if case == "membership_wins" else 12, index + 1]
                 )
-        cost = (
-            trips * (1.0 + (35 * 0.35 if case == "membership_wins" else 0.01))
-            if case == "membership_wins"
-            else trips * (0.05 + 0.01)
-        )
+        duration = 35 if case == "membership_wins" else 12
+        cost = trips * (1.0 + duration * 0.19)
+        member_cost = member_cost + trips * max(0, duration - 45) * 0.17
         decision = "Buy Monthly Membership" if member_cost < cost else "Pay Per Ride/Minute"
         summary = {
             "scenario": case,
@@ -350,6 +348,7 @@ def run_bike_scenarios():
                 }
                 for _ in range(4)
             ],
+            "caveat": "With 500 or more individual rides, the $1 unlock fee makes pay-per-use more expensive than the $29 monthly pass; a pay-winning acceptance case is mathematically incompatible with the published rates.",
         }
         _write(SCENARIOS / f"{case}_summary.json", summary)
         rows.append(summary)

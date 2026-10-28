@@ -17,3 +17,5 @@ The raw machine-readable results are stored under `reports/hw07/raw/`.
 | Safety-gate blocked commands | 5 |
 
 The three fixed verification tasks require search/detail, aggregate/detail, and search/detail/detail chains. The Reflexion path retries a failed deterministic verification at most twice and records only concise failure evidence and revised strategy. Tool-boundary enforcement blocks non-SELECT SQL even if a prompt attempts to override the policy text.
+
+Part 4 pricing caveat: the official Lyft Bikes page lists a $29/month pass with a $1 unlock fee for each single ride. With 500 or more individual ride rows, pay-per-use cannot mathematically beat the monthly pass; the UI reports this comparison transparently rather than fabricating a pay-winning result.

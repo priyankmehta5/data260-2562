@@ -1,34 +1,35 @@
 {
   "scenario": "membership_wins",
   "rows": 650,
-  "pay_per_use_cost": 8612.5,
-  "membership_cost": 149.0,
+  "pay_per_use_cost": 4972.5,
+  "membership_cost": 29.0,
   "decision": "Buy Monthly Membership",
   "steps": 3,
   "stop_reason": "success",
-  "pricing_url": "https://www.baywheels.com/pricing",
-  "pricing_access_date": "2026-10-28T03:56:00.488771+00:00",
-  "pricing_sha256": "f73269b161687e049fbbfe3a413011207c5145b5a337d662bb3141c3a8ce1e91",
+  "pricing_url": "https://www.lyft.com/bikes/bay-wheels",
+  "pricing_access_date": "2026-10-28T04:28:34.057686+00:00",
+  "pricing_sha256": "9d5ea6e905282937cfc00a3e0bda171123728c25eab4551175188c6f3ff7ec15",
   "weekly": [
     {
       "ride_count": 162,
       "average_duration": 35,
-      "spend": 2153.12
+      "spend": 1243.12
     },
     {
       "ride_count": 162,
       "average_duration": 35,
-      "spend": 2153.12
+      "spend": 1243.12
     },
     {
       "ride_count": 162,
       "average_duration": 35,
-      "spend": 2153.12
+      "spend": 1243.12
     },
     {
       "ride_count": 162,
       "average_duration": 35,
-      "spend": 2153.12
+      "spend": 1243.12
     }
-  ]
+  ],
+  "caveat": "With 500 or more individual rides, the $1 unlock fee makes pay-per-use more expensive than the $29 monthly pass; a pay-winning acceptance case is mathematically incompatible with the published rates."
 }
