@@ -46,7 +46,7 @@
     ],
     "stop_reason": "completed",
     "tool_call_count": 2,
-    "latency_ms": 0.2452
+    "latency_ms": 0.2283
   },
   {
     "user_input": "verification task B",
@@ -89,7 +89,7 @@
     ],
     "stop_reason": "completed",
     "tool_call_count": 2,
-    "latency_ms": 0.2467
+    "latency_ms": 0.164
   },
   {
     "user_input": "verification task C",
@@ -149,6 +149,6 @@
     ],
     "stop_reason": "completed",
     "tool_call_count": 3,
-    "latency_ms": 0.2426
+    "latency_ms": 0.1821
   }
 ]

@@ -170,6 +170,8 @@ cython_debug/
 # Ruff stuff:
 .ruff_cache/
 .pre-commit-cache/
+/package.json
+/package-lock.json
 
 # PyPI configuration file
 .pypirc
