@@ -12,6 +12,7 @@ from fastapi import (
     status,
 )
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.openapi.utils import get_openapi
 from sqlalchemy.orm import Session as DatabaseSession
 
 from .database import Base, engine, get_db
@@ -20,7 +21,6 @@ from .routes_hw05 import router as hw5_router
 from .routes_hw06 import router as hw6_router
 from .routes_hw07 import router as hw7_router
 from .schemas import LoginRequest, UserResponse
-
 
 Base.metadata.create_all(bind=engine)
 
@@ -87,21 +87,11 @@ def login(
     response: Response,
     database: DatabaseSession = Depends(get_db),
 ):
-    user = (
-        database.query(User)
-        .filter(
-            User.email
-            == credentials.email.strip().lower()
-        )
-        .first()
-    )
+    user = database.query(User).filter(User.email == credentials.email.strip().lower()).first()
 
-    password_valid = (
-        user is not None
-        and bcrypt.checkpw(
-            credentials.password.encode("utf-8"),
-            user.password_hash.encode("utf-8"),
-        )
+    password_valid = user is not None and bcrypt.checkpw(
+        credentials.password.encode("utf-8"),
+        user.password_hash.encode("utf-8"),
     )
 
     if not password_valid:
@@ -144,9 +134,7 @@ def logout(
     token = request.cookies.get("session_token")
 
     if token:
-        database.query(Session).filter(
-            Session.token == token
-        ).delete()
+        database.query(Session).filter(Session.token == token).delete()
         database.commit()
 
     response.delete_cookie("session_token")
@@ -168,6 +156,30 @@ app.include_router(
 app.include_router(hw6_router)
 
 
+def custom_openapi():
+    if app.openapi_schema:
+        return app.openapi_schema
+    schema = get_openapi(title=app.title, version=app.version, routes=app.routes)
+    protected_paths = {
+        "/auth/me",
+        "/api/agencies",
+        "/api/agencies/{agency_id}",
+        "/api/agencies/{agency_id}/incidents",
+        "/api/incidents",
+        "/api/incidents/{incident_id}",
+    }
+    for path in protected_paths:
+        if path in schema.get("paths", {}):
+            for operation in schema["paths"][path].values():
+                if isinstance(operation, dict) and "responses" in operation:
+                    operation["security"] = [{"HTTPBearer": []}]
+    app.openapi_schema = schema
+    return schema
+
+
+app.openapi = custom_openapi
+
+
 @app.get("/api/performance/incidents-naive")
 def get_incidents_naive(
     response: Response,
@@ -183,23 +195,12 @@ def get_incidents_naive(
 
     started = time.perf_counter()
 
-    incidents = (
-        database.query(Incident)
-        .order_by(Incident.id)
-        .limit(page_size)
-        .all()
-    )
+    incidents = database.query(Incident).order_by(Incident.id).limit(page_size).all()
 
     records = []
 
     for incident in incidents:
-        notes = (
-            database.query(IncidentNote)
-            .filter(
-                IncidentNote.incident_id == incident.id
-            )
-            .all()
-        )
+        notes = database.query(IncidentNote).filter(IncidentNote.incident_id == incident.id).all()
 
         records.append(
             {
@@ -225,12 +226,8 @@ def get_incidents_naive(
     )
     sql_queries = 1 + len(incidents)
 
-    response.headers["X-SQL-Queries"] = str(
-        sql_queries
-    )
-    response.headers["X-Retrieval-Latency-MS"] = str(
-        latency_ms
-    )
+    response.headers["X-SQL-Queries"] = str(sql_queries)
+    response.headers["X-Retrieval-Latency-MS"] = str(latency_ms)
 
     return {
         "version": "naive",
@@ -256,12 +253,7 @@ def get_incidents_optimized(
 
     started = time.perf_counter()
 
-    incident_page = (
-        database.query(Incident.id)
-        .order_by(Incident.id)
-        .limit(page_size)
-        .subquery()
-    )
+    incident_page = database.query(Incident.id).order_by(Incident.id).limit(page_size).subquery()
 
     rows = (
         database.query(Incident, IncidentNote)
@@ -307,12 +299,8 @@ def get_incidents_optimized(
     )
     sql_queries = 1
 
-    response.headers["X-SQL-Queries"] = str(
-        sql_queries
-    )
-    response.headers["X-Retrieval-Latency-MS"] = str(
-        latency_ms
-    )
+    response.headers["X-SQL-Queries"] = str(sql_queries)
+    response.headers["X-Retrieval-Latency-MS"] = str(latency_ms)
 
     return {
         "version": "optimized",

@@ -7,7 +7,7 @@
     "failure_type": null,
     "tool_calls": 2,
     "tokens": 101,
-    "latency_ms": 0.0498,
+    "latency_ms": 0.0538,
     "stop_reason": "completed"
   },
   {
@@ -18,7 +18,7 @@
     "failure_type": null,
     "tool_calls": 2,
     "tokens": 98,
-    "latency_ms": 0.0379,
+    "latency_ms": 0.0359,
     "stop_reason": "completed"
   },
   {
@@ -29,7 +29,7 @@
     "failure_type": null,
     "tool_calls": 3,
     "tokens": 123,
-    "latency_ms": 0.0337,
+    "latency_ms": 0.033,
     "stop_reason": "completed"
   },
   {
@@ -40,7 +40,7 @@
     "failure_type": null,
     "tool_calls": 2,
     "tokens": 101,
-    "latency_ms": 0.0239,
+    "latency_ms": 0.0234,
     "stop_reason": "completed"
   },
   {
@@ -51,7 +51,7 @@
     "failure_type": "malformed arguments",
     "tool_calls": 2,
     "tokens": 98,
-    "latency_ms": 0.0243,
+    "latency_ms": 0.0248,
     "stop_reason": "completed"
   },
   {
@@ -62,7 +62,7 @@
     "failure_type": null,
     "tool_calls": 3,
     "tokens": 123,
-    "latency_ms": 0.0283,
+    "latency_ms": 0.028,
     "stop_reason": "completed"
   },
   {
@@ -73,7 +73,7 @@
     "failure_type": null,
     "tool_calls": 2,
     "tokens": 101,
-    "latency_ms": 0.0212,
+    "latency_ms": 0.0211,
     "stop_reason": "completed"
   },
   {
@@ -84,7 +84,7 @@
     "failure_type": null,
     "tool_calls": 2,
     "tokens": 98,
-    "latency_ms": 0.0223,
+    "latency_ms": 0.0224,
     "stop_reason": "completed"
   },
   {
@@ -95,7 +95,7 @@
     "failure_type": null,
     "tool_calls": 3,
     "tokens": 123,
-    "latency_ms": 0.0277,
+    "latency_ms": 0.0275,
     "stop_reason": "completed"
   },
   {
@@ -106,7 +106,7 @@
     "failure_type": "malformed arguments",
     "tool_calls": 2,
     "tokens": 101,
-    "latency_ms": 0.0208,
+    "latency_ms": 0.0256,
     "stop_reason": "completed"
   },
   {
@@ -117,7 +117,7 @@
     "failure_type": null,
     "tool_calls": 2,
     "tokens": 98,
-    "latency_ms": 0.0222,
+    "latency_ms": 0.0217,
     "stop_reason": "completed"
   },
   {
@@ -128,7 +128,7 @@
     "failure_type": null,
     "tool_calls": 3,
     "tokens": 124,
-    "latency_ms": 0.0271,
+    "latency_ms": 0.0267,
     "stop_reason": "completed"
   },
   {
@@ -139,7 +139,7 @@
     "failure_type": null,
     "tool_calls": 2,
     "tokens": 101,
-    "latency_ms": 0.021,
+    "latency_ms": 0.0208,
     "stop_reason": "completed"
   },
   {
@@ -161,7 +161,7 @@
     "failure_type": "malformed arguments",
     "tool_calls": 3,
     "tokens": 124,
-    "latency_ms": 0.0263,
+    "latency_ms": 0.0264,
     "stop_reason": "completed"
   },
   {
@@ -172,7 +172,7 @@
     "failure_type": null,
     "tool_calls": 2,
     "tokens": 101,
-    "latency_ms": 0.02,
+    "latency_ms": 0.0199,
     "stop_reason": "completed"
   },
   {
@@ -183,7 +183,7 @@
     "failure_type": null,
     "tool_calls": 2,
     "tokens": 98,
-    "latency_ms": 0.0209,
+    "latency_ms": 0.0212,
     "stop_reason": "completed"
   },
   {
@@ -194,7 +194,7 @@
     "failure_type": null,
     "tool_calls": 3,
     "tokens": 124,
-    "latency_ms": 0.0507,
+    "latency_ms": 0.0257,
     "stop_reason": "completed"
   },
   {
@@ -205,7 +205,7 @@
     "failure_type": null,
     "tool_calls": 2,
     "tokens": 101,
-    "latency_ms": 0.0255,
+    "latency_ms": 0.0201,
     "stop_reason": "completed"
   },
   {
@@ -216,7 +216,7 @@
     "failure_type": "malformed arguments",
     "tool_calls": 2,
     "tokens": 98,
-    "latency_ms": 0.0232,
+    "latency_ms": 0.021,
     "stop_reason": "completed"
   }
 ]

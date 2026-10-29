@@ -10,8 +10,8 @@
     "reflexion_tokens": 40,
     "unsupported_claims_original": 0,
     "unsupported_claims_reflexion": 0,
-    "original_latency_ms": 0.0486,
-    "reflexion_latency_ms": 0.0317,
+    "original_latency_ms": 0.0591,
+    "reflexion_latency_ms": 0.0314,
     "verifier_false_rejection": false,
     "reflections": []
   },
@@ -26,8 +26,8 @@
     "reflexion_tokens": 40,
     "unsupported_claims_original": 0,
     "unsupported_claims_reflexion": 0,
-    "original_latency_ms": 0.0318,
-    "reflexion_latency_ms": 0.0232,
+    "original_latency_ms": 0.0327,
+    "reflexion_latency_ms": 0.0267,
     "verifier_false_rejection": false,
     "reflections": [
       {
@@ -63,8 +63,8 @@
     "reflexion_tokens": 60,
     "unsupported_claims_original": 0,
     "unsupported_claims_reflexion": 0,
-    "original_latency_ms": 0.03,
-    "reflexion_latency_ms": 0.0291,
+    "original_latency_ms": 0.0343,
+    "reflexion_latency_ms": 0.0317,
     "verifier_false_rejection": false,
     "reflections": []
   }

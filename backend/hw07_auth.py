@@ -11,7 +11,8 @@ import time
 from typing import Any
 
 import bcrypt
-from fastapi import Depends, HTTPException, Request, status
+from fastapi import Depends, HTTPException, Security, status
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 from sqlalchemy import or_
 from sqlalchemy.orm import Session
 
@@ -19,6 +20,7 @@ from .database import get_db
 from .models import User
 
 JWT_SECRET = os.getenv("HW7_JWT_SECRET", "hw7-local-secret-change-in-production")
+bearer_scheme = HTTPBearer(auto_error=False)
 
 
 def _b64(value: bytes) -> str:
@@ -71,15 +73,13 @@ def authenticate_user(database: Session, username: str, password: str):
     return user
 
 
-def bearer_claims(request: Request) -> dict[str, Any]:
-    value = request.headers.get("Authorization", "")
-    if not value.startswith("Bearer "):
+def bearer_claims(credentials: HTTPAuthorizationCredentials | None = Security(bearer_scheme)) -> dict[str, Any]:
+    if credentials is None:
         raise HTTPException(status_code=401, detail="Bearer token required")
-    return decode_access_token(value.split(" ", 1)[1])
+    return decode_access_token(credentials.credentials)
 
 
-def get_current_jwt_user(request: Request, database: Session = Depends(get_db)):
-    claims = bearer_claims(request)
+def get_current_jwt_user(claims: dict[str, Any] = Depends(bearer_claims), database: Session = Depends(get_db)):
     user = database.get(User, int(claims["sub"]))
     if user is None:
         raise HTTPException(status_code=401, detail="User not found")
@@ -87,7 +87,7 @@ def get_current_jwt_user(request: Request, database: Session = Depends(get_db)):
 
 
 def require_roles(*roles: str):
-    def dependency(user=Depends(get_current_jwt_user)):
+    def dependency(user=Security(get_current_jwt_user)):
         role = getattr(user, "role", "reader") or "reader"
         if role not in roles:
             raise HTTPException(status_code=403, detail="Insufficient role")

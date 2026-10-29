@@ -2,7 +2,7 @@ import { useState } from "react";
 import api from "./api";
 
 function Login({ onLogin }) {
-  const [email, setEmail] = useState("student@example.com");
+  const [email, setEmail] = useState("writer@example.com");
   const [password, setPassword] = useState("Transit2562!");
   const [error, setError] = useState("");
 
@@ -11,12 +11,16 @@ function Login({ onLogin }) {
     setError("");
 
     try {
-      const response = await api.post("/api/login", {
-        email,
-        password,
-      });
-
-      onLogin(response.data);
+      try {
+        const response = await api.post("/auth/login", { username: email, password });
+        localStorage.setItem("hw7_access_token", response.data.access_token);
+        api.defaults.headers.common.Authorization = `Bearer ${response.data.access_token}`;
+        const currentUser = await api.get("/auth/me");
+        onLogin(currentUser.data);
+      } catch {
+        const response = await api.post("/api/login", { email, password });
+        onLogin(response.data);
+      }
     } catch (requestError) {
       setError(
         requestError.response?.data?.detail ||

@@ -18,7 +18,7 @@
   ],
   "stop_reason": "completed",
   "tool_call_count": 1,
-  "latency_ms": 0.0275,
+  "latency_ms": 0.0274,
   "model_adapter": "deterministic_fixture",
   "messages": [
     {

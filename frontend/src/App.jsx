@@ -15,14 +15,31 @@ function App() {
   const [user, setUser] = useState(null);
   const [checkingSession, setCheckingSession] = useState(true);
   useEffect(() => {
-    dispatch(fetchIncidents());
+    const token = localStorage.getItem("hw7_access_token");
+    if (!token) dispatch(fetchIncidents());
     async function checkSession() {
       try { setUser((await api.get("/api/session")).data); }
       catch { setUser(null); } finally { setCheckingSession(false); }
     }
+    if (token) {
+      api.defaults.headers.common.Authorization = `Bearer ${token}`;
+      api.get("/auth/me")
+        .then((response) => setUser(response.data))
+        .catch(() => { localStorage.removeItem("hw7_access_token"); delete api.defaults.headers.common.Authorization; setUser(null); })
+        .finally(() => setCheckingSession(false));
+      return;
+    }
     checkSession();
   }, [dispatch]);
-  async function handleLogout() { await api.post("/api/logout"); setUser(null); }
+  async function handleLogout() {
+    if (localStorage.getItem("hw7_access_token")) {
+      localStorage.removeItem("hw7_access_token");
+      delete api.defaults.headers.common.Authorization;
+    } else {
+      await api.post("/api/logout");
+    }
+    setUser(null);
+  }
   if (checkingSession) return <p className="status">Checking session...</p>;
   if (!user) return <Login onLogin={setUser} />;
   return <BrowserRouter><Routes>

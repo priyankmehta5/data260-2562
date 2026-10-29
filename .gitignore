@@ -194,3 +194,9 @@ node_modules/
 **/.env
 **/.vite/
 **/dist/
+
+# Local report-generation workspace
+reports/hw07/extracted_screenshots/
+reports/hw07/hw7_requirements.txt
+reports/hw07/make_report.py
+tmp/

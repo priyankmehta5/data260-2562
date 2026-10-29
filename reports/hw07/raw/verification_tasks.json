@@ -46,7 +46,7 @@
     ],
     "stop_reason": "completed",
     "tool_call_count": 2,
-    "latency_ms": 0.0776,
+    "latency_ms": 0.0746,
     "model_adapter": "deterministic_fixture",
     "messages": [
       {
@@ -129,7 +129,7 @@
     ],
     "stop_reason": "completed",
     "tool_call_count": 2,
-    "latency_ms": 0.0545,
+    "latency_ms": 0.0757,
     "model_adapter": "deterministic_fixture",
     "messages": [
       {
@@ -225,7 +225,7 @@
     ],
     "stop_reason": "completed",
     "tool_call_count": 3,
-    "latency_ms": 0.0567,
+    "latency_ms": 0.0649,
     "model_adapter": "deterministic_fixture",
     "messages": [
       {
