@@ -1,0 +1,102 @@
+{
+  "request_topic": "s2562_entity_requests",
+  "response_topic": "s2562_entity_responses",
+  "request_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "correlation_id": {
+        "maxLength": 100,
+        "minLength": 1,
+        "title": "Correlation Id",
+        "type": "string"
+      },
+      "reply_to": {
+        "title": "Reply To",
+        "type": "string"
+      },
+      "operation": {
+        "title": "Operation",
+        "type": "string"
+      },
+      "data": {
+        "additionalProperties": true,
+        "title": "Data",
+        "type": "object"
+      }
+    },
+    "required": [
+      "correlation_id",
+      "reply_to",
+      "operation",
+      "data"
+    ],
+    "title": "IncidentOperation",
+    "type": "object"
+  },
+  "create_incident_data_schema": {
+    "additionalProperties": false,
+    "properties": {
+      "title": {
+        "maxLength": 100,
+        "minLength": 3,
+        "title": "Title",
+        "type": "string"
+      },
+      "description": {
+        "maxLength": 1000,
+        "minLength": 3,
+        "title": "Description",
+        "type": "string"
+      },
+      "incident_code": {
+        "pattern": "^[A-Z][A-Z0-9-]{2,29}$",
+        "title": "Incident Code",
+        "type": "string"
+      },
+      "severity": {
+        "maximum": 5,
+        "minimum": 1,
+        "title": "Severity",
+        "type": "integer"
+      },
+      "agency_id": {
+        "exclusiveMinimum": 0,
+        "title": "Agency Id",
+        "type": "integer"
+      }
+    },
+    "required": [
+      "title",
+      "description",
+      "incident_code",
+      "severity",
+      "agency_id"
+    ],
+    "title": "KafkaIncidentCreate",
+    "type": "object"
+  },
+  "success_create_fields": {
+    "correlation_id": "unchanged caller ID",
+    "success": true,
+    "incident_id": "worker-generated UUID",
+    "message": "Incident created"
+  },
+  "success_get_fields": {
+    "correlation_id": "unchanged caller ID",
+    "success": true,
+    "incident": {
+      "incident_id": "UUID",
+      "title": "...",
+      "description": "...",
+      "incident_code": "...",
+      "severity": "1..5",
+      "agency_id": "positive integer"
+    }
+  },
+  "failure_fields": {
+    "correlation_id": "unchanged caller ID",
+    "success": false,
+    "error": "clear validation or lookup error"
+  },
+  "note": "Contract definitions only; these are not experiment results."
+}

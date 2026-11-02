@@ -22,3 +22,4 @@ python-dotenv
 bcrypt
 mcp[cli]
 pymongo==4.15.3
+aiokafka==0.12.0

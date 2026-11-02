@@ -1,0 +1,11 @@
+# Lightweight container dependencies for the shared application (no embedding/model downloads).
+fastapi
+uvicorn
+pydantic>=2,<3
+SQLAlchemy
+PyMySQL
+python-dotenv
+bcrypt
+pymongo
+httpx
+aiokafka==0.12.0

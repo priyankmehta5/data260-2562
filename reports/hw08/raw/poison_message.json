@@ -1,0 +1,88 @@
+{
+  "before": {
+    "blocked": {
+      "timestamp": "2026-11-02T14:47:37.641444+00:00",
+      "name": "Priyank Mehta",
+      "component": "poison-before-42dfb7a0f4",
+      "event": "poison_blocks_partition",
+      "partition": 0,
+      "offset": 3
+    },
+    "committed_next_offset": 3
+  },
+  "after": {
+    "retry_limit": 3,
+    "retry_events": [
+      {
+        "timestamp": "2026-11-02T14:47:43.607446+00:00",
+        "name": "Priyank Mehta",
+        "component": "poison-after-42dfb7a0f4",
+        "event": "retry",
+        "attempt": 1,
+        "error": "question must be nonempty text",
+        "correlation_id": "3719b376-6f6c-4a79-803a-3d7ddd4e042e",
+        "partition": 0,
+        "offset": 3
+      },
+      {
+        "timestamp": "2026-11-02T14:47:43.703214+00:00",
+        "name": "Priyank Mehta",
+        "component": "poison-after-42dfb7a0f4",
+        "event": "retry",
+        "attempt": 2,
+        "error": "question must be nonempty text",
+        "correlation_id": "3719b376-6f6c-4a79-803a-3d7ddd4e042e",
+        "partition": 0,
+        "offset": 3
+      },
+      {
+        "timestamp": "2026-11-02T14:47:43.905890+00:00",
+        "name": "Priyank Mehta",
+        "component": "poison-after-42dfb7a0f4",
+        "event": "retry",
+        "attempt": 3,
+        "error": "question must be nonempty text",
+        "correlation_id": "3719b376-6f6c-4a79-803a-3d7ddd4e042e",
+        "partition": 0,
+        "offset": 3
+      }
+    ],
+    "dead_letter": {
+      "message": {
+        "correlation_id": "3719b376-6f6c-4a79-803a-3d7ddd4e042e",
+        "success": false,
+        "error": "question must be nonempty text",
+        "attempts": 3,
+        "source_topic": "s2562_tasks",
+        "partition": 0,
+        "offset": 3,
+        "original": "{\"correlation_id\": \"3719b376-6f6c-4a79-803a-3d7ddd4e042e\", \"question\": 27, \"plan\": [\"invalid numeric question\"]}"
+      },
+      "broker_partition": 0,
+      "broker_offset": 0,
+      "observed_order": 0
+    },
+    "later_message": {
+      "timestamp": "2026-11-02T14:47:43.949635+00:00",
+      "name": "Priyank Mehta",
+      "component": "poison-after-42dfb7a0f4",
+      "event": "sent",
+      "stage": "writer",
+      "topic": "s2562_drafts",
+      "correlation_id": "9973fcf0-a516-4a06-897d-fdde91f5302e",
+      "source_partition": 0,
+      "source_offset": 4,
+      "output_offset": 3,
+      "duplicate": false,
+      "message": {
+        "correlation_id": "9973fcf0-a516-4a06-897d-fdde91f5302e",
+        "question": "Valid message after poison",
+        "plan": [
+          "review"
+        ],
+        "draft": "For the transit question 'Valid message after poison', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+        "stage": "writer"
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "create_request": {
+    "correlation_id": "0b9fc0e9-0a06-4602-af02-4b3ab3a71555",
+    "reply_to": "s2562_entity_responses",
+    "operation": "CREATE_INCIDENT",
+    "data": {
+      "title": "Route 2 signal delay",
+      "description": "Signal fault reported to transit operations",
+      "incident_code": "HW8-F6F3EF3683BE",
+      "severity": 3,
+      "agency_id": 1
+    }
+  },
+  "create_response": {
+    "correlation_id": "0b9fc0e9-0a06-4602-af02-4b3ab3a71555",
+    "success": true,
+    "incident_id": "29ed1845-74bf-45fd-b442-a39cd8befba2",
+    "message": "Incident created"
+  },
+  "get_request": {
+    "correlation_id": "63c6cac0-58ca-4032-98cf-6a576ac94bcf",
+    "reply_to": "s2562_entity_responses",
+    "operation": "GET_INCIDENT",
+    "data": {
+      "incident_id": "29ed1845-74bf-45fd-b442-a39cd8befba2"
+    }
+  },
+  "get_response": {
+    "correlation_id": "63c6cac0-58ca-4032-98cf-6a576ac94bcf",
+    "success": true,
+    "incident": {
+      "incident_id": "29ed1845-74bf-45fd-b442-a39cd8befba2",
+      "title": "Route 2 signal delay",
+      "description": "Signal fault reported to transit operations",
+      "incident_code": "HW8-F6F3EF3683BE",
+      "severity": 3,
+      "agency_id": 1
+    }
+  },
+  "correlation_preserved": true,
+  "via_api": true
+}

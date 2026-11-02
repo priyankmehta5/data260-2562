@@ -1,0 +1,92 @@
+{
+  "before": {
+    "idempotency_enabled": false,
+    "first": {
+      "correlation_id": "22c3e65a-20d0-46c9-b27b-02512760377b",
+      "success": true,
+      "incident_id": "2077e5b1-86b3-45e9-865c-abae1b93ba61",
+      "message": "Incident created"
+    },
+    "replay": {
+      "correlation_id": "22c3e65a-20d0-46c9-b27b-02512760377b",
+      "success": true,
+      "incident_id": "c789a91b-00da-4cd3-be41-70b7ccfb7f72",
+      "message": "Incident created"
+    },
+    "incident_count": 2,
+    "same_uuid": false,
+    "events": [
+      {
+        "timestamp": "2026-11-02T14:47:05.828562+00:00",
+        "name": "Priyank Mehta",
+        "component": "duplicate-before-b387c0a9a9",
+        "event": "request_processed",
+        "message": {
+          "correlation_id": "22c3e65a-20d0-46c9-b27b-02512760377b",
+          "success": true,
+          "incident_id": "2077e5b1-86b3-45e9-865c-abae1b93ba61",
+          "message": "Incident created"
+        },
+        "incident_count": 1
+      },
+      {
+        "timestamp": "2026-11-02T14:47:05.854089+00:00",
+        "name": "Priyank Mehta",
+        "component": "duplicate-before-b387c0a9a9",
+        "event": "request_processed",
+        "message": {
+          "correlation_id": "22c3e65a-20d0-46c9-b27b-02512760377b",
+          "success": true,
+          "incident_id": "c789a91b-00da-4cd3-be41-70b7ccfb7f72",
+          "message": "Incident created"
+        },
+        "incident_count": 2
+      }
+    ]
+  },
+  "after": {
+    "idempotency_enabled": true,
+    "first": {
+      "correlation_id": "cae80e64-8b0c-4dd8-9da6-12423a02da5f",
+      "success": true,
+      "incident_id": "854289e9-b6bd-4551-8eac-4799d92b2244",
+      "message": "Incident created"
+    },
+    "replay": {
+      "correlation_id": "cae80e64-8b0c-4dd8-9da6-12423a02da5f",
+      "success": true,
+      "incident_id": "854289e9-b6bd-4551-8eac-4799d92b2244",
+      "message": "Incident created"
+    },
+    "incident_count": 1,
+    "same_uuid": true,
+    "events": [
+      {
+        "timestamp": "2026-11-02T14:47:13.216400+00:00",
+        "name": "Priyank Mehta",
+        "component": "duplicate-after-24c46eae5f",
+        "event": "request_processed",
+        "message": {
+          "correlation_id": "cae80e64-8b0c-4dd8-9da6-12423a02da5f",
+          "success": true,
+          "incident_id": "854289e9-b6bd-4551-8eac-4799d92b2244",
+          "message": "Incident created"
+        },
+        "incident_count": 1
+      },
+      {
+        "timestamp": "2026-11-02T14:47:13.237953+00:00",
+        "name": "Priyank Mehta",
+        "component": "duplicate-after-24c46eae5f",
+        "event": "request_processed",
+        "message": {
+          "correlation_id": "cae80e64-8b0c-4dd8-9da6-12423a02da5f",
+          "success": true,
+          "incident_id": "854289e9-b6bd-4551-8eac-4799d92b2244",
+          "message": "Incident created"
+        },
+        "incident_count": 1
+      }
+    ]
+  }
+}

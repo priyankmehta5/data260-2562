@@ -1,0 +1,12 @@
+.git
+.venv
+**/.venv
+**/node_modules
+**/__pycache__
+**/.env
+**/.env.*
+reports
+tmp
+.pre-commit-cache
+frontend
+*.zip

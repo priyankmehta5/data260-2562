@@ -200,3 +200,7 @@ reports/hw07/extracted_screenshots/
 reports/hw07/hw7_requirements.txt
 reports/hw07/make_report.py
 tmp/
+
+# HW8 runtime state; raw observations and experiment summaries remain tracked.
+reports/hw08/raw/state/
+reports/hw08/raw/processes/

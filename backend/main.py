@@ -1,5 +1,7 @@
+import os
 import secrets
 import time
+from contextlib import asynccontextmanager
 from datetime import datetime, timedelta
 
 import bcrypt
@@ -20,13 +22,32 @@ from .models import Incident, IncidentNote, Session, User
 from .routes_hw05 import router as hw5_router
 from .routes_hw06 import router as hw6_router
 from .routes_hw07 import router as hw7_router
+from .routes_hw08 import router as hw8_router
 from .schemas import LoginRequest, UserResponse
 
-Base.metadata.create_all(bind=engine)
+if os.getenv("HW08_SKIP_LEGACY_DB") != "1":
+    Base.metadata.create_all(bind=engine)
+
+
+@asynccontextmanager
+async def lifespan(app):
+    app.state.hw08_rpc = None
+    if os.getenv("HW08_KAFKA_ENABLED") == "1":
+        from .hw08_rpc import KafkaRPC
+        app.state.hw08_rpc = KafkaRPC()
+        await app.state.hw08_rpc.start()
+        from .hw08_common import emit
+        emit("api", "published_host_url", url="http://127.0.0.1:8762", port=8762)
+    try:
+        yield
+    finally:
+        if app.state.hw08_rpc is not None:
+            await app.state.hw08_rpc.stop()
 
 app = FastAPI(
     title="Municipal Transit Incident API",
-    version="7.0.0",
+    version="8.0.0",
+    lifespan=lifespan,
 )
 
 app.add_middleware(
@@ -149,6 +170,7 @@ def session_status(
 
 
 app.include_router(hw7_router)
+app.include_router(hw8_router)
 app.include_router(
     hw5_router,
     dependencies=[Depends(get_current_user)],

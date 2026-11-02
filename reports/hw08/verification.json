@@ -1,0 +1,145 @@
+{
+  "homework": "8",
+  "sid4": "2562",
+  "commit_hash": "2ba9aaa6a6c0e148daf43499b9b12decebc65e72",
+  "tag_commit": null,
+  "model": "qwen3:1.7b (personal configuration; HW8 agents use deterministic domain rules)",
+  "configuration": {
+    "port_base": 8762,
+    "prefix": "s2562",
+    "domain_id": 2,
+    "transport": "Kafka",
+    "agent_mode": "deterministic",
+    "bootstrap": "127.0.0.1:9092"
+  },
+  "seed": 2562,
+  "verify_seed": 262562,
+  "platform": "Windows-10-10.0.19045-SP0",
+  "timestamp": "2026-11-02T14:48:29.831088+00:00",
+  "source_digest_sha256": "c08a0ed850399359fd30b13631eace22e57216b247091ec8b33b9d6657e1f72f",
+  "checks": [
+    {
+      "name": "offline behavioral tests",
+      "passed": true,
+      "output": "{\"timestamp\": \"2026-11-02T14:48:24.002156+00:00\", \"name\": \"Priyank Mehta\", \"component\": \"offline-test\", \"event\": \"request_sent\", \"topic\": \"s2562_entity_requests\", \"message\": {\"correlation_id\": \"9abf8ca9-b7b1-49f1-aad9-4e3be65362ec\", \"reply_to\": \"s2562_entity_responses\", \"operation\": \"CREATE_INCIDENT\", \"data\": {\"title\": \"Signal delay\", \"description\": \"Delay requires operations review\", \"incident_code\": \"HW8-2562\", \"severity\": 3, \"agency_id\": 1}}}\nPriyank Mehta - 14/14 offline tests passed\ntest_api_preserves_original_correlation (__main__.APIWrapperTests.test_api_preserves_original_correlation) ... ok\ntest_disabled_transport_returns_503 (__main__.APIWrapperTests.test_disabled_transport_returns_503) ... ok\ntest_conflicting_correlation_is_rejected (__main__.IncidentTests.test_conflicting_correlation_is_rejected) ... ok\ntest_create_get_and_uuid (__main__.IncidentTests.test_create_get_and_uuid) ... ok\ntest_duplicate_has_one_side_effect (__main__.IncidentTests.test_duplicate_has_one_side_effect) ... ok\ntest_exact_topic_configuration (__main__.IncidentTests.test_exact_topic_configuration) ... ok\ntest_invalid_and_empty_values (__main__.IncidentTests.test_invalid_and_empty_values) ... ok\ntest_invalid_envelope (__main__.IncidentTests.test_invalid_envelope) ... ok\ntest_required_fields_missing (__main__.IncidentTests.test_required_fields_missing) ... ok\ntest_unknown_operation_and_missing_id (__main__.IncidentTests.test_unknown_operation_and_missing_id) ... ok\ntest_all_stages_preserve_id (__main__.PipelineTests.test_all_stages_preserve_id) ... ok\ntest_persistent_deduplication_and_conflict (__main__.PipelineTests.test_persistent_deduplication_and_conflict) ... ok\ntest_poison_message_rejected (__main__.PipelineTests.test_poison_message_rejected) ... ok\ntest_rpc_timeout_removes_pending (__main__.PipelineTests.test_rpc_timeout_removes_pending) ... ok\n\n----------------------------------------------------------------------\nRan 14 tests in 1.380s\n\nOK\n"
+    },
+    {
+      "name": "all seven prefixed topics and partition counts",
+      "passed": true,
+      "observed": {
+        "s2562_inbox": 1,
+        "s2562_entity_responses": 1,
+        "s2562_tasks": 2,
+        "s2562_final": 1,
+        "s2562_dead_letter": 1,
+        "s2562_drafts": 1,
+        "s2562_entity_requests": 1
+      }
+    },
+    {
+      "name": "FastAPI on PORT_BASE 8762",
+      "passed": true
+    },
+    {
+      "name": "CREATE_INCIDENT then GET_INCIDENT through Kafka",
+      "passed": true
+    },
+    {
+      "name": "unknown UUID",
+      "passed": true,
+      "response": {
+        "correlation_id": "5ad3fd90-03aa-4bc8-82d8-1bb873da2140",
+        "success": false,
+        "error": "Incident not found"
+      }
+    },
+    {
+      "name": "missing required incident fields",
+      "passed": true,
+      "response": {
+        "correlation_id": "d92af315-eefd-4544-85f1-d439cb2688bb",
+        "success": false,
+        "error": "Invalid incident: title: Field required; description: Field required; incident_code: Field required; severity: Field required; agency_id: Field required"
+      }
+    },
+    {
+      "name": "unknown operation",
+      "passed": true,
+      "response": {
+        "correlation_id": "5a573973-a41d-40ca-ac0d-d5fe3791eb6f",
+        "success": false,
+        "error": "Unknown operation"
+      }
+    },
+    {
+      "name": "three-process pipeline final JSON",
+      "passed": true
+    },
+    {
+      "name": "replay before/after side effects",
+      "passed": true
+    },
+    {
+      "name": "killed Writer restart and offsets",
+      "passed": true
+    },
+    {
+      "name": "poison retries, dead letter, later-message progress",
+      "passed": true
+    },
+    {
+      "name": "20-message unkeyed ordering",
+      "passed": true,
+      "observed_sequence": [
+        1,
+        0,
+        3,
+        2,
+        5,
+        4,
+        7,
+        6,
+        9,
+        8,
+        11,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    },
+    {
+      "name": "20-message keyed ordering",
+      "passed": true,
+      "observed_sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ]
+    }
+  ],
+  "overall_pass": true,
+  "mode": "live"
+}

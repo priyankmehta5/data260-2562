@@ -1,0 +1,1515 @@
+{
+  "duplicate": {
+    "before": {
+      "idempotency_enabled": false,
+      "first": {
+        "correlation_id": "22c3e65a-20d0-46c9-b27b-02512760377b",
+        "success": true,
+        "incident_id": "2077e5b1-86b3-45e9-865c-abae1b93ba61",
+        "message": "Incident created"
+      },
+      "replay": {
+        "correlation_id": "22c3e65a-20d0-46c9-b27b-02512760377b",
+        "success": true,
+        "incident_id": "c789a91b-00da-4cd3-be41-70b7ccfb7f72",
+        "message": "Incident created"
+      },
+      "incident_count": 2,
+      "same_uuid": false,
+      "events": [
+        {
+          "timestamp": "2026-11-02T14:47:05.828562+00:00",
+          "name": "Priyank Mehta",
+          "component": "duplicate-before-b387c0a9a9",
+          "event": "request_processed",
+          "message": {
+            "correlation_id": "22c3e65a-20d0-46c9-b27b-02512760377b",
+            "success": true,
+            "incident_id": "2077e5b1-86b3-45e9-865c-abae1b93ba61",
+            "message": "Incident created"
+          },
+          "incident_count": 1
+        },
+        {
+          "timestamp": "2026-11-02T14:47:05.854089+00:00",
+          "name": "Priyank Mehta",
+          "component": "duplicate-before-b387c0a9a9",
+          "event": "request_processed",
+          "message": {
+            "correlation_id": "22c3e65a-20d0-46c9-b27b-02512760377b",
+            "success": true,
+            "incident_id": "c789a91b-00da-4cd3-be41-70b7ccfb7f72",
+            "message": "Incident created"
+          },
+          "incident_count": 2
+        }
+      ]
+    },
+    "after": {
+      "idempotency_enabled": true,
+      "first": {
+        "correlation_id": "cae80e64-8b0c-4dd8-9da6-12423a02da5f",
+        "success": true,
+        "incident_id": "854289e9-b6bd-4551-8eac-4799d92b2244",
+        "message": "Incident created"
+      },
+      "replay": {
+        "correlation_id": "cae80e64-8b0c-4dd8-9da6-12423a02da5f",
+        "success": true,
+        "incident_id": "854289e9-b6bd-4551-8eac-4799d92b2244",
+        "message": "Incident created"
+      },
+      "incident_count": 1,
+      "same_uuid": true,
+      "events": [
+        {
+          "timestamp": "2026-11-02T14:47:13.216400+00:00",
+          "name": "Priyank Mehta",
+          "component": "duplicate-after-24c46eae5f",
+          "event": "request_processed",
+          "message": {
+            "correlation_id": "cae80e64-8b0c-4dd8-9da6-12423a02da5f",
+            "success": true,
+            "incident_id": "854289e9-b6bd-4551-8eac-4799d92b2244",
+            "message": "Incident created"
+          },
+          "incident_count": 1
+        },
+        {
+          "timestamp": "2026-11-02T14:47:13.237953+00:00",
+          "name": "Priyank Mehta",
+          "component": "duplicate-after-24c46eae5f",
+          "event": "request_processed",
+          "message": {
+            "correlation_id": "cae80e64-8b0c-4dd8-9da6-12423a02da5f",
+            "success": true,
+            "incident_id": "854289e9-b6bd-4551-8eac-4799d92b2244",
+            "message": "Incident created"
+          },
+          "incident_count": 1
+        }
+      ]
+    }
+  },
+  "consumer_death": {
+    "before": {
+      "correlation_id": "26e4c2a5-1637-49b0-b6f9-79bd66be6339",
+      "source_offset": 0,
+      "committed_next_offset_at_kill": 1,
+      "group": "s2562_death_453f2ba4fa",
+      "unsafe_early_commit": true,
+      "lost_before_fix": true,
+      "following_marker_completed": true
+    },
+    "after": {
+      "correlation_id": "5e219aa7-66ad-4bb6-b86a-040d04e32c16",
+      "source_offset": 2,
+      "committed_next_offset_at_kill": 2,
+      "group": "s2562_death_cf78632b53",
+      "unsafe_early_commit": false,
+      "redelivered_and_completed": true,
+      "completed": {
+        "timestamp": "2026-11-02T14:47:33.385375+00:00",
+        "name": "Priyank Mehta",
+        "component": "death-after-cf78632b53-restart",
+        "event": "sent",
+        "stage": "writer",
+        "topic": "s2562_drafts",
+        "correlation_id": "5e219aa7-66ad-4bb6-b86a-040d04e32c16",
+        "source_partition": 0,
+        "source_offset": 2,
+        "output_offset": 2,
+        "duplicate": false,
+        "message": {
+          "correlation_id": "5e219aa7-66ad-4bb6-b86a-040d04e32c16",
+          "question": "Consumer-death test",
+          "plan": [
+            "review"
+          ],
+          "processing_delay_s": 0,
+          "hold_until_killed": true,
+          "draft": "For the transit question 'Consumer-death test', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer"
+        }
+      },
+      "commit": {
+        "timestamp": "2026-11-02T14:47:33.390452+00:00",
+        "name": "Priyank Mehta",
+        "component": "death-after-cf78632b53-restart",
+        "event": "offset_committed_after_processing",
+        "partition": 0,
+        "next_offset": 3,
+        "correlation_id": "5e219aa7-66ad-4bb6-b86a-040d04e32c16"
+      }
+    }
+  },
+  "poison": {
+    "before": {
+      "blocked": {
+        "timestamp": "2026-11-02T14:47:37.641444+00:00",
+        "name": "Priyank Mehta",
+        "component": "poison-before-42dfb7a0f4",
+        "event": "poison_blocks_partition",
+        "partition": 0,
+        "offset": 3
+      },
+      "committed_next_offset": 3
+    },
+    "after": {
+      "retry_limit": 3,
+      "retry_events": [
+        {
+          "timestamp": "2026-11-02T14:47:43.607446+00:00",
+          "name": "Priyank Mehta",
+          "component": "poison-after-42dfb7a0f4",
+          "event": "retry",
+          "attempt": 1,
+          "error": "question must be nonempty text",
+          "correlation_id": "3719b376-6f6c-4a79-803a-3d7ddd4e042e",
+          "partition": 0,
+          "offset": 3
+        },
+        {
+          "timestamp": "2026-11-02T14:47:43.703214+00:00",
+          "name": "Priyank Mehta",
+          "component": "poison-after-42dfb7a0f4",
+          "event": "retry",
+          "attempt": 2,
+          "error": "question must be nonempty text",
+          "correlation_id": "3719b376-6f6c-4a79-803a-3d7ddd4e042e",
+          "partition": 0,
+          "offset": 3
+        },
+        {
+          "timestamp": "2026-11-02T14:47:43.905890+00:00",
+          "name": "Priyank Mehta",
+          "component": "poison-after-42dfb7a0f4",
+          "event": "retry",
+          "attempt": 3,
+          "error": "question must be nonempty text",
+          "correlation_id": "3719b376-6f6c-4a79-803a-3d7ddd4e042e",
+          "partition": 0,
+          "offset": 3
+        }
+      ],
+      "dead_letter": {
+        "message": {
+          "correlation_id": "3719b376-6f6c-4a79-803a-3d7ddd4e042e",
+          "success": false,
+          "error": "question must be nonempty text",
+          "attempts": 3,
+          "source_topic": "s2562_tasks",
+          "partition": 0,
+          "offset": 3,
+          "original": "{\"correlation_id\": \"3719b376-6f6c-4a79-803a-3d7ddd4e042e\", \"question\": 27, \"plan\": [\"invalid numeric question\"]}"
+        },
+        "broker_partition": 0,
+        "broker_offset": 0,
+        "observed_order": 0
+      },
+      "later_message": {
+        "timestamp": "2026-11-02T14:47:43.949635+00:00",
+        "name": "Priyank Mehta",
+        "component": "poison-after-42dfb7a0f4",
+        "event": "sent",
+        "stage": "writer",
+        "topic": "s2562_drafts",
+        "correlation_id": "9973fcf0-a516-4a06-897d-fdde91f5302e",
+        "source_partition": 0,
+        "source_offset": 4,
+        "output_offset": 3,
+        "duplicate": false,
+        "message": {
+          "correlation_id": "9973fcf0-a516-4a06-897d-fdde91f5302e",
+          "question": "Valid message after poison",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Valid message after poison', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer"
+        }
+      }
+    }
+  },
+  "ordering": {
+    "unkeyed": {
+      "verify_seed": 262562,
+      "group": "s2562_order_6227274102",
+      "two_writer_instances": [
+        "order-unkeyed-6227274102-0",
+        "order-unkeyed-6227274102-1"
+      ],
+      "key": null,
+      "input": [
+        {
+          "sequence": 0,
+          "related_entity": "route-2",
+          "sample": 2381,
+          "processing_delay_s": 0.1152,
+          "correlation_id": "45a80933-6f7f-4648-98f7-be5d4a123d4f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 0,
+          "source_offset": 5
+        },
+        {
+          "sequence": 1,
+          "related_entity": "route-2",
+          "sample": 6158,
+          "processing_delay_s": 0.085,
+          "correlation_id": "3c6fb878-3074-4e9f-b7e4-29bc3446227f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 1
+        },
+        {
+          "sequence": 2,
+          "related_entity": "route-2",
+          "sample": 6885,
+          "processing_delay_s": 0.0891,
+          "correlation_id": "aa4247f7-16c8-4978-86e5-ce7e2d69b2cb",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 0,
+          "source_offset": 6
+        },
+        {
+          "sequence": 3,
+          "related_entity": "route-2",
+          "sample": 9850,
+          "processing_delay_s": 0.1017,
+          "correlation_id": "b95aaf96-9e46-4220-839f-0283564e9b38",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 2
+        },
+        {
+          "sequence": 4,
+          "related_entity": "route-2",
+          "sample": 7754,
+          "processing_delay_s": 0.0896,
+          "correlation_id": "89ec7389-bdde-4590-b42b-abc62f6e150d",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 0,
+          "source_offset": 7
+        },
+        {
+          "sequence": 5,
+          "related_entity": "route-2",
+          "sample": 3932,
+          "processing_delay_s": 0.0613,
+          "correlation_id": "9c46f892-0b2a-4471-927c-b92e1464a65a",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 3
+        },
+        {
+          "sequence": 6,
+          "related_entity": "route-2",
+          "sample": 2169,
+          "processing_delay_s": 0.0123,
+          "correlation_id": "23f0ecbd-df94-4fcd-82fe-26d2318794a5",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 0,
+          "source_offset": 8
+        },
+        {
+          "sequence": 7,
+          "related_entity": "route-2",
+          "sample": 1508,
+          "processing_delay_s": 0.0352,
+          "correlation_id": "c2db289e-b353-44da-a329-3bc64ada93f9",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 4
+        },
+        {
+          "sequence": 8,
+          "related_entity": "route-2",
+          "sample": 2686,
+          "processing_delay_s": 0.06,
+          "correlation_id": "7f790f19-4a1b-4f4b-b5b2-8cd1db3c6126",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 0,
+          "source_offset": 9
+        },
+        {
+          "sequence": 9,
+          "related_entity": "route-2",
+          "sample": 8706,
+          "processing_delay_s": 0.1114,
+          "correlation_id": "8f913bd4-9ea4-4945-baec-b95b5794302b",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 5
+        },
+        {
+          "sequence": 10,
+          "related_entity": "route-2",
+          "sample": 3540,
+          "processing_delay_s": 0.0258,
+          "correlation_id": "16dd25d7-aa48-4795-afb3-db596ebabda8",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 0,
+          "source_offset": 10
+        },
+        {
+          "sequence": 11,
+          "related_entity": "route-2",
+          "sample": 7327,
+          "processing_delay_s": 0.0445,
+          "correlation_id": "befd1c58-ac45-42e9-b820-2bac6f140b20",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 6
+        },
+        {
+          "sequence": 12,
+          "related_entity": "route-2",
+          "sample": 3041,
+          "processing_delay_s": 0.0356,
+          "correlation_id": "0a142975-4f8d-4278-90ab-00c7d61b7b28",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 0,
+          "source_offset": 11
+        },
+        {
+          "sequence": 13,
+          "related_entity": "route-2",
+          "sample": 2744,
+          "processing_delay_s": 0.1123,
+          "correlation_id": "05739af5-402b-4c50-b833-3b9b63dd7650",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 7
+        },
+        {
+          "sequence": 14,
+          "related_entity": "route-2",
+          "sample": 2949,
+          "processing_delay_s": 0.064,
+          "correlation_id": "1ec5a4f2-742e-42bd-a416-86e6e2bf64dd",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 0,
+          "source_offset": 12
+        },
+        {
+          "sequence": 15,
+          "related_entity": "route-2",
+          "sample": 7374,
+          "processing_delay_s": 0.059,
+          "correlation_id": "42172096-2d4a-456f-be6b-ad36b8199055",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 8
+        },
+        {
+          "sequence": 16,
+          "related_entity": "route-2",
+          "sample": 3444,
+          "processing_delay_s": 0.0756,
+          "correlation_id": "7f6b700d-895e-404a-ad69-d04f95cae5b1",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 0,
+          "source_offset": 13
+        },
+        {
+          "sequence": 17,
+          "related_entity": "route-2",
+          "sample": 9013,
+          "processing_delay_s": 0.1165,
+          "correlation_id": "88613891-8f70-4a11-a835-1cbe064bf9df",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 9
+        },
+        {
+          "sequence": 18,
+          "related_entity": "route-2",
+          "sample": 7342,
+          "processing_delay_s": 0.0995,
+          "correlation_id": "fbf3eec3-384e-45f9-8da7-43b16a55aa03",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 0,
+          "source_offset": 14
+        },
+        {
+          "sequence": 19,
+          "related_entity": "route-2",
+          "sample": 6939,
+          "processing_delay_s": 0.0907,
+          "correlation_id": "e60fb649-c62d-4aab-9aee-b37dae0fef48",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 10
+        }
+      ],
+      "records": [
+        {
+          "sequence": 1,
+          "related_entity": "route-2",
+          "sample": 6158,
+          "processing_delay_s": 0.085,
+          "correlation_id": "3c6fb878-3074-4e9f-b7e4-29bc3446227f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 0,
+          "source_partition": 1,
+          "writer": "order-unkeyed-6227274102-1",
+          "draft_offset": 4
+        },
+        {
+          "sequence": 0,
+          "related_entity": "route-2",
+          "sample": 2381,
+          "processing_delay_s": 0.1152,
+          "correlation_id": "45a80933-6f7f-4648-98f7-be5d4a123d4f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 1,
+          "source_partition": 0,
+          "writer": "order-unkeyed-6227274102-0",
+          "draft_offset": 5
+        },
+        {
+          "sequence": 3,
+          "related_entity": "route-2",
+          "sample": 9850,
+          "processing_delay_s": 0.1017,
+          "correlation_id": "b95aaf96-9e46-4220-839f-0283564e9b38",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 2,
+          "source_partition": 1,
+          "writer": "order-unkeyed-6227274102-1",
+          "draft_offset": 6
+        },
+        {
+          "sequence": 2,
+          "related_entity": "route-2",
+          "sample": 6885,
+          "processing_delay_s": 0.0891,
+          "correlation_id": "aa4247f7-16c8-4978-86e5-ce7e2d69b2cb",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 3,
+          "source_partition": 0,
+          "writer": "order-unkeyed-6227274102-0",
+          "draft_offset": 7
+        },
+        {
+          "sequence": 5,
+          "related_entity": "route-2",
+          "sample": 3932,
+          "processing_delay_s": 0.0613,
+          "correlation_id": "9c46f892-0b2a-4471-927c-b92e1464a65a",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 4,
+          "source_partition": 1,
+          "writer": "order-unkeyed-6227274102-1",
+          "draft_offset": 8
+        },
+        {
+          "sequence": 4,
+          "related_entity": "route-2",
+          "sample": 7754,
+          "processing_delay_s": 0.0896,
+          "correlation_id": "89ec7389-bdde-4590-b42b-abc62f6e150d",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 5,
+          "source_partition": 0,
+          "writer": "order-unkeyed-6227274102-0",
+          "draft_offset": 9
+        },
+        {
+          "sequence": 7,
+          "related_entity": "route-2",
+          "sample": 1508,
+          "processing_delay_s": 0.0352,
+          "correlation_id": "c2db289e-b353-44da-a329-3bc64ada93f9",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 6,
+          "source_partition": 1,
+          "writer": "order-unkeyed-6227274102-1",
+          "draft_offset": 10
+        },
+        {
+          "sequence": 6,
+          "related_entity": "route-2",
+          "sample": 2169,
+          "processing_delay_s": 0.0123,
+          "correlation_id": "23f0ecbd-df94-4fcd-82fe-26d2318794a5",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 7,
+          "source_partition": 0,
+          "writer": "order-unkeyed-6227274102-0",
+          "draft_offset": 11
+        },
+        {
+          "sequence": 9,
+          "related_entity": "route-2",
+          "sample": 8706,
+          "processing_delay_s": 0.1114,
+          "correlation_id": "8f913bd4-9ea4-4945-baec-b95b5794302b",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 8,
+          "source_partition": 1,
+          "writer": "order-unkeyed-6227274102-1",
+          "draft_offset": 12
+        },
+        {
+          "sequence": 8,
+          "related_entity": "route-2",
+          "sample": 2686,
+          "processing_delay_s": 0.06,
+          "correlation_id": "7f790f19-4a1b-4f4b-b5b2-8cd1db3c6126",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 9,
+          "source_partition": 0,
+          "writer": "order-unkeyed-6227274102-0",
+          "draft_offset": 13
+        },
+        {
+          "sequence": 11,
+          "related_entity": "route-2",
+          "sample": 7327,
+          "processing_delay_s": 0.0445,
+          "correlation_id": "befd1c58-ac45-42e9-b820-2bac6f140b20",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 10,
+          "source_partition": 1,
+          "writer": "order-unkeyed-6227274102-1",
+          "draft_offset": 14
+        },
+        {
+          "sequence": 10,
+          "related_entity": "route-2",
+          "sample": 3540,
+          "processing_delay_s": 0.0258,
+          "correlation_id": "16dd25d7-aa48-4795-afb3-db596ebabda8",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 11,
+          "source_partition": 0,
+          "writer": "order-unkeyed-6227274102-0",
+          "draft_offset": 15
+        },
+        {
+          "sequence": 12,
+          "related_entity": "route-2",
+          "sample": 3041,
+          "processing_delay_s": 0.0356,
+          "correlation_id": "0a142975-4f8d-4278-90ab-00c7d61b7b28",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 12,
+          "source_partition": 0,
+          "writer": "order-unkeyed-6227274102-0",
+          "draft_offset": 16
+        },
+        {
+          "sequence": 13,
+          "related_entity": "route-2",
+          "sample": 2744,
+          "processing_delay_s": 0.1123,
+          "correlation_id": "05739af5-402b-4c50-b833-3b9b63dd7650",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 13,
+          "source_partition": 1,
+          "writer": "order-unkeyed-6227274102-1",
+          "draft_offset": 17
+        },
+        {
+          "sequence": 14,
+          "related_entity": "route-2",
+          "sample": 2949,
+          "processing_delay_s": 0.064,
+          "correlation_id": "1ec5a4f2-742e-42bd-a416-86e6e2bf64dd",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 14,
+          "source_partition": 0,
+          "writer": "order-unkeyed-6227274102-0",
+          "draft_offset": 18
+        },
+        {
+          "sequence": 15,
+          "related_entity": "route-2",
+          "sample": 7374,
+          "processing_delay_s": 0.059,
+          "correlation_id": "42172096-2d4a-456f-be6b-ad36b8199055",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 15,
+          "source_partition": 1,
+          "writer": "order-unkeyed-6227274102-1",
+          "draft_offset": 19
+        },
+        {
+          "sequence": 16,
+          "related_entity": "route-2",
+          "sample": 3444,
+          "processing_delay_s": 0.0756,
+          "correlation_id": "7f6b700d-895e-404a-ad69-d04f95cae5b1",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 16,
+          "source_partition": 0,
+          "writer": "order-unkeyed-6227274102-0",
+          "draft_offset": 20
+        },
+        {
+          "sequence": 17,
+          "related_entity": "route-2",
+          "sample": 9013,
+          "processing_delay_s": 0.1165,
+          "correlation_id": "88613891-8f70-4a11-a835-1cbe064bf9df",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 17,
+          "source_partition": 1,
+          "writer": "order-unkeyed-6227274102-1",
+          "draft_offset": 21
+        },
+        {
+          "sequence": 18,
+          "related_entity": "route-2",
+          "sample": 7342,
+          "processing_delay_s": 0.0995,
+          "correlation_id": "fbf3eec3-384e-45f9-8da7-43b16a55aa03",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 18,
+          "source_partition": 0,
+          "writer": "order-unkeyed-6227274102-0",
+          "draft_offset": 22
+        },
+        {
+          "sequence": 19,
+          "related_entity": "route-2",
+          "sample": 6939,
+          "processing_delay_s": 0.0907,
+          "correlation_id": "e60fb649-c62d-4aab-9aee-b37dae0fef48",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 19,
+          "source_partition": 1,
+          "writer": "order-unkeyed-6227274102-1",
+          "draft_offset": 23
+        }
+      ],
+      "observed_sequence": [
+        1,
+        0,
+        3,
+        2,
+        5,
+        4,
+        7,
+        6,
+        9,
+        8,
+        11,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "partitions": [
+        0,
+        1
+      ],
+      "in_order": false
+    },
+    "keyed": {
+      "verify_seed": 262562,
+      "group": "s2562_order_924a84ecd5",
+      "two_writer_instances": [
+        "order-keyed-924a84ecd5-0",
+        "order-keyed-924a84ecd5-1"
+      ],
+      "key": "route-2",
+      "input": [
+        {
+          "sequence": 0,
+          "related_entity": "route-2",
+          "sample": 2381,
+          "processing_delay_s": 0.1152,
+          "correlation_id": "a2231243-56d7-4bf1-b22c-f36bba69398f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 11
+        },
+        {
+          "sequence": 1,
+          "related_entity": "route-2",
+          "sample": 6158,
+          "processing_delay_s": 0.085,
+          "correlation_id": "2f7b00cd-ea7a-4104-bd29-9ce8c6c161a7",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 12
+        },
+        {
+          "sequence": 2,
+          "related_entity": "route-2",
+          "sample": 6885,
+          "processing_delay_s": 0.0891,
+          "correlation_id": "5a7d7b3a-5146-479b-b285-516c325cd655",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 13
+        },
+        {
+          "sequence": 3,
+          "related_entity": "route-2",
+          "sample": 9850,
+          "processing_delay_s": 0.1017,
+          "correlation_id": "b55bac0a-e12c-4f99-b45f-2cb47d349912",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 14
+        },
+        {
+          "sequence": 4,
+          "related_entity": "route-2",
+          "sample": 7754,
+          "processing_delay_s": 0.0896,
+          "correlation_id": "09dabef0-c336-4e45-b1b8-403a8e2f1936",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 15
+        },
+        {
+          "sequence": 5,
+          "related_entity": "route-2",
+          "sample": 3932,
+          "processing_delay_s": 0.0613,
+          "correlation_id": "9d005ad0-cdec-4a22-b3d8-22989166e77f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 16
+        },
+        {
+          "sequence": 6,
+          "related_entity": "route-2",
+          "sample": 2169,
+          "processing_delay_s": 0.0123,
+          "correlation_id": "3afe9197-5b0b-454c-b43e-b6253326b31f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 17
+        },
+        {
+          "sequence": 7,
+          "related_entity": "route-2",
+          "sample": 1508,
+          "processing_delay_s": 0.0352,
+          "correlation_id": "141f7f04-78a6-4d85-a83f-936a6cd20b4b",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 18
+        },
+        {
+          "sequence": 8,
+          "related_entity": "route-2",
+          "sample": 2686,
+          "processing_delay_s": 0.06,
+          "correlation_id": "a41347d5-87a4-4631-a480-f8ac0f3e7ffd",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 19
+        },
+        {
+          "sequence": 9,
+          "related_entity": "route-2",
+          "sample": 8706,
+          "processing_delay_s": 0.1114,
+          "correlation_id": "5cdc4c2c-24f6-43aa-b84b-4c1246f43ddd",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 20
+        },
+        {
+          "sequence": 10,
+          "related_entity": "route-2",
+          "sample": 3540,
+          "processing_delay_s": 0.0258,
+          "correlation_id": "085f6ff7-7d37-4065-8def-999c547d0148",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 21
+        },
+        {
+          "sequence": 11,
+          "related_entity": "route-2",
+          "sample": 7327,
+          "processing_delay_s": 0.0445,
+          "correlation_id": "3a1e8239-aa7b-4c65-bf67-d7a95ed42098",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 22
+        },
+        {
+          "sequence": 12,
+          "related_entity": "route-2",
+          "sample": 3041,
+          "processing_delay_s": 0.0356,
+          "correlation_id": "b408b4b6-3b3b-4deb-aa22-f10276363f7c",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 23
+        },
+        {
+          "sequence": 13,
+          "related_entity": "route-2",
+          "sample": 2744,
+          "processing_delay_s": 0.1123,
+          "correlation_id": "e98e0557-03c1-47c9-b04b-be024a3bdc8c",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 24
+        },
+        {
+          "sequence": 14,
+          "related_entity": "route-2",
+          "sample": 2949,
+          "processing_delay_s": 0.064,
+          "correlation_id": "aff49449-31c1-4b5f-8ff4-113e142f8387",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 25
+        },
+        {
+          "sequence": 15,
+          "related_entity": "route-2",
+          "sample": 7374,
+          "processing_delay_s": 0.059,
+          "correlation_id": "0cff5cda-1611-44bc-9d25-afd149c891e9",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 26
+        },
+        {
+          "sequence": 16,
+          "related_entity": "route-2",
+          "sample": 3444,
+          "processing_delay_s": 0.0756,
+          "correlation_id": "c966f718-1066-41ea-8d89-8b352cdba263",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 27
+        },
+        {
+          "sequence": 17,
+          "related_entity": "route-2",
+          "sample": 9013,
+          "processing_delay_s": 0.1165,
+          "correlation_id": "4fd26e7b-efe5-4db7-ace3-70a604a6fb6f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 28
+        },
+        {
+          "sequence": 18,
+          "related_entity": "route-2",
+          "sample": 7342,
+          "processing_delay_s": 0.0995,
+          "correlation_id": "18f651df-0170-4f0a-a668-1a0e8c7852fb",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 29
+        },
+        {
+          "sequence": 19,
+          "related_entity": "route-2",
+          "sample": 6939,
+          "processing_delay_s": 0.0907,
+          "correlation_id": "5136c185-8222-40af-8118-2065a22ae8f9",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "source_partition": 1,
+          "source_offset": 30
+        }
+      ],
+      "records": [
+        {
+          "sequence": 0,
+          "related_entity": "route-2",
+          "sample": 2381,
+          "processing_delay_s": 0.1152,
+          "correlation_id": "a2231243-56d7-4bf1-b22c-f36bba69398f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 0,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 24
+        },
+        {
+          "sequence": 1,
+          "related_entity": "route-2",
+          "sample": 6158,
+          "processing_delay_s": 0.085,
+          "correlation_id": "2f7b00cd-ea7a-4104-bd29-9ce8c6c161a7",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 1,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 25
+        },
+        {
+          "sequence": 2,
+          "related_entity": "route-2",
+          "sample": 6885,
+          "processing_delay_s": 0.0891,
+          "correlation_id": "5a7d7b3a-5146-479b-b285-516c325cd655",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 2,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 26
+        },
+        {
+          "sequence": 3,
+          "related_entity": "route-2",
+          "sample": 9850,
+          "processing_delay_s": 0.1017,
+          "correlation_id": "b55bac0a-e12c-4f99-b45f-2cb47d349912",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 3,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 27
+        },
+        {
+          "sequence": 4,
+          "related_entity": "route-2",
+          "sample": 7754,
+          "processing_delay_s": 0.0896,
+          "correlation_id": "09dabef0-c336-4e45-b1b8-403a8e2f1936",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 4,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 28
+        },
+        {
+          "sequence": 5,
+          "related_entity": "route-2",
+          "sample": 3932,
+          "processing_delay_s": 0.0613,
+          "correlation_id": "9d005ad0-cdec-4a22-b3d8-22989166e77f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 5,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 29
+        },
+        {
+          "sequence": 6,
+          "related_entity": "route-2",
+          "sample": 2169,
+          "processing_delay_s": 0.0123,
+          "correlation_id": "3afe9197-5b0b-454c-b43e-b6253326b31f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 6,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 30
+        },
+        {
+          "sequence": 7,
+          "related_entity": "route-2",
+          "sample": 1508,
+          "processing_delay_s": 0.0352,
+          "correlation_id": "141f7f04-78a6-4d85-a83f-936a6cd20b4b",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 7,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 31
+        },
+        {
+          "sequence": 8,
+          "related_entity": "route-2",
+          "sample": 2686,
+          "processing_delay_s": 0.06,
+          "correlation_id": "a41347d5-87a4-4631-a480-f8ac0f3e7ffd",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 8,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 32
+        },
+        {
+          "sequence": 9,
+          "related_entity": "route-2",
+          "sample": 8706,
+          "processing_delay_s": 0.1114,
+          "correlation_id": "5cdc4c2c-24f6-43aa-b84b-4c1246f43ddd",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 9,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 33
+        },
+        {
+          "sequence": 10,
+          "related_entity": "route-2",
+          "sample": 3540,
+          "processing_delay_s": 0.0258,
+          "correlation_id": "085f6ff7-7d37-4065-8def-999c547d0148",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 10,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 34
+        },
+        {
+          "sequence": 11,
+          "related_entity": "route-2",
+          "sample": 7327,
+          "processing_delay_s": 0.0445,
+          "correlation_id": "3a1e8239-aa7b-4c65-bf67-d7a95ed42098",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 11,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 35
+        },
+        {
+          "sequence": 12,
+          "related_entity": "route-2",
+          "sample": 3041,
+          "processing_delay_s": 0.0356,
+          "correlation_id": "b408b4b6-3b3b-4deb-aa22-f10276363f7c",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 12,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 36
+        },
+        {
+          "sequence": 13,
+          "related_entity": "route-2",
+          "sample": 2744,
+          "processing_delay_s": 0.1123,
+          "correlation_id": "e98e0557-03c1-47c9-b04b-be024a3bdc8c",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 13,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 37
+        },
+        {
+          "sequence": 14,
+          "related_entity": "route-2",
+          "sample": 2949,
+          "processing_delay_s": 0.064,
+          "correlation_id": "aff49449-31c1-4b5f-8ff4-113e142f8387",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 14,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 38
+        },
+        {
+          "sequence": 15,
+          "related_entity": "route-2",
+          "sample": 7374,
+          "processing_delay_s": 0.059,
+          "correlation_id": "0cff5cda-1611-44bc-9d25-afd149c891e9",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 15,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 39
+        },
+        {
+          "sequence": 16,
+          "related_entity": "route-2",
+          "sample": 3444,
+          "processing_delay_s": 0.0756,
+          "correlation_id": "c966f718-1066-41ea-8d89-8b352cdba263",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 16,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 40
+        },
+        {
+          "sequence": 17,
+          "related_entity": "route-2",
+          "sample": 9013,
+          "processing_delay_s": 0.1165,
+          "correlation_id": "4fd26e7b-efe5-4db7-ace3-70a604a6fb6f",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 17,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 41
+        },
+        {
+          "sequence": 18,
+          "related_entity": "route-2",
+          "sample": 7342,
+          "processing_delay_s": 0.0995,
+          "correlation_id": "18f651df-0170-4f0a-a668-1a0e8c7852fb",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 18,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 42
+        },
+        {
+          "sequence": 19,
+          "related_entity": "route-2",
+          "sample": 6939,
+          "processing_delay_s": 0.0907,
+          "correlation_id": "5136c185-8222-40af-8118-2065a22ae8f9",
+          "question": "Related Route 2 incident update",
+          "plan": [
+            "review"
+          ],
+          "draft": "For the transit question 'Related Route 2 incident update', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+          "stage": "writer",
+          "observed_order": 19,
+          "source_partition": 1,
+          "writer": "order-keyed-924a84ecd5-1",
+          "draft_offset": 43
+        }
+      ],
+      "observed_sequence": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "partitions": [
+        1
+      ],
+      "in_order": true
+    }
+  }
+}

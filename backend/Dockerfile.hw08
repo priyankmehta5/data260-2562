@@ -1,0 +1,8 @@
+FROM python:3.12-slim
+WORKDIR /app
+ENV PYTHONUNBUFFERED=1 PYTHONDONTWRITEBYTECODE=1
+COPY backend/requirements-hw08.txt /app/requirements-hw08.txt
+RUN pip install --no-cache-dir -r requirements-hw08.txt
+COPY backend /app/backend
+COPY planner.py writer.py reviewer.py send_question.py homework_demo.py /app/
+CMD ["python", "-m", "backend.hw08_worker"]

@@ -1,0 +1,52 @@
+{
+  "before": {
+    "correlation_id": "26e4c2a5-1637-49b0-b6f9-79bd66be6339",
+    "source_offset": 0,
+    "committed_next_offset_at_kill": 1,
+    "group": "s2562_death_453f2ba4fa",
+    "unsafe_early_commit": true,
+    "lost_before_fix": true,
+    "following_marker_completed": true
+  },
+  "after": {
+    "correlation_id": "5e219aa7-66ad-4bb6-b86a-040d04e32c16",
+    "source_offset": 2,
+    "committed_next_offset_at_kill": 2,
+    "group": "s2562_death_cf78632b53",
+    "unsafe_early_commit": false,
+    "redelivered_and_completed": true,
+    "completed": {
+      "timestamp": "2026-11-02T14:47:33.385375+00:00",
+      "name": "Priyank Mehta",
+      "component": "death-after-cf78632b53-restart",
+      "event": "sent",
+      "stage": "writer",
+      "topic": "s2562_drafts",
+      "correlation_id": "5e219aa7-66ad-4bb6-b86a-040d04e32c16",
+      "source_partition": 0,
+      "source_offset": 2,
+      "output_offset": 2,
+      "duplicate": false,
+      "message": {
+        "correlation_id": "5e219aa7-66ad-4bb6-b86a-040d04e32c16",
+        "question": "Consumer-death test",
+        "plan": [
+          "review"
+        ],
+        "processing_delay_s": 0,
+        "hold_until_killed": true,
+        "draft": "For the transit question 'Consumer-death test', confirm the affected route, time, and severity. Notify transit operations and follow the agency safety-review procedure. Verify the incident record and any service advisory before reporting resolution.",
+        "stage": "writer"
+      }
+    },
+    "commit": {
+      "timestamp": "2026-11-02T14:47:33.390452+00:00",
+      "name": "Priyank Mehta",
+      "component": "death-after-cf78632b53-restart",
+      "event": "offset_committed_after_processing",
+      "partition": 0,
+      "next_offset": 3,
+      "correlation_id": "5e219aa7-66ad-4bb6-b86a-040d04e32c16"
+    }
+  }
+}
