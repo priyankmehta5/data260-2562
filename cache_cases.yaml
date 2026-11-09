@@ -1,0 +1,283 @@
+schema: 1
+anchors:
+- id: anchor01
+  route: 2
+  field: severity
+  query: What is the current severity of the Route 2 incident?
+- id: anchor02
+  route: 2
+  field: delay
+  query: What is the current delay of the Route 2 incident?
+- id: anchor03
+  route: 3
+  field: severity
+  query: What is the current severity of the Route 3 incident?
+- id: anchor04
+  route: 3
+  field: delay
+  query: What is the current delay of the Route 3 incident?
+- id: anchor05
+  route: 4
+  field: status
+  query: What is the current status of the Route 4 incident?
+- id: anchor06
+  route: 5
+  field: delay
+  query: What is the current delay of the Route 5 incident?
+- id: anchor07
+  route: 4
+  field: agency
+  query: What is the current agency of the Route 4 incident?
+- id: anchor08
+  route: 5
+  field: severity
+  query: What is the current severity of the Route 5 incident?
+- id: anchor09
+  route: 3
+  field: status
+  query: What is the current status of the Route 3 incident?
+- id: anchor10
+  route: 2
+  field: agency
+  query: What is the current agency of the Route 2 incident?
+cases:
+- case_id: exact01
+  category: exact
+  anchor_id: anchor01
+  query: What is the current severity of the Route 2 incident?
+  should_hit: true
+  label_reason: Same current fact
+- case_id: paraphrase01
+  category: paraphrase
+  anchor_id: anchor01
+  query: Tell me the current severity for the incident on Route 2.
+  should_hit: true
+  label_reason: Same current fact
+- case_id: similar_different01
+  category: similar_different
+  anchor_id: anchor01
+  query: What was the severity of the Route 2 incident yesterday?
+  should_hit: false
+  label_reason: Historical facts are not supplied
+- case_id: unrelated01
+  category: unrelated
+  anchor_id: anchor01
+  query: How do I bake sourdough bread?
+  should_hit: false
+  label_reason: Outside municipal transit reference scope
+- case_id: exact02
+  category: exact
+  anchor_id: anchor02
+  query: What is the current delay of the Route 2 incident?
+  should_hit: true
+  label_reason: Same current fact
+- case_id: paraphrase02
+  category: paraphrase
+  anchor_id: anchor02
+  query: Tell me the current delay for the incident on Route 2.
+  should_hit: true
+  label_reason: Same current fact
+- case_id: similar_different02
+  category: similar_different
+  anchor_id: anchor02
+  query: What was the delay of the Route 2 incident yesterday?
+  should_hit: false
+  label_reason: Historical facts are not supplied
+- case_id: unrelated02
+  category: unrelated
+  anchor_id: anchor02
+  query: What is the capital of Japan?
+  should_hit: false
+  label_reason: Outside municipal transit reference scope
+- case_id: exact03
+  category: exact
+  anchor_id: anchor03
+  query: What is the current severity of the Route 3 incident?
+  should_hit: true
+  label_reason: Same current fact
+- case_id: paraphrase03
+  category: paraphrase
+  anchor_id: anchor03
+  query: Tell me the current severity for the incident on Route 3.
+  should_hit: true
+  label_reason: Same current fact
+- case_id: similar_different03
+  category: similar_different
+  anchor_id: anchor03
+  query: What was the severity of the Route 3 incident yesterday?
+  should_hit: false
+  label_reason: Historical facts are not supplied
+- case_id: unrelated03
+  category: unrelated
+  anchor_id: anchor03
+  query: Explain photosynthesis.
+  should_hit: false
+  label_reason: Outside municipal transit reference scope
+- case_id: exact04
+  category: exact
+  anchor_id: anchor04
+  query: What is the current delay of the Route 3 incident?
+  should_hit: true
+  label_reason: Same current fact
+- case_id: paraphrase04
+  category: paraphrase
+  anchor_id: anchor04
+  query: Tell me the current delay for the incident on Route 3.
+  should_hit: true
+  label_reason: Same current fact
+- case_id: similar_different04
+  category: similar_different
+  anchor_id: anchor04
+  query: What was the delay of the Route 3 incident yesterday?
+  should_hit: false
+  label_reason: Historical facts are not supplied
+- case_id: unrelated04
+  category: unrelated
+  anchor_id: anchor04
+  query: How do I tune a guitar?
+  should_hit: false
+  label_reason: Outside municipal transit reference scope
+- case_id: exact05
+  category: exact
+  anchor_id: anchor05
+  query: What is the current status of the Route 4 incident?
+  should_hit: true
+  label_reason: Same current fact
+- case_id: paraphrase05
+  category: paraphrase
+  anchor_id: anchor05
+  query: Tell me the current status for the incident on Route 4.
+  should_hit: true
+  label_reason: Same current fact
+- case_id: similar_different05
+  category: similar_different
+  anchor_id: anchor05
+  query: What was the status of the Route 4 incident yesterday?
+  should_hit: false
+  label_reason: Historical facts are not supplied
+- case_id: unrelated05
+  category: unrelated
+  anchor_id: anchor05
+  query: What is a prime number?
+  should_hit: false
+  label_reason: Outside municipal transit reference scope
+- case_id: exact06
+  category: exact
+  anchor_id: anchor06
+  query: What is the current delay of the Route 5 incident?
+  should_hit: true
+  label_reason: Same current fact
+- case_id: paraphrase06
+  category: paraphrase
+  anchor_id: anchor06
+  query: Tell me the current delay for the incident on Route 5.
+  should_hit: true
+  label_reason: Same current fact
+- case_id: similar_different06
+  category: similar_different
+  anchor_id: anchor06
+  query: What was the delay of the Route 5 incident yesterday?
+  should_hit: false
+  label_reason: Historical facts are not supplied
+- case_id: unrelated06
+  category: unrelated
+  anchor_id: anchor06
+  query: How do volcanoes form?
+  should_hit: false
+  label_reason: Outside municipal transit reference scope
+- case_id: exact07
+  category: exact
+  anchor_id: anchor07
+  query: What is the current agency of the Route 4 incident?
+  should_hit: true
+  label_reason: Same current fact
+- case_id: paraphrase07
+  category: paraphrase
+  anchor_id: anchor07
+  query: Tell me the current agency for the incident on Route 4.
+  should_hit: true
+  label_reason: Same current fact
+- case_id: similar_different07
+  category: similar_different
+  anchor_id: anchor07
+  query: What was the agency of the Route 4 incident yesterday?
+  should_hit: false
+  label_reason: Historical facts are not supplied
+- case_id: unrelated07
+  category: unrelated
+  anchor_id: anchor07
+  query: Explain a chess fork.
+  should_hit: false
+  label_reason: Outside municipal transit reference scope
+- case_id: exact08
+  category: exact
+  anchor_id: anchor08
+  query: What is the current severity of the Route 5 incident?
+  should_hit: true
+  label_reason: Same current fact
+- case_id: paraphrase08
+  category: paraphrase
+  anchor_id: anchor08
+  query: Tell me the current severity for the incident on Route 5.
+  should_hit: true
+  label_reason: Same current fact
+- case_id: similar_different08
+  category: similar_different
+  anchor_id: anchor08
+  query: What was the severity of the Route 5 incident yesterday?
+  should_hit: false
+  label_reason: Historical facts are not supplied
+- case_id: unrelated08
+  category: unrelated
+  anchor_id: anchor08
+  query: How do I grow basil?
+  should_hit: false
+  label_reason: Outside municipal transit reference scope
+- case_id: exact09
+  category: exact
+  anchor_id: anchor09
+  query: What is the current status of the Route 3 incident?
+  should_hit: true
+  label_reason: Same current fact
+- case_id: paraphrase09
+  category: paraphrase
+  anchor_id: anchor09
+  query: Tell me the current status for the incident on Route 3.
+  should_hit: true
+  label_reason: Same current fact
+- case_id: similar_different09
+  category: similar_different
+  anchor_id: anchor09
+  query: What was the status of the Route 3 incident yesterday?
+  should_hit: false
+  label_reason: Historical facts are not supplied
+- case_id: unrelated09
+  category: unrelated
+  anchor_id: anchor09
+  query: What is a lunar eclipse?
+  should_hit: false
+  label_reason: Outside municipal transit reference scope
+- case_id: exact10
+  category: exact
+  anchor_id: anchor10
+  query: What is the current agency of the Route 2 incident?
+  should_hit: true
+  label_reason: Same current fact
+- case_id: paraphrase10
+  category: paraphrase
+  anchor_id: anchor10
+  query: Tell me the current agency for the incident on Route 2.
+  should_hit: true
+  label_reason: Same current fact
+- case_id: similar_different10
+  category: similar_different
+  anchor_id: anchor10
+  query: What was the agency of the Route 2 incident yesterday?
+  should_hit: false
+  label_reason: Historical facts are not supplied
+- case_id: unrelated10
+  category: unrelated
+  anchor_id: anchor10
+  query: How do I knit a scarf?
+  should_hit: false
+  label_reason: Outside municipal transit reference scope
