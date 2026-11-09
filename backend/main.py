@@ -23,6 +23,7 @@ from .routes_hw05 import router as hw5_router
 from .routes_hw06 import router as hw6_router
 from .routes_hw07 import router as hw7_router
 from .routes_hw08 import router as hw8_router
+from .routes_hw09 import router as hw9_router
 from .schemas import LoginRequest, UserResponse
 
 if os.getenv("HW08_SKIP_LEGACY_DB") != "1":
@@ -32,6 +33,18 @@ if os.getenv("HW08_SKIP_LEGACY_DB") != "1":
 @asynccontextmanager
 async def lifespan(app):
     app.state.hw08_rpc = None
+    app.state.hw09_cache = None
+    if os.getenv('HW09_ENABLED') == '1':
+        import redis
+
+        from .hw09_cache import Embedder, SemanticCache, shipping_threshold
+        from .hw09_common import REDIS_URL
+        from .hw09_database import IncidentDatabaseWithCache
+        from .hw09_pipeline import KafkaAnswerPipeline
+        connection = redis.Redis.from_url(REDIS_URL)
+        connection.ping()
+        app.state.hw09_cache = SemanticCache(connection, Embedder(),
+            IncidentDatabaseWithCache(engine, connection), KafkaAnswerPipeline(), threshold=shipping_threshold())
     if os.getenv("HW08_KAFKA_ENABLED") == "1":
         from .hw08_rpc import KafkaRPC
         app.state.hw08_rpc = KafkaRPC()
@@ -41,6 +54,8 @@ async def lifespan(app):
     try:
         yield
     finally:
+        if app.state.hw09_cache is not None:
+            app.state.hw09_cache.redis.close()
         if app.state.hw08_rpc is not None:
             await app.state.hw08_rpc.stop()
 
@@ -171,6 +186,7 @@ def session_status(
 
 app.include_router(hw7_router)
 app.include_router(hw8_router)
+app.include_router(hw9_router)
 app.include_router(
     hw5_router,
     dependencies=[Depends(get_current_user)],

@@ -1,0 +1,43 @@
+[
+  {
+    "question": "What is the severity and agency of the Route 4 incident?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": {
+          "answer": "Route 4 has severity 2 and agency VTA.",
+          "facts": {
+            "severity": 2,
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "evaluation": {
+          "result": "PASS",
+          "explanation": "All requested facts agree with the reference.",
+          "feedback": "",
+          "expected_facts": {
+            "severity": 2,
+            "agency": "VTA"
+          }
+        },
+        "loaded_lessons": [
+          "agency-completeness-001"
+        ]
+      }
+    ],
+    "attempt_count": 1,
+    "final_response": {
+      "answer": "Route 4 has severity 2 and agency VTA.",
+      "facts": {
+        "severity": 2,
+        "agency": "VTA"
+      },
+      "abstained": false
+    },
+    "final_result": "PASS",
+    "stop_reason": "passed",
+    "controlled_initial_failure": false,
+    "latency_ms": 2258.3445999989635
+  }
+]

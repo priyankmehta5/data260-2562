@@ -1,0 +1,23 @@
+{
+  "case_id": "similar_different01",
+  "category": "similar_different",
+  "anchor_id": "anchor01",
+  "query": "What was the severity of the Route 2 incident yesterday?",
+  "should_hit": false,
+  "label_reason": "Historical facts are not supplied",
+  "answer": "{\"answer\": \"The current severity of the Route 2 incident is 3.\", \"facts\": {\"route\": 2, \"severity\": 3, \"status\": \"open\", \"agency\": \"VTA\", \"delay_minutes\": 12}, \"abstained\": false}",
+  "is_cached": true,
+  "similarity": 0.9415602087975,
+  "latency_ms": 56.50489999970887,
+  "started_at": "2026-11-09T21:36:53.936491+00:00",
+  "finished_at": "2026-11-09T21:36:53.993690+00:00",
+  "version": "incident-5007-v2",
+  "correlation_id": null,
+  "cached_query": "What is the current severity of the Route 2 incident?",
+  "cached_version": "incident-5007-v2",
+  "threshold": 0.75,
+  "false_hit": true,
+  "correct_facts": {},
+  "correct_answer": "The reference does not supply historical facts; abstain.",
+  "explanation": "The queries share entity and attribute wording; the embedding underweights the temporal change from current to yesterday."
+}

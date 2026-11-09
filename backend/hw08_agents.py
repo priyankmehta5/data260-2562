@@ -176,7 +176,17 @@ async def run_agent(
                         )
                         await asyncio.Event().wait()
                     cached = store.get(group, message)
-                    result = cached or transform(stage, message)
+                    if cached:
+                        result = cached
+                    elif stage == 'writer' and message.get('hw09_local_model'):
+                        from .hw09_model import OllamaAdapter
+                        generated = await asyncio.to_thread(
+                            OllamaAdapter().generate, message['question'], message['hw09_context'],
+                            'Follow the Planner plan: ' + json.dumps(message.get('plan', [])))
+                        result = {**message, 'draft': json.dumps(generated), 'stage': 'writer',
+                                  'model': 'qwen3:1.7b'}
+                    else:
+                        result = transform(stage, message)
                     if cached is None:
                         store.save(group, message, result)
                     else:

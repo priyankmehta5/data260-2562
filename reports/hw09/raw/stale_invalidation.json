@@ -1,0 +1,58 @@
+{
+  "query": "What is the current severity of the Route 2 incident?",
+  "record_id": 5007,
+  "before": {
+    "query": "What is the current severity of the Route 2 incident?",
+    "answer": "{\"answer\": \"The current severity of the Route 2 incident is 3.\", \"facts\": {\"route\": 2, \"severity\": 3, \"status\": \"open\", \"agency\": \"VTA\", \"delay_minutes\": 12}, \"abstained\": false}",
+    "is_cached": false,
+    "similarity": null,
+    "latency_ms": 5159.304999997403,
+    "started_at": "2026-11-09T21:43:29.330142+00:00",
+    "finished_at": "2026-11-09T21:43:34.489693+00:00",
+    "version": "incident-5007-v2",
+    "correlation_id": "06d77333-265c-432e-8cbb-2cca00517769",
+    "cached_query": null,
+    "cached_version": null
+  },
+  "stale_hit": {
+    "query": "What is the current severity of the Route 2 incident?",
+    "answer": "{\"answer\": \"The current severity of the Route 2 incident is 3.\", \"facts\": {\"route\": 2, \"severity\": 3, \"status\": \"open\", \"agency\": \"VTA\", \"delay_minutes\": 12}, \"abstained\": false}",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 15.028100002382416,
+    "started_at": "2026-11-09T21:43:34.511647+00:00",
+    "finished_at": "2026-11-09T21:43:34.527200+00:00",
+    "version": "incident-5007-v3",
+    "correlation_id": null,
+    "cached_query": "What is the current severity of the Route 2 incident?",
+    "cached_version": "incident-5007-v2"
+  },
+  "after_invalidation": {
+    "query": "What is the current severity of the Route 2 incident?",
+    "answer": "{\"answer\": \"The current severity of the Route 2 incident is 5.\", \"facts\": {\"route\": 2, \"severity\": 5, \"delay_minutes\": 30, \"status\": \"open\", \"agency\": \"VTA\"}, \"abstained\": false}",
+    "is_cached": false,
+    "similarity": null,
+    "latency_ms": 5463.154100001702,
+    "started_at": "2026-11-09T21:43:34.529413+00:00",
+    "finished_at": "2026-11-09T21:43:39.992851+00:00",
+    "version": "incident-5007-v3",
+    "correlation_id": "c7a47452-9e16-41c0-b0f0-461ff5a0199c",
+    "cached_query": null,
+    "cached_version": null
+  },
+  "fresh_hit": {
+    "query": "What is the current severity of the Route 2 incident?",
+    "answer": "{\"answer\": \"The current severity of the Route 2 incident is 5.\", \"facts\": {\"route\": 2, \"severity\": 5, \"delay_minutes\": 30, \"status\": \"open\", \"agency\": \"VTA\"}, \"abstained\": false}",
+    "is_cached": true,
+    "similarity": 1.0,
+    "latency_ms": 21.91270000184886,
+    "started_at": "2026-11-09T21:43:39.994972+00:00",
+    "finished_at": "2026-11-09T21:43:40.016885+00:00",
+    "version": "incident-5007-v3",
+    "correlation_id": null,
+    "cached_query": "What is the current severity of the Route 2 incident?",
+    "cached_version": "incident-5007-v3"
+  },
+  "strategy": "Compare cached record/version with the current MySQL version before serving a hit.",
+  "tradeoff": "A metadata database read per request and obsolete vectors consume work/storage; updates must advance cache_version. Snapshot is valid as of the version read."
+}

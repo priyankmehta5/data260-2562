@@ -1,0 +1,131 @@
+{
+  "incident_id": 5007,
+  "starting_count": 25,
+  "records": [
+    {
+      "access": 1,
+      "count": 26,
+      "database_count": 20
+    },
+    {
+      "access": 2,
+      "count": 27,
+      "database_count": 20
+    },
+    {
+      "access": 3,
+      "count": 28,
+      "database_count": 20
+    },
+    {
+      "access": 4,
+      "count": 29,
+      "database_count": 20
+    },
+    {
+      "access": 5,
+      "count": 30,
+      "database_count": 30
+    },
+    {
+      "access": 6,
+      "count": 31,
+      "database_count": 30
+    },
+    {
+      "access": 7,
+      "count": 32,
+      "database_count": 30
+    },
+    {
+      "access": 8,
+      "count": 33,
+      "database_count": 30
+    },
+    {
+      "access": 9,
+      "count": 34,
+      "database_count": 30
+    },
+    {
+      "access": 10,
+      "count": 35,
+      "database_count": 30
+    },
+    {
+      "access": 11,
+      "count": 36,
+      "database_count": 30
+    },
+    {
+      "access": 12,
+      "count": 37,
+      "database_count": 30
+    },
+    {
+      "access": 13,
+      "count": 38,
+      "database_count": 30
+    },
+    {
+      "access": 14,
+      "count": 39,
+      "database_count": 30
+    },
+    {
+      "access": 15,
+      "count": 40,
+      "database_count": 40
+    },
+    {
+      "access": 16,
+      "count": 41,
+      "database_count": 40
+    },
+    {
+      "access": 17,
+      "count": 42,
+      "database_count": 40
+    },
+    {
+      "access": 18,
+      "count": 43,
+      "database_count": 40
+    },
+    {
+      "access": 19,
+      "count": 44,
+      "database_count": 40
+    },
+    {
+      "access": 20,
+      "count": 45,
+      "database_count": 40
+    },
+    {
+      "access": 21,
+      "count": 46,
+      "database_count": 40
+    },
+    {
+      "access": 22,
+      "count": 47,
+      "database_count": 40
+    },
+    {
+      "access": 23,
+      "count": 48,
+      "database_count": 40
+    },
+    {
+      "access": 24,
+      "count": 49,
+      "database_count": 40
+    },
+    {
+      "access": 25,
+      "count": 50,
+      "database_count": 50
+    }
+  ]
+}

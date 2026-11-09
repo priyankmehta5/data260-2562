@@ -1,0 +1,10 @@
+[
+  {
+    "id": "training-1",
+    "question": "What is the severity and agency of the Route 2 incident?"
+  },
+  {
+    "id": "training-2",
+    "question": "Give the severity and agency for the Route 3 incident."
+  }
+]

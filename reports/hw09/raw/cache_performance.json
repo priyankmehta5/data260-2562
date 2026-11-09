@@ -1,0 +1,8 @@
+{
+  "queries": 12,
+  "hits": 6,
+  "misses": 6,
+  "hit_rate": 0.5,
+  "cached_mean_latency_ms": 83.43211666639642,
+  "noncached_mean_latency_ms": 16395.32861666703
+}

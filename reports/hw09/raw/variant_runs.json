@@ -1,0 +1,654 @@
+[
+  {
+    "variant": "Baseline",
+    "runs": [
+      {
+        "question": "State the severity and agency of the Route 5 incident.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "Route 5 has a severity of 1 and is managed by the VTA.",
+              "facts": {
+                "severity": 1,
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "severity": 1,
+                "agency": "VTA"
+              }
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "Route 5 has a severity of 1 and is managed by the VTA.",
+          "facts": {
+            "severity": 1,
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1793.9683999939007
+      },
+      {
+        "question": "What is the delay of the Route 3 incident?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The delay of Route 3 incident is 25 minutes.",
+              "facts": {
+                "route": 3,
+                "severity": 4,
+                "delay_minutes": 25,
+                "status": "open",
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "delay_minutes": 25
+              }
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The delay of Route 3 incident is 25 minutes.",
+          "facts": {
+            "route": 3,
+            "severity": 4,
+            "delay_minutes": 25,
+            "status": "open",
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 2062.8160999985994
+      },
+      {
+        "question": "What is the current status of the Route 4 incident?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The current status of the Route 4 incident is open.",
+              "facts": {
+                "route": 4,
+                "severity": 2,
+                "delay_minutes": 8,
+                "status": "open",
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "status": "open"
+              }
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The current status of the Route 4 incident is open.",
+          "facts": {
+            "route": 4,
+            "severity": 2,
+            "delay_minutes": 8,
+            "status": "open",
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1917.6498999950127
+      },
+      {
+        "question": "Who won the World Cup?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The question is unrelated to the provided reference facts.",
+              "facts": {},
+              "abstained": true
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {}
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The question is unrelated to the provided reference facts.",
+          "facts": {},
+          "abstained": true
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1267.3534999994445
+      }
+    ]
+  },
+  {
+    "variant": "Evaluator Repair",
+    "runs": [
+      {
+        "question": "State the severity and agency of the Route 5 incident.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "Route 5 has a severity of 1 and is managed by the VTA.",
+              "facts": {
+                "severity": 1,
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "severity": 1,
+                "agency": "VTA"
+              }
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "Route 5 has a severity of 1 and is managed by the VTA.",
+          "facts": {
+            "severity": 1,
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1688.9154999953462
+      },
+      {
+        "question": "What is the delay of the Route 3 incident?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The delay of Route 3 incident is 25 minutes.",
+              "facts": {
+                "route": 3,
+                "severity": 4,
+                "delay_minutes": 25,
+                "status": "open",
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "delay_minutes": 25
+              }
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The delay of Route 3 incident is 25 minutes.",
+          "facts": {
+            "route": 3,
+            "severity": 4,
+            "delay_minutes": 25,
+            "status": "open",
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1947.9772999984561
+      },
+      {
+        "question": "What is the current status of the Route 4 incident?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The current status of the Route 4 incident is open.",
+              "facts": {
+                "route": 4,
+                "severity": 2,
+                "delay_minutes": 8,
+                "status": "open",
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "status": "open"
+              }
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The current status of the Route 4 incident is open.",
+          "facts": {
+            "route": 4,
+            "severity": 2,
+            "delay_minutes": 8,
+            "status": "open",
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 2025.800800001889
+      },
+      {
+        "question": "Who won the World Cup?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The question is unrelated to the provided reference facts.",
+              "facts": {},
+              "abstained": true
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {}
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The question is unrelated to the provided reference facts.",
+          "facts": {},
+          "abstained": true
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1216.3742000047932
+      }
+    ]
+  },
+  {
+    "variant": "Lesson Memory",
+    "runs": [
+      {
+        "question": "State the severity and agency of the Route 5 incident.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "Route 5 has a severity of 1 and is managed by VTA.",
+              "facts": {
+                "severity": 1,
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "severity": 1,
+                "agency": "VTA"
+              }
+            },
+            "loaded_lessons": [
+              "agency-completeness-001"
+            ]
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "Route 5 has a severity of 1 and is managed by VTA.",
+          "facts": {
+            "severity": 1,
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1630.9114999967278
+      },
+      {
+        "question": "What is the delay of the Route 3 incident?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The delay of Route 3 incident is 25 minutes.",
+              "facts": {
+                "route": 3,
+                "severity": 4,
+                "delay_minutes": 25,
+                "status": "open",
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "delay_minutes": 25
+              }
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The delay of Route 3 incident is 25 minutes.",
+          "facts": {
+            "route": 3,
+            "severity": 4,
+            "delay_minutes": 25,
+            "status": "open",
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 2049.8569999981555
+      },
+      {
+        "question": "What is the current status of the Route 4 incident?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The current status of the Route 4 incident is open.",
+              "facts": {
+                "route": 4,
+                "severity": 2,
+                "delay_minutes": 8,
+                "status": "open",
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "status": "open"
+              }
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The current status of the Route 4 incident is open.",
+          "facts": {
+            "route": 4,
+            "severity": 2,
+            "delay_minutes": 8,
+            "status": "open",
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1935.122599999886
+      },
+      {
+        "question": "Who won the World Cup?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The question is unrelated to the provided reference facts.",
+              "facts": {},
+              "abstained": true
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {}
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The question is unrelated to the provided reference facts.",
+          "facts": {},
+          "abstained": true
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1235.9203000014531
+      }
+    ]
+  },
+  {
+    "variant": "Validated Improvement",
+    "runs": [
+      {
+        "question": "State the severity and agency of the Route 5 incident.",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "Route 5 has a severity of 1 and is managed by VTA.",
+              "facts": {
+                "severity": 1,
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "severity": 1,
+                "agency": "VTA"
+              }
+            },
+            "loaded_lessons": [
+              "agency-completeness-001"
+            ]
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "Route 5 has a severity of 1 and is managed by VTA.",
+          "facts": {
+            "severity": 1,
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1698.3067000037408
+      },
+      {
+        "question": "What is the delay of the Route 3 incident?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The delay of Route 3 incident is 25 minutes.",
+              "facts": {
+                "route": 3,
+                "severity": 4,
+                "delay_minutes": 25,
+                "status": "open",
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "delay_minutes": 25
+              }
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The delay of Route 3 incident is 25 minutes.",
+          "facts": {
+            "route": 3,
+            "severity": 4,
+            "delay_minutes": 25,
+            "status": "open",
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 2164.1199000005145
+      },
+      {
+        "question": "What is the current status of the Route 4 incident?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The current status of the Route 4 incident is open.",
+              "facts": {
+                "route": 4,
+                "severity": 2,
+                "delay_minutes": 8,
+                "status": "open",
+                "agency": "VTA"
+              },
+              "abstained": false
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {
+                "status": "open"
+              }
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The current status of the Route 4 incident is open.",
+          "facts": {
+            "route": 4,
+            "severity": 2,
+            "delay_minutes": 8,
+            "status": "open",
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1912.3311000003014
+      },
+      {
+        "question": "Who won the World Cup?",
+        "attempts": [
+          {
+            "attempt": 1,
+            "answer": {
+              "answer": "The question is unrelated to the provided reference facts.",
+              "facts": {},
+              "abstained": true
+            },
+            "evaluation": {
+              "result": "PASS",
+              "explanation": "All requested facts agree with the reference.",
+              "feedback": "",
+              "expected_facts": {}
+            },
+            "loaded_lessons": []
+          }
+        ],
+        "attempt_count": 1,
+        "final_response": {
+          "answer": "The question is unrelated to the provided reference facts.",
+          "facts": {},
+          "abstained": true
+        },
+        "final_result": "PASS",
+        "stop_reason": "passed",
+        "controlled_initial_failure": false,
+        "latency_ms": 1258.210700005293
+      }
+    ]
+  }
+]

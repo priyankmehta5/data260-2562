@@ -204,3 +204,7 @@ tmp/
 # HW8 runtime state; raw observations and experiment summaries remain tracked.
 reports/hw08/raw/state/
 reports/hw08/raw/processes/
+
+# HW9 runtime caches and process handles; experiment evidence remains tracked.
+reports/hw09/raw/state/
+reports/hw09/raw/processes/

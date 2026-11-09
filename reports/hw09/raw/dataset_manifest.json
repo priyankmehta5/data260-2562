@@ -1,0 +1,15 @@
+{
+  "cache_cases_sha256": "545236a71d944efadcfbf19791770c9f861e8bfe3f09ea549d1bd9bc3bbd340f",
+  "cases": 40,
+  "labels": {
+    "exact": 10,
+    "paraphrase": 10,
+    "similar_different": 10,
+    "unrelated": 10
+  },
+  "split_sha256": {
+    "training": "41599acc8fd5e2f780c8a6228a9a955af79b55525310519e36cd4ec12926922e",
+    "validation": "e3492ff3a2fe47815c7ed06a5a2181840d1fd6d324f2f6c5e14ba96da8042722",
+    "test": "ca8592df180793e56c898b6993b33d3ef27423f1936ea08d49e25af5188295db"
+  }
+}

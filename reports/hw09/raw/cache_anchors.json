@@ -1,0 +1,82 @@
+[
+  {
+    "id": "anchor01",
+    "route": 2,
+    "field": "severity",
+    "query": "What is the current severity of the Route 2 incident?",
+    "answer": "{\"answer\": \"The current severity of the Route 2 incident is 3.\", \"facts\": {\"route\": 2, \"severity\": 3, \"status\": \"open\", \"agency\": \"VTA\", \"delay_minutes\": 12}, \"abstained\": false}",
+    "version": "incident-5007-v2"
+  },
+  {
+    "id": "anchor02",
+    "route": 2,
+    "field": "delay",
+    "query": "What is the current delay of the Route 2 incident?",
+    "answer": "{\"answer\": \"The current delay of Route 2 incident is 12 minutes.\", \"facts\": {\"route\": 2, \"severity\": 3, \"delay_minutes\": 12, \"status\": \"open\", \"agency\": \"VTA\"}, \"abstained\": false}",
+    "version": "incident-5007-v2"
+  },
+  {
+    "id": "anchor03",
+    "route": 3,
+    "field": "severity",
+    "query": "What is the current severity of the Route 3 incident?",
+    "answer": "{\"answer\": \"4\", \"facts\": {\"severity\": 4, \"route\": 3, \"agency\": \"VTA\", \"status\": \"open\"}, \"abstained\": false}",
+    "version": "incident-5008-v0"
+  },
+  {
+    "id": "anchor04",
+    "route": 3,
+    "field": "delay",
+    "query": "What is the current delay of the Route 3 incident?",
+    "answer": "{\"answer\": \"The current delay of Route 3 incident is 25 minutes.\", \"facts\": {\"route\": 3, \"severity\": 4, \"delay_minutes\": 25, \"status\": \"open\", \"agency\": \"VTA\"}, \"abstained\": false}",
+    "version": "incident-5008-v0"
+  },
+  {
+    "id": "anchor05",
+    "route": 4,
+    "field": "status",
+    "query": "What is the current status of the Route 4 incident?",
+    "answer": "{\"answer\": \"The current status of the Route 4 incident is open.\", \"facts\": {\"status\": \"open\"}, \"abstained\": false}",
+    "version": "incident-5009-v0"
+  },
+  {
+    "id": "anchor06",
+    "route": 5,
+    "field": "delay",
+    "query": "What is the current delay of the Route 5 incident?",
+    "answer": "{\"answer\": \"The current delay of Route 5 incident is 4 minutes.\", \"facts\": {\"route\": 5, \"severity\": 1, \"delay_minutes\": 4, \"status\": \"open\", \"agency\": \"VTA\"}, \"abstained\": false}",
+    "version": "incident-5010-v0"
+  },
+  {
+    "id": "anchor07",
+    "route": 4,
+    "field": "agency",
+    "query": "What is the current agency of the Route 4 incident?",
+    "answer": "{\"answer\": \"VTA\", \"facts\": {\"agency\": \"VTA\"}, \"abstained\": false}",
+    "version": "incident-5009-v0"
+  },
+  {
+    "id": "anchor08",
+    "route": 5,
+    "field": "severity",
+    "query": "What is the current severity of the Route 5 incident?",
+    "answer": "{\"answer\": \"The current severity of the Route 5 incident is 1.\", \"facts\": {\"route\": 5, \"severity\": 1, \"delay_minutes\": 4, \"status\": \"open\", \"agency\": \"VTA\"}, \"abstained\": false}",
+    "version": "incident-5010-v0"
+  },
+  {
+    "id": "anchor09",
+    "route": 3,
+    "field": "status",
+    "query": "What is the current status of the Route 3 incident?",
+    "answer": "{\"answer\": \"The current status of the Route 3 incident is 'open'.\", \"facts\": {\"status\": \"open\"}, \"abstained\": false}",
+    "version": "incident-5008-v0"
+  },
+  {
+    "id": "anchor10",
+    "route": 2,
+    "field": "agency",
+    "query": "What is the current agency of the Route 2 incident?",
+    "answer": "{\"answer\": \"VTA\", \"facts\": {\"agency\": \"VTA\"}, \"abstained\": false}",
+    "version": "incident-5007-v2"
+  }
+]

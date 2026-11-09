@@ -1,0 +1,120 @@
+[
+  {
+    "question": "What is the severity and agency of the Route 2 incident?",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": {
+          "answer": "The incident severity is 3.",
+          "facts": {
+            "severity": 3
+          },
+          "abstained": false
+        },
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "agency must be VTA; Answer text omits agency",
+          "feedback": "agency must be VTA; Answer text omits agency",
+          "expected_facts": {
+            "severity": 3,
+            "agency": "VTA"
+          }
+        },
+        "loaded_lessons": []
+      },
+      {
+        "attempt": 2,
+        "answer": {
+          "answer": "Route 2 has severity 3 and agency VTA.",
+          "facts": {
+            "severity": 3,
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "evaluation": {
+          "result": "PASS",
+          "explanation": "All requested facts agree with the reference.",
+          "feedback": "",
+          "expected_facts": {
+            "severity": 3,
+            "agency": "VTA"
+          }
+        },
+        "loaded_lessons": []
+      }
+    ],
+    "attempt_count": 2,
+    "final_response": {
+      "answer": "Route 2 has severity 3 and agency VTA.",
+      "facts": {
+        "severity": 3,
+        "agency": "VTA"
+      },
+      "abstained": false
+    },
+    "final_result": "PASS",
+    "stop_reason": "passed",
+    "controlled_initial_failure": true,
+    "latency_ms": 14841.650900001696
+  },
+  {
+    "question": "Give the severity and agency for the Route 3 incident.",
+    "attempts": [
+      {
+        "attempt": 1,
+        "answer": {
+          "answer": "The incident severity is 3.",
+          "facts": {
+            "severity": 3
+          },
+          "abstained": false
+        },
+        "evaluation": {
+          "result": "REVISE",
+          "explanation": "severity must be 4; agency must be VTA; Unsupported fact severity=3; Answer text omits severity; Answer text omits agency",
+          "feedback": "severity must be 4; agency must be VTA; Unsupported fact severity=3; Answer text omits severity; Answer text omits agency",
+          "expected_facts": {
+            "severity": 4,
+            "agency": "VTA"
+          }
+        },
+        "loaded_lessons": []
+      },
+      {
+        "attempt": 2,
+        "answer": {
+          "answer": "severity=4, agency=VTA",
+          "facts": {
+            "severity": 4,
+            "agency": "VTA"
+          },
+          "abstained": false
+        },
+        "evaluation": {
+          "result": "PASS",
+          "explanation": "All requested facts agree with the reference.",
+          "feedback": "",
+          "expected_facts": {
+            "severity": 4,
+            "agency": "VTA"
+          }
+        },
+        "loaded_lessons": []
+      }
+    ],
+    "attempt_count": 2,
+    "final_response": {
+      "answer": "severity=4, agency=VTA",
+      "facts": {
+        "severity": 4,
+        "agency": "VTA"
+      },
+      "abstained": false
+    },
+    "final_result": "PASS",
+    "stop_reason": "passed",
+    "controlled_initial_failure": true,
+    "latency_ms": 3156.0963000010815
+  }
+]

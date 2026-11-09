@@ -1,6 +1,6 @@
 """HW7 JWT authentication and role-protected municipal transit routes."""
 
-from fastapi import APIRouter, Depends, Security
+from fastapi import APIRouter, Depends, Request, Security
 from fastapi.security import HTTPAuthorizationCredentials
 from pydantic import BaseModel
 from sqlalchemy.orm import Session
@@ -121,11 +121,16 @@ def list_incidents_jwt(
 )
 def get_incident_jwt(
     incident_id: int,
+    request: Request,
     database: Session = Depends(get_db),
     _credentials: HTTPAuthorizationCredentials = Security(bearer_scheme),
     user=Depends(require_roles("reader", "writer", "moderator")),
 ):
-    return crud.get_incident(database, incident_id)
+    incident = crud.get_incident(database, incident_id)
+    cache = getattr(request.app.state, 'hw09_cache', None)
+    if cache is not None:
+        cache.database.increment_incident_views(incident_id)
+    return incident
 
 
 @router.post(

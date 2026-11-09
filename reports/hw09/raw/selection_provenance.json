@@ -1,0 +1,13 @@
+{
+  "test_sha256": "ca8592df180793e56c898b6993b33d3ef27423f1936ea08d49e25af5188295db",
+  "selected_lessons": [
+    {
+      "lesson_id": "agency-completeness-001",
+      "failure_pattern": "Compound answers omit the agency.",
+      "correction": "When agency is requested with severity, include both the agency and severity from the reference in the facts object and answer text. Abstain outside the reference.",
+      "created_at": "2026-11-09T22:02:02.911270+00:00",
+      "use_count": 1
+    }
+  ],
+  "source": "training and validation only"
+}

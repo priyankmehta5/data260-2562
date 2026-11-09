@@ -7,8 +7,10 @@ x-app: &app
     KAFKA_BOOTSTRAP_SERVERS: kafka:19092
     HW08_EVENT_DIR: /app/reports/hw08/raw
     HW08_DEDUP_DB: /app/reports/hw08/raw/state/pipeline.sqlite3
+    OLLAMA_HOST: http://host.docker.internal:11434
   volumes:
     - ./reports/hw08:/app/reports/hw08
+    - ./reports/hw09:/app/reports/hw09
   depends_on:
     topics:
       condition: service_completed_successfully
@@ -34,10 +36,10 @@ services:
       - kafka-data:/tmp/kraft-combined-logs
     healthcheck:
       test: ["CMD", "/opt/kafka/bin/kafka-topics.sh", "--bootstrap-server", "localhost:19092", "--list"]
-      interval: 5s
-      timeout: 5s
-      retries: 24
-      start_period: 15s
+      interval: 10s
+      timeout: 15s
+      retries: 18
+      start_period: 30s
   topics:
     image: apache/kafka:3.9.2
     depends_on:

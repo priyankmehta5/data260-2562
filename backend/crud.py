@@ -180,6 +180,8 @@ def update_incident(
     for field, value in changes.items():
         setattr(incident, field, value)
 
+    incident.cache_version += 1
+
     commit_or_conflict(
         database,
         "Incident code must be unique",

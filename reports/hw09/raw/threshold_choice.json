@@ -1,0 +1,22 @@
+{
+  "selected": {
+    "threshold": 0.95,
+    "queries": 40,
+    "hits": 18,
+    "misses": 22,
+    "hit_rate": 0.45,
+    "cached_mean_latency_ms": 19.13596666620126,
+    "noncached_mean_latency_ms": 5203.20590909118,
+    "false_hits": 4,
+    "false_hit_rate": 0.1,
+    "false_hit_rate_among_hits": 0.2222222222222222,
+    "mean_latency_ms": 2870.3744349999397,
+    "total_cost": 0.444
+  },
+  "miss_cost": 0.002,
+  "false_hit_support_cost": 0.1,
+  "units": "assumed service-cost units, not Ollama billing",
+  "justification": "A wrong transit answer can trigger review/rework; budget 50x a local inference miss.",
+  "selection": "Minimum assumed total cost; prefer fewer false hits and then stricter threshold on ties.",
+  "limitation": "Selected on this labeled workload, not proof of production accuracy."
+}

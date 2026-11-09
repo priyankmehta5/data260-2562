@@ -1,0 +1,192 @@
+{
+  "homework": "9",
+  "sid4": "2562",
+  "commit_hash": "a67d98af1091a348f6f4b3f0605c4d0d53bf63f0",
+  "working_tree_dirty": true,
+  "model": "qwen3:1.7b",
+  "seed": 2562,
+  "verify_seed": 262562,
+  "timestamp": "2026-11-09T22:13:56.538916+00:00",
+  "configuration": {
+    "port_base": 8762,
+    "prefix": "s2562",
+    "domain_id": 2,
+    "embedding": "sentence-transformers/all-MiniLM-L6-v2"
+  },
+  "mode": "live-evidence",
+  "checks": [
+    {
+      "name": "offline behavioral suite",
+      "passed": true,
+      "output": "test_feedback_repairs_controlled_failure (__main__.AgentTests.test_feedback_repairs_controlled_failure) ... ok\ntest_lesson_saved_reloaded_and_used (__main__.AgentTests.test_lesson_saved_reloaded_and_used) ... ok\ntest_never_exceeds_two_attempts (__main__.AgentTests.test_never_exceeds_two_attempts) ... ok\ntest_no_answers_in_input_splits (__main__.AgentTests.test_no_answers_in_input_splits) ... ok\ntest_text_must_contain_fact_values (__main__.AgentTests.test_text_must_contain_fact_values) ... ok\ntest_unsupported_answer_rejected (__main__.AgentTests.test_unsupported_answer_rejected) ... ok\ntest_validation_rejects_regression (__main__.AgentTests.test_validation_rejects_regression) ... ok\ntest_miss_hit_and_version_rejection_skip_pipeline (__main__.CacheTests.test_miss_hit_and_version_rejection_skip_pipeline) ... ok\ntest_scope_clear_preserves_other_keys (__main__.CacheTests.test_scope_clear_preserves_other_keys) ... ok\ntest_25_accesses_sync_at_ten_and_twenty (__main__.CounterTests.test_25_accesses_sync_at_ten_and_twenty) ... ok\ntest_cold_cache_resumes_persisted_count (__main__.CounterTests.test_cold_cache_resumes_persisted_count) ... ok\ntest_missing_or_invalid_incident_does_not_increment (__main__.CounterTests.test_missing_or_invalid_incident_does_not_increment) ... ok\n\n----------------------------------------------------------------------\nRan 12 tests in 0.245s\n\nOK\n"
+    },
+    {
+      "name": "40 labeled cases with ten per category",
+      "passed": true
+    },
+    {
+      "name": "question-only input splits",
+      "passed": true
+    },
+    {
+      "name": "live Redis ping and vector index",
+      "passed": true
+    },
+    {
+      "name": "HW9 API on 8762",
+      "passed": true
+    },
+    {
+      "name": "API uses the selected shipping threshold",
+      "passed": true
+    },
+    {
+      "name": "local model available",
+      "passed": true
+    },
+    {
+      "name": "authenticated endpoint and repeated-query hit",
+      "passed": true,
+      "first_response": {
+        "query": "What is the current severity of the Route 3 incident?",
+        "answer": "{\"answer\": \"4\", \"facts\": {\"severity\": 4, \"route\": 3, \"agency\": \"VTA\", \"status\": \"open\"}, \"abstained\": false}",
+        "is_cached": true,
+        "similarity": 0.9999998211860657,
+        "latency_ms": 944.2610000041896,
+        "started_at": "2026-11-09T22:13:54.929925+00:00",
+        "finished_at": "2026-11-09T22:13:55.876074+00:00",
+        "version": "incident-5008-v0",
+        "correlation_id": null,
+        "cached_query": "What is the current severity of the Route 3 incident?",
+        "cached_version": "incident-5008-v0"
+      },
+      "second_response": {
+        "query": "What is the current severity of the Route 3 incident?",
+        "answer": "{\"answer\": \"4\", \"facts\": {\"severity\": 4, \"route\": 3, \"agency\": \"VTA\", \"status\": \"open\"}, \"abstained\": false}",
+        "is_cached": true,
+        "similarity": 0.9999998211860657,
+        "latency_ms": 53.86079999880167,
+        "started_at": "2026-11-09T22:13:55.981340+00:00",
+        "finished_at": "2026-11-09T22:13:56.035723+00:00",
+        "version": "incident-5008-v0",
+        "correlation_id": null,
+        "cached_query": "What is the current severity of the Route 3 incident?",
+        "cached_version": "incident-5008-v0"
+      }
+    },
+    {
+      "name": "labels committed before sweep",
+      "passed": true
+    },
+    {
+      "name": "evidence counter.json",
+      "passed": true
+    },
+    {
+      "name": "evidence cache_queries.json",
+      "passed": true
+    },
+    {
+      "name": "evidence cache_performance.json",
+      "passed": true
+    },
+    {
+      "name": "evidence threshold_summary.json",
+      "passed": true
+    },
+    {
+      "name": "evidence threshold_records.json",
+      "passed": true
+    },
+    {
+      "name": "evidence false_hit.json",
+      "passed": true
+    },
+    {
+      "name": "evidence threshold_choice.json",
+      "passed": true
+    },
+    {
+      "name": "evidence stale_invalidation.json",
+      "passed": true
+    },
+    {
+      "name": "evidence variant_runs.json",
+      "passed": true
+    },
+    {
+      "name": "evidence variant_summary.json",
+      "passed": true
+    },
+    {
+      "name": "evidence revision_sequences.json",
+      "passed": true
+    },
+    {
+      "name": "evidence lesson_reuse.json",
+      "passed": true
+    },
+    {
+      "name": "evidence lesson_validation.json",
+      "passed": true
+    },
+    {
+      "name": "25 real counter accesses",
+      "passed": true
+    },
+    {
+      "name": "at least ten ingress queries",
+      "passed": true
+    },
+    {
+      "name": "200 threshold calls, 40 per threshold",
+      "passed": true
+    },
+    {
+      "name": "threshold metrics and costs reproduce from raw calls",
+      "passed": true
+    },
+    {
+      "name": "cache hits bypass the pipeline",
+      "passed": true
+    },
+    {
+      "name": "full false-hit evidence exists",
+      "passed": true
+    },
+    {
+      "name": "real stale hit then invalidation miss",
+      "passed": true
+    },
+    {
+      "name": "stale answer preserved then changed after invalidation",
+      "passed": true
+    },
+    {
+      "name": "four independent final variants, max two attempts",
+      "passed": true
+    },
+    {
+      "name": "failed then repaired sequence",
+      "passed": true
+    },
+    {
+      "name": "later question reloads a lesson",
+      "passed": true
+    },
+    {
+      "name": "held-out inputs unchanged after lesson selection",
+      "passed": true
+    },
+    {
+      "name": "all variants use the identical held-out questions",
+      "passed": true
+    },
+    {
+      "name": "retained lesson passes the no-regression gate",
+      "passed": true
+    }
+  ],
+  "overall_pass": true,
+  "source_sha256": "7f7b0a23fe1b289ca31d46f01fc0bb78957f0fdb7516aad0d65404fed2e30313"
+}

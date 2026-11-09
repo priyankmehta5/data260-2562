@@ -1,0 +1,72 @@
+[
+  {
+    "threshold": 0.75,
+    "queries": 40,
+    "hits": 30,
+    "misses": 10,
+    "hit_rate": 0.75,
+    "cached_mean_latency_ms": 53.31360666653685,
+    "noncached_mean_latency_ms": 11361.520739999833,
+    "false_hits": 10,
+    "false_hit_rate": 0.25,
+    "false_hit_rate_among_hits": 0.3333333333333333,
+    "mean_latency_ms": 2880.365389999861,
+    "total_cost": 1.02
+  },
+  {
+    "threshold": 0.8,
+    "queries": 40,
+    "hits": 30,
+    "misses": 10,
+    "hit_rate": 0.75,
+    "cached_mean_latency_ms": 21.686786666396074,
+    "noncached_mean_latency_ms": 5417.160559998592,
+    "false_hits": 10,
+    "false_hit_rate": 0.25,
+    "false_hit_rate_among_hits": 0.3333333333333333,
+    "mean_latency_ms": 1370.5552299994451,
+    "total_cost": 1.02
+  },
+  {
+    "threshold": 0.85,
+    "queries": 40,
+    "hits": 30,
+    "misses": 10,
+    "hit_rate": 0.75,
+    "cached_mean_latency_ms": 20.33818333366071,
+    "noncached_mean_latency_ms": 5346.737760000178,
+    "false_hits": 10,
+    "false_hit_rate": 0.25,
+    "false_hit_rate_among_hits": 0.3333333333333333,
+    "mean_latency_ms": 1351.93807750029,
+    "total_cost": 1.02
+  },
+  {
+    "threshold": 0.9,
+    "queries": 40,
+    "hits": 30,
+    "misses": 10,
+    "hit_rate": 0.75,
+    "cached_mean_latency_ms": 19.98092666641848,
+    "noncached_mean_latency_ms": 5349.439370000255,
+    "false_hits": 10,
+    "false_hit_rate": 0.25,
+    "false_hit_rate_among_hits": 0.3333333333333333,
+    "mean_latency_ms": 1352.3455374998775,
+    "total_cost": 1.02
+  },
+  {
+    "threshold": 0.95,
+    "queries": 40,
+    "hits": 18,
+    "misses": 22,
+    "hit_rate": 0.45,
+    "cached_mean_latency_ms": 19.13596666620126,
+    "noncached_mean_latency_ms": 5203.20590909118,
+    "false_hits": 4,
+    "false_hit_rate": 0.1,
+    "false_hit_rate_among_hits": 0.2222222222222222,
+    "mean_latency_ms": 2870.3744349999397,
+    "total_cost": 0.444
+  }
+]
